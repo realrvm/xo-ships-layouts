@@ -1,0 +1,8 @@
+include /shared/mixins/svg/arrow-left-big
+
+
+mixin arrow-left(path)
+  -var arrow = "svg-arrow-left-big"
+  span.xo-link__back-big
+    a(href= path)
+      +#{arrow}

@@ -1,0 +1,10 @@
+mixin breadcrumbs(links)
+  ol.xo-breadcrumbs__header
+    each link in links
+      - var {path, caption} = link;
+      if path
+        li
+          a(href=path) #{caption}
+      else
+        li
+          | #{caption}

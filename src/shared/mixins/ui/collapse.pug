@@ -1,0 +1,6 @@
+mixin collapse(placeholder, width, cls)
+  details.xo-collapse(style= `width: ${width}px`)
+    summary.xo-collapse__summary
+      span(class= cls)= placeholder
+    ul.xo-collapse__content
+      block

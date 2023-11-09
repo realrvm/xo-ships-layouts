@@ -1,0 +1,20 @@
+include /shared/mixins/svg/pencil
+include /shared/mixins/svg/cross-sm
+include /shared/mixins/svg/plus
+
+mixin three-icons
+  - var pencil = 'svg-pencil';
+  - var cross = 'svg-cross-sm';
+  .xo-icons__three
+    span &#128065;
+    span
+      +#{pencil}
+    span
+      +#{cross}
+
+mixin two-icons
+  - var plus = 'svg-plus';
+  .xo-icons__two
+    span &#128065;
+    span
+      +#{plus}

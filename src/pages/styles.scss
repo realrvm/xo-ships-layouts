@@ -6,13 +6,33 @@
 /* СТИЛИ СТРАНИЦЫ */
 .xo-layouts {
   & h1 {
-    font: 700 42px/1.4 "Monrope", sans-serif;
+    font:
+      700 42px/1.4 "Monrope",
+      sans-serif;
     margin-bottom: 24px;
   }
 
   & h2 {
-    font: 700 32px/1.4 "Monrope", sans-serif;
+    font:
+      700 32px/1.4 "Monrope",
+      sans-serif;
     margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  &__typography {
+    margin-bottom: 20px;
+
+    &-items {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+
+      span {
+        margin: 0;
+      }
+    }
   }
 
   &__pages {
@@ -25,18 +45,36 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    & a {
-     color: var(--color-bg);
-     font-weight: 500;
-     background-color: var(--color-accent);
-     padding: 20px;
-     border-radius: 4px;
-     transition: background-color .2s ease-in-out;
+    & > a {
+      color: var(--color-bg);
+      font-weight: 500;
+      background-color: var(--color-accent);
+      padding: 20px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease-in-out;
 
-     &:hover {
-      opacity: .8;
-     }
+      &:hover {
+        opacity: 0.8;
+      }
     }
+  }
 
+  &__buttons,
+  &__inputs,
+  &__anchors,
+  &__icons,
+  &__cbs {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  &__steps,
+  &__tabs,
+  &__collapse {
+    max-width: 900px;
+    margin-bottom: 50px;
   }
 }

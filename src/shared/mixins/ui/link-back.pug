@@ -1,0 +1,7 @@
+include /shared/mixins/svg/arrow-left
+mixin link-back(path= '*')
+  a.xo-link__back(href= path)
+    span
+      +svg-arrow-left
+    span
+      block

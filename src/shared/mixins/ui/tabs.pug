@@ -1,0 +1,24 @@
+mixin tabs(list= [])
+  .xo-tabs
+    each tab,index in list
+      - var len = list.length;
+      - var indx = index + 1;
+      if indx === len
+        input(name='xo-tab-btn' type='radio' value='' checked id='xo-tab' + indx)
+      else
+        input(name='xo-tab-btn' type='radio' value='' id='xo-tab' + indx)
+      label(for='xo-tab' + indx)
+        | #{tab}
+    each tab,index in list
+      - var indx = index + 1;
+      .xo-tab(id='xo-tab' + indx + '-content')
+        if block
+          | #{tab}
+          block
+        else
+          if indx === 1
+            include /snippets/layouts/status
+          else if indx === 2
+            include /snippets/layouts/report
+          else
+            include /snippets/layouts/stability

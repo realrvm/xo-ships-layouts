@@ -1,4 +1,14 @@
 extends /shared/ui/layout
+include /shared/mixins/ui/button
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/icons
+include /shared/mixins/ui/cbs
+include /shared/mixins/ui/steps
+include /shared/mixins/ui/tabs
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/collapse
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -6,6 +16,12 @@ append head
   title= 'Раздаточная страница'
 
 block content
+  - var breadcrumbsLinks = [{path: "*", caption: "Все сервисы"}, {path: "*", caption: "Рыболовное “Lobster”"}, {path: "*", caption: "Расчет остойчивости"}, {caption: "Все сервисы"}];
+  - var steps = [{caption:'Запасы'}, {caption: 'Груз'}, {caption: "Константы", cls: 'active'}, {caption: "Статус", cls: 'inactive'}];
+  - var tabs = ['status', 'Noon-report', 'Расчет остойчивости'];
+  - var options = [{1 :'m'}, {2: 't'}, {3: 'km'}];
+  - var collaps_items = ['Дедвейт', 'Водоизмещение', 'Груз'];
+
   main.xo-main
     .xo-layouts
       h1 Раздаточная страница
@@ -15,5 +31,63 @@ block content
           a(href='services-start-screen/services-start-screen.html') Стартовый экран  сервисов
           a(href='calc-service/calc-service.html') Команда сервис расчётов
 
+      section.xo-layouts__typography
+        h2 Типография
+        .xo-layouts__typography-items
+          span.xo-text__title Заголовок
+          span.xo-text__subtitle Подзаголовок
+          span.xo-text__24-600 Текст 24-600
+          span.xo-text__24-500 Текст 24-500
+          span.xo-text__20-600 Текст 20-600
+          span.xo-text__20-400 Текст 20-400
+          span.xo-text__18-700 Текст 18-700
+          span.xo-text__18-600 Текст 18-600
+          span.xo-text__18-500 Текст 18-500
+          span.xo-text__18-400 Текст 18-400
+          span.xo-text__16-600 Текст 16-600
+          span.xo-text__16-500 Текст 16-500
+          span.xo-text__14-600 Текст 14-600
+          span.xo-text__14-400 Текст 14-400
+          span.xo-text__12-400 Текст 12-400
+
       section.xo-layouts__elements
         h2 Элементы
+        .xo-layouts__buttons
+          +button('xo-btn__accent-fill')
+            | Найти
+          +button('xo-btn__accent-clean')
+            | Найти
+          +button('xo-btn__cancel-fill')
+            | Сбросить
+          +button('xo-btn__cancel-clean')
+            | Сбросить
+          +button('xo-btn__content-clean')
+            | Новый расчет устройчивости
+          +button('xo-btn__content-fill')
+            | +Добавить нагрузку
+          +button('xo-btn__content-fill-inter')
+            | Новый объект
+        .xo-layouts__inputs
+          +calendar
+          +simple_input('Переоборудование', '250')
+          +simple_select(options, '100')
+        .xo-layouts__anchors
+          +link-back
+            | Вернуться к выбору судна
+          +breadcrumbs(breadcrumbsLinks)
+          +arrow-left('*')
+        .xo-layouts__icons
+          +three-icons
+          +two-icons
+        .xo-layouts__cbs
+          +cb-double
+          +cb-tripple
+        .xo-layouts__steps
+          +steps(steps)
+        .xo-layouts__tabs
+          +tabs(tabs)
+            |   - the test for the layouts page
+        .xo-layouts__collapse
+          +collapse('Дизельное топливо', '250')
+            each item in collaps_items
+              li= item
