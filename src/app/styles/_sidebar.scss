@@ -1,0 +1,49 @@
+.sidebar {
+  position: absolute;
+  width: 112px;
+  background-color: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+
+  &__logo {
+    margin-bottom: 106px;
+    align-self: center;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 226px;
+  }
+
+  &__service {
+    position: relative;
+  }
+
+  &__service a {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  &__interfaces {
+    align-self: center;
+    margin-bottom: 21px;
+  }
+
+  &__slash {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 5px;
+  }
+}
+
+[data-path] {
+  left: 3px;
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  background-color: #fff;
+}

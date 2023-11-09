@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+:root {
+  /* TYPOGRAPHY */
+  --font-size: 18px;
+  /* COLORS */
+  --color-primary: #282828;
+  --color-secondary: #878787;
+  --color-accent: #4472c4;
+  --color-add-content: #198754;
+  --color-del: #dc3545;
+  --color-bg: #fff;
+  --color-border: #cecece;
+  --color-bg-table: #fbfbfb;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  outline: none;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  font-family: "Manrope", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+main.xo-main {
+  padding: 30px 20px 30px 152px;
+}
+
+.xo-text__title {
+  font: 700 36px/1 "Monrope", sans-serif;
+  text-transform: uppercase;
+  margin: 10px 0 36px;
+}
+.xo-text__subtitle {
+  font: 500 24px/1 "Monrope", sans-serif;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  position: absolute;
+  width: 112px;
+  background-color: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+.sidebar__logo {
+  margin-bottom: 106px;
+  align-self: center;
+}
+.sidebar__services {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 226px;
+}
+.sidebar__service {
+  position: relative;
+}
+.sidebar__service a {
+  display: block;
+  text-align: center;
+  margin: 5px 0;
+}
+.sidebar__interfaces {
+  align-self: center;
+  margin-bottom: 21px;
+}
+.sidebar__slash {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 5px;
+}
+
+[data-path] {
+  left: 3px;
+  position: absolute;
+  width: 7px;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* СТИЛИ СТРАНИЦЫ */
+.xo-services {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+@media (max-width: 1200px) {
+  .xo-services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .xo-services {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.xo-services-card {
+  max-width: 532px;
+  padding: 30px;
+  min-height: 288px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  .xo-services-card {
+    max-width: 100%;
+  }
+}
+.xo-services-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.xo-services-card__title {
+  font: 500 28px/1.4 "Manrope", sans-serif;
+}
+.xo-services-card__body {
+  font: 400 24px/1.4 "Manrope", sans-serif;
+}

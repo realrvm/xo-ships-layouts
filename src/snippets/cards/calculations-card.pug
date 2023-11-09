@@ -1,0 +1,20 @@
+mixin calculations-card(ship)
+  - var { imgPath, type, vessel, isPort, agreed} = ship;
+  .xo-calculations-card
+    .xo-calculations-card__img
+      img(src= imgPath alt= vessel)
+    .xo-calculations-card__body
+      p.xo-calculations-card__type= type
+      h4.xo-calculations-card__vessel= vessel
+      .xo-calculations-card__location
+        div(class= isPort ? 'xo-calculations-card__active'
+        : 'xo-calculations-card__inactive')
+        div.xo-calculations-card__isport #{isPort ? "В пути" : "В порту"}
+      .xo-calculations-card__agreed
+        p
+          if agreed
+            span.agreed &#10003;
+            span Согласовано офисом
+          else
+            span.unagreed !
+            span Ожидает подтверждения

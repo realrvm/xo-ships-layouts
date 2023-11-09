@@ -1,0 +1,38 @@
+include /shared/mixins/svg/logo
+include /shared/mixins/svg/analitics
+include /shared/mixins/svg/calculations
+include /shared/mixins/svg/settings
+include /shared/mixins/svg/support
+include /shared/mixins/svg/additionals
+include /shared/mixins/svg/docs
+include /shared/mixins/svg/crew
+include /shared/mixins/svg/office
+
+aside.sidebar
+  .sidebar__logo
+    a(href='../index.html')
+      +svg-logo
+  ul.sidebar__services
+    li.sidebar__service(title= 'Аналитика')
+      div(data-path='analytics')
+      a(href='../index.html')
+        +svg-analitics
+    li.sidebar__service(title= 'Сервис расчетов')
+      a(href='../index.html')
+        +svg-calculations
+    li.sidebar__service(title= 'Документация')
+      a(href='../index.html')
+        +svg-docs
+    li.sidebar__service(title= 'Сервис дополнительных расчётов')
+      a(href='../index.html')
+        +svg-additionals
+    li.sidebar__service(title= 'Настройки')
+      a(href='../index.html')
+        +svg-settings
+    li.sidebar__service(title= 'Поддержка')
+      a(href='../index.html')
+        +svg-support
+  .sidebar__interfaces
+    +svg-crew
+    span.sidebar__slash &#47;
+    +svg-office

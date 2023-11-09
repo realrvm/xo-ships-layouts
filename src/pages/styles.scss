@@ -1,4 +1,42 @@
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
 @import "../app/styles/reset";
 @import "../app/styles/main";
 @import "../app/styles/common";
 
+/* СТИЛИ СТРАНИЦЫ */
+.xo-layouts {
+  & h1 {
+    font: 700 42px/1.4 "Monrope", sans-serif;
+    margin-bottom: 24px;
+  }
+
+  & h2 {
+    font: 700 32px/1.4 "Monrope", sans-serif;
+    margin-bottom: 20px;
+  }
+
+  &__pages {
+    margin-bottom: 20px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    & a {
+     color: var(--color-bg);
+     font-weight: 500;
+     background-color: var(--color-accent);
+     padding: 20px;
+     border-radius: 4px;
+     transition: background-color .2s ease-in-out;
+
+     &:hover {
+      opacity: .8;
+     }
+    }
+
+  }
+}

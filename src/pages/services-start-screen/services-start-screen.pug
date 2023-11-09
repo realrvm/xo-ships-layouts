@@ -1,0 +1,22 @@
+extends /shared/ui/layout
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Services'
+
+block content
+  - var services = [{analytics: ['Аналитика', 'Сервис для просмотра аналитики с подробным отображением данных по дням и построением графиков']}, {calculations: ["Сервис расчётов", 'Сервис для расчетов грузового плана и/или остойчивости судна, подготовке документации для судохода или выхода из порта']},{docs: ['Документация', 'Сервис для добавления, хранения и удобного доступа к документам судна']}, {additionals: ['Сервис доп. расчетов', 'Сервис вспомогательных расчетов для определения остатка грузоподъемности судна и проверки драфт сюрвея']}, {settings: ['Настройки', 'Сервис по настройке продукта ']}, {support: ['Поддержка', 'Сервис для получения технической поддержки']}];
+
+  include /snippets/cards/services-card
+  include /widgets/sidebar
+  main.xo-main
+    h1.xo-text__title Команда: Все сервисы
+
+    h2.xo-text__subtitle Интерфейс команды
+
+    .xo-services
+      each service in services
+        - var key = Object.keys(service)[0];
+        +services-card(service[key][0], key)
+          | #{service[key][1]}

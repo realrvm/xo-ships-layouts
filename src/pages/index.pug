@@ -3,10 +3,17 @@ extends /shared/ui/layout
 append styles
   link(rel= "stylesheet" href= "./styles.css")
 append head
-  title= 'Main page'
+  title= 'Раздаточная страница'
 
 block content
-  include /widgets/header
+  main.xo-main
+    .xo-layouts
+      h1 Раздаточная страница
+      section.xo-layouts__pages
+        h2 Ссылки на страницы
+        .xo-layouts__links
+          a(href='services-start-screen/services-start-screen.html') Стартовый экран  сервисов
+          a(href='calc-service/calc-service.html') Команда сервис расчётов
 
-
-  include /widgets/footer
+      section.xo-layouts__elements
+        h2 Элементы

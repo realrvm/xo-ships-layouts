@@ -1,0 +1,54 @@
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
+@import "../../app/styles/reset";
+@import "../../app/styles/main";
+@import "../../app/styles/common";
+@import "../../app/styles/sidebar";
+
+/* СТИЛИ СТРАНИЦЫ */
+.xo-services {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.xo-services-card {
+  max-width: 532px;
+  padding: 30px;
+  min-height: 288px;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font:
+      500 28px/1.4 "Manrope",
+      sans-serif;
+  }
+
+  &__body {
+    font:
+      400 24px/1.4 "Manrope",
+      sans-serif;
+  }
+}

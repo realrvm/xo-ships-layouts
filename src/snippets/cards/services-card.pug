@@ -1,0 +1,30 @@
+include /shared/mixins/svg/add-g
+include /shared/mixins/svg/analytics-dashboard
+include /shared/mixins/svg/calc-g
+include /shared/mixins/svg/docs-g
+include /shared/mixins/svg/settings-g
+include /shared/mixins/svg/support-g
+
+-
+  function getMixinName(condition) {
+      let mixin_string;
+      switch(condition) {
+          case 'analytics': mixin_string = 'svg-analytics-dashboard'; break;
+          case 'additionals': mixin_string = 'svg-add-g'; break;
+          case 'calculations': mixin_string = 'svg-calc-g'; break;
+          case 'docs': mixin_string = 'svg-docs-g'; break;
+          case 'settings': mixin_string = 'svg-settings-g'; break;
+          case 'support': mixin_string = 'svg-support-g'; break;
+          default: mixin_string = ''; break;
+        }
+
+      return mixin_string;
+  }
+
+mixin services-card(title, condition)
+  .xo-services-card
+    .xo-services-card__header
+      +#{getMixinName(condition)}
+      h3.xo-services-card__title #{title}
+    p.xo-services-card__body
+      block

@@ -1,0 +1,20 @@
+main.xo-main {
+  padding: 30px 20px 30px 152px;
+}
+
+.xo-text {
+  &__title {
+    font:
+      700 36px/1 "Monrope",
+      sans-serif;
+    text-transform: uppercase;
+    margin: 10px 0 36px;
+  }
+
+  &__subtitle {
+    font:
+      500 24px/1 "Monrope",
+      sans-serif;
+    text-transform: uppercase;
+  }
+}

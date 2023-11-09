@@ -1,0 +1,20 @@
+extends /shared/ui/layout
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Команда сервис расчётов'
+
+
+block content
+  - var ships = [ {imgPath: '../img/ship1.jpg', type: "Рыболовное", vessel: "Lobster", isPort: true, agreed: true}, {imgPath: '../img/ship2.jpg', type: "Hефтеналивное", vessel: "Андрей Первозванный", isPort: true, agreed: false}, {imgPath: '../img/ship3.jpg', type: "Навалочное", vessel: "Название судна", isPort: false, agreed: true}, {imgPath: '../img/ship4.jpg', type: "Универсальный сухогруз", vessel: "PALANA", isPort: true, agreed: true}, {imgPath: '../img/ship5.jpg', type: "Kонтейнеровоз", vessel: "Название судна", isPort: false, agreed: true},];
+
+  include /snippets/cards/calculations-card
+  include /widgets/sidebar
+  main.xo-main
+    h1.xo-text__title Сервис расчетов
+
+    h2.xo-text__subtitle Выбор судна
+    .xo-calculations
+      each ship in ships
+        +calculations-card(ship)
