@@ -1,0 +1,25 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "npx gulp",
+    "svpug": "svpug -i src/shared/svg -o src/shared/mixins/svg --ignore-existing",
+    "build": "npx gulp build"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.69.5",
+    "svpug": "^0.1.4"
+  }
+}
