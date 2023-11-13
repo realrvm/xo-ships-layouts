@@ -1,5 +1,7 @@
-mixin breadcrumbs(links)
-  ol.xo-breadcrumbs__header
+mixin breadcrumbs(links, cls)
+  - var attributes = {};
+  - attributes.class = cls
+  ol(class= 'xo-breadcrumbs__header')&attributes(attributes)
     each link in links
       - var {path, caption} = link;
       if path

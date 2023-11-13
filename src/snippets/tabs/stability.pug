@@ -1,0 +1,31 @@
+include /shared/mixins/ui/button
+include /shared/mixins/ui/inputs
+
+include /snippets/cards/stability-common
+include /snippets/cards/stability-completed
+
+- var common_cases = [{title: "Расчет остойчивости судна с промысла", description: "Трюмы заполнены полностью, минимальное количество запасов"},{title: "Расчет остойчивости судна на промысел", description: "Пустые трюмы, максимальное количество запасов"}]
+
+- var completed_cases = [{title: "Расчет остойчивости судна с промысла", description: "Трюмы заполнены полностью, минимальное количество запасов", date: "01.03.23 12.00"},{title: "Расчет остойчивости судна с промысла", description: "Трюмы заполнены на половину, среднее количество запасов", date: "28.02.23 12.00"},{title: "Расчет остойчивости судна на промысел", description: "Пустые трюмы, максимальное количество запасов", date: "15.02.23 12.00"},{title: "Расчет остойчивости судна с промысла", description: "Трюмы заполнены полностью, минимальное количество запасов", date: "03.02.23 12.00"}]
+
++button(['xo-btn__content-clean', 'xo-calc__stability-calc-btn'])
+  | Новый расчет остойчивости
+section.xo-calc__stability-cases
+  h3.xo-calc__stability-cases-title.xo-text__24-500 Типовые случаи нагрузки
+  .xo-calc__stability-cases-cards
+    each val in common_cases
+      +stability-common(val)
+section.xo-calc__stability-cases
+  h3.xo-calc__stability-cases-title.xo-text__24-500 Выполненные расчеты
+  form.xo-calc__stability-cases-form
+    div
+      +simple_input('#000000', '390')
+      +calendar('164')
+    div
+      +button('xo-btn__accent-fill', {type: 'submit'})
+        | Найти
+      +button('xo-btn__cancel-fill')
+        | Сбросить
+  .xo-calc__stability-cases-cards
+    each val in completed_cases
+      +stability-completed(val)

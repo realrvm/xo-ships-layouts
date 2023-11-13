@@ -1,5 +1,5 @@
-mixin calendar
-  input.xo-inputs__calendar(type='date' name='xo-date' id='xo-date')
+mixin calendar(width)
+  input.xo-inputs__calendar(type='date' name='xo-date' id='xo-date' style=`width: ${width}px`)
 
 mixin simple_input(placeholder, width)
   input.xo-inputs__simple-input(type='text' placeholder=placeholder name='xo-text' id='xo-text' style=`width: ${width}px`)

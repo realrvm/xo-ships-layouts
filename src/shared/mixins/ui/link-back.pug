@@ -1,6 +1,8 @@
 include /shared/mixins/svg/arrow-left
-mixin link-back(path= '*')
-  a.xo-link__back(href= path)
+mixin link-back(path= '*', cls)
+  - var attrs = {};
+  - attrs.class = cls;
+  a(class= 'xo-link__back' href= path)&attributes(attrs)
     span
       +svg-arrow-left
     span

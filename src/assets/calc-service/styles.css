@@ -206,7 +206,7 @@ main.xo-main {
   outline: none;
 }
 .xo-btn__accent-fill {
-  border: none;
+  border: 1px solid var(--color-accent);
   color: var(--color-bg);
   background-color: var(--color-accent);
 }
@@ -232,7 +232,7 @@ main.xo-main {
 .xo-btn__content-fill {
   color: var(--color-bg);
   background-color: var(--color-add-content);
-  border: none;
+  border: 1px solid var(--color-add-content);
 }
 .xo-btn__content-fill-inter {
   font-family: "Inter", sans-serif;
@@ -272,7 +272,6 @@ main.xo-main {
 }
 .xo-link__back-big {
   display: inline-block;
-  margin-right: 21px;
 }
 
 .xo-breadcrumbs__header li {

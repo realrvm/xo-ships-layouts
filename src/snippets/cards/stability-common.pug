@@ -1,0 +1,12 @@
+include /shared/mixins/ui/icons
+
+mixin stability-common(content)
+  - var {title, description} = content;j
+  .xo-calc__stability-cases-card
+    .xo-calc__stability-cases-card-header
+      .xo-calc__stability-cases-card-header-title.xo-text__20-600= title
+      +three-icons
+    p
+      span.xo-text__18-500
+        | Описание
+    p.xo-text__18-400= description

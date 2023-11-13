@@ -1,0 +1,24 @@
+extends /shared/ui/layout
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/tabs
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Команда сервис расчётов'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {caption: 'Рыболовное “Lobster”'}];
+  - var tabs = ['status', 'Noon-report', 'Расчет остойчивости'];
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться в выбору судна
+    .xo-calc__title
+      +arrow-left('*')
+      h1.xo-text__title Сервис расчетов: “Lobster”
+    .xo-calc__tabs
+      +tabs(tabs)

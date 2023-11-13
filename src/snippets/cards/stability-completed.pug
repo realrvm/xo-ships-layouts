@@ -1,0 +1,13 @@
+include /shared/mixins/ui/icons
+
+mixin stability-completed(content)
+  - var {title, date, description} = content;
+  .xo-calc__stability-cases-card
+    .xo-calc__stability-cases-card-header
+      .xo-calc__stability-cases-card-header-title.xo-text__20-600= title
+      +two-icons
+    p.xo-text__18-400 Случай нагрузки от #[span.xo-text__18-500 #{date}]
+    p
+      span.xo-text__18-500
+       | Описание
+    p.xo-text__18-400= description
