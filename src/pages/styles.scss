@@ -78,3 +78,33 @@
     margin-bottom: 50px;
   }
 }
+
+.xo-steps__layouts {
+  & li.active span:first-child {
+    box-sizing: border-box;
+    border: 2px solid blue;
+    color: var(--color-accent);
+    background-color: var(--color-bg);
+    font-weight: 600;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 40px);
+      height: 2px;
+      background-color: var(--color-accent);
+      left: 40px;
+      z-index: -10;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: calc(100% / 2);
+      height: 2px;
+      background-color: #cecece;
+      right: 0;
+      z-index: -10;
+    }
+  }
+}

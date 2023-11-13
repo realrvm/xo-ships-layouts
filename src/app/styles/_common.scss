@@ -18,56 +18,95 @@ main.xo-main {
     text-transform: uppercase;
   }
 
+  &__28-700 {
+    font:
+      700 28px/1 "Monrope",
+      sans-serif;
+  }
+
   &__24-600 {
-    font: 600 24px/1.4 "Monrope", sans-serif;
+    font:
+      600 24px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__24-500 {
-    font: 500 24px/1.4 "Monrope", sans-serif;
+    font:
+      500 24px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__20-600 {
-    font: 600 20px/1.4 "Monrope", sans-serif;
+    font:
+      600 20px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__20-400 {
-    font: 400 20px/1.4 "Monrope", sans-serif;
+    font:
+      400 20px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__18-700 {
-    font: 700 18px/1.4 "Monrope", sans-serif;
+    font:
+      700 18px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__18-600 {
-    font: 600 18px/1.4 "Monrope", sans-serif;
+    font:
+      600 18px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__18-500 {
-    font: 500 18px/1.4 "Monrope", sans-serif;
+    font:
+      500 18px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__18-400 {
-    font: 400 18px/1.4 "Monrope", sans-serif;
+    font:
+      400 18px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__16-600 {
-    font: 500 16px/1.4 "Monrope", sans-serif;
+    font:
+      600 16px/1.4 "Monrope",
+      sans-serif;
+  }
+
+  &__16-600--gray {
+    font:
+      600 16px/1.4 "Monrope",
+      sans-serif;
+    color: var(--color-secondary);
   }
 
   &__16-500 {
-    font: 500 16px/1.4 "Monrope", sans-serif;
+    font:
+      500 16px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__14-600 {
-    font: 600 14px/1.4 "Monrope", sans-serif;
+    font:
+      600 14px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__14-400 {
-    font: 400 14px/1.4 "Monrope", sans-serif;
+    font:
+      400 14px/1.4 "Monrope",
+      sans-serif;
   }
 
   &__12-400 {
-    font: 400 14px/1.4 "Monrope", sans-serif;
+    font:
+      400 14px/1.4 "Monrope",
+      sans-serif;
   }
 }
 
@@ -144,11 +183,11 @@ main.xo-main {
   }
 
   &__simple-select {
-    background: url(../assets/img/arrow-down-sm.svg) no-repeat;
+    background: url(../img/arrow-down-sm.svg) no-repeat;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-position: 85%;
+    background-position: 93%;
   }
 }
 
@@ -375,6 +414,8 @@ main.xo-main {
 }
 
 .xo-steps {
+  margin-bottom: 40px;
+
   & > ul {
     display: flex;
     max-width: 900px;
@@ -412,34 +453,6 @@ main.xo-main {
 
   & li span:last-child {
     color: var(--color-accent);
-  }
-
-  & li.active span:first-child {
-    box-sizing: border-box;
-    border: 2px solid blue;
-    color: var(--color-accent);
-    background-color: var(--color-bg);
-    font-weight: 600;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: calc(100% - 40px);
-      height: 2px;
-      background-color: var(--color-accent);
-      left: 40px;
-      z-index: -10;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: calc(100% / 2);
-      height: 2px;
-      background-color: #cecece;
-      right: 0;
-      z-index: -10;
-    }
   }
 
   & li.active span:last-child {
@@ -490,13 +503,14 @@ main.xo-main {
 }
 
 .xo-collapse {
-  &[open] .xo-collapse__summary:before {
+  margin: 10px 0;
+
+  &[open] > .xo-collapse__summary:before {
     transform: rotate(270deg);
   }
 
   &__summary {
     position: relative;
-    width: 100%;
 
     &::marker {
       content: "";
@@ -515,9 +529,11 @@ main.xo-main {
       transform-origin: 4px 50%;
       transition: 0.2s transform ease;
     }
-
-    & span {
-      font: 700 18px/1.4 "Manrope",sans-serif;
-    }
   }
+}
+
+.xo-link-more {
+  display: inline-block;
+  font: 400 14px/1.4 "Mantrope", sans-serif;
+  color: var(--color-accent);
 }

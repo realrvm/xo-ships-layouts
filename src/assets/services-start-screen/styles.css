@@ -156,6 +156,9 @@ main.xo-main {
   font: 500 24px/1 "Monrope", sans-serif;
   text-transform: uppercase;
 }
+.xo-text__28-700 {
+  font: 700 28px/1 "Monrope", sans-serif;
+}
 .xo-text__24-600 {
   font: 600 24px/1.4 "Monrope", sans-serif;
 }
@@ -181,7 +184,11 @@ main.xo-main {
   font: 400 18px/1.4 "Monrope", sans-serif;
 }
 .xo-text__16-600 {
-  font: 500 16px/1.4 "Monrope", sans-serif;
+  font: 600 16px/1.4 "Monrope", sans-serif;
+}
+.xo-text__16-600--gray {
+  font: 600 16px/1.4 "Monrope", sans-serif;
+  color: var(--color-secondary);
 }
 .xo-text__16-500 {
   font: 500 16px/1.4 "Monrope", sans-serif;
@@ -252,11 +259,11 @@ main.xo-main {
   opacity: 0.5;
 }
 .xo-inputs__simple-select {
-  background: url(../assets/img/arrow-down-sm.svg) no-repeat;
+  background: url(../img/arrow-down-sm.svg) no-repeat;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-position: 85%;
+  background-position: 93%;
 }
 
 .xo-link__back {
@@ -437,6 +444,9 @@ main.xo-main {
   border: none;
 }
 
+.xo-steps {
+  margin-bottom: 40px;
+}
 .xo-steps > ul {
   display: flex;
   max-width: 900px;
@@ -469,31 +479,6 @@ main.xo-main {
 }
 .xo-steps li span:last-child {
   color: var(--color-accent);
-}
-.xo-steps li.active span:first-child {
-  box-sizing: border-box;
-  border: 2px solid blue;
-  color: var(--color-accent);
-  background-color: var(--color-bg);
-  font-weight: 600;
-}
-.xo-steps li.active span:first-child:before {
-  content: "";
-  position: absolute;
-  width: calc(100% - 40px);
-  height: 2px;
-  background-color: var(--color-accent);
-  left: 40px;
-  z-index: -10;
-}
-.xo-steps li.active span:first-child:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  height: 2px;
-  background-color: #cecece;
-  right: 0;
-  z-index: -10;
 }
 .xo-steps li.active span:last-child {
   font-weight: 700;
@@ -535,12 +520,14 @@ main.xo-main {
   font-weight: 500;
 }
 
-.xo-collapse[open] .xo-collapse__summary:before {
+.xo-collapse {
+  margin: 10px 0;
+}
+.xo-collapse[open] > .xo-collapse__summary:before {
   transform: rotate(270deg);
 }
 .xo-collapse__summary {
   position: relative;
-  width: 100%;
 }
 .xo-collapse__summary::marker {
   content: "";
@@ -558,8 +545,11 @@ main.xo-main {
   transform-origin: 4px 50%;
   transition: 0.2s transform ease;
 }
-.xo-collapse__summary span {
-  font: 700 18px/1.4 "Manrope", sans-serif;
+
+.xo-link-more {
+  display: inline-block;
+  font: 400 14px/1.4 "Mantrope", sans-serif;
+  color: var(--color-accent);
 }
 
 .sidebar {

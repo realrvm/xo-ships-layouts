@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="./styles.css">
-    <title>Сервис расчетов: “Lobster”</title>
+    <title>Расчет остойчивости-статус</title>
   </head>
   <body>
     <aside class="sidebar">
@@ -37,112 +37,26 @@
     <main class="xo-main">
       <ol class="xo-breadcrumbs__header xo-calc__breadcrumbs">
         <li><a href="*">Сервис расчётов</a></li>
-        <li>Рыболовное “Lobster”</li>
+        <li><a href="*">Рыболовное “Lobster”</a></li>
+        <li>Расчет загрузки судна</li>
       </ol><a class="xo-link__back xo-calc__link-back" href="*"><span>
-          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.75506 11.311L0.229357 6.43494C0.0669965 6.27163 0 6.11854 0 5.98841C0 5.85828 0.0669663 5.68298 0.201835 5.5651L5.72754 0.689012C6.00373 0.444213 6.46209 0.436252 6.75059 0.670674C7.04106 0.903507 7.05051 1.2925 6.77228 1.53592L1.72742 5.98841L6.79743 10.4639C7.07565 10.7063 7.0662 11.0962 6.77574 11.3291C6.4884 11.5636 6.02969 11.556 5.75506 11.311Z" fill="#282828"/></svg></span><span>Вернуться в выбору судна</span></a>
-      <div class="xo-calc__title"><span class="xo-link__back-big"><a href="*">
-            <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.2488 22C11.801 22 11.3531 21.8465 11.0118 21.5396L0.512655 12.111C-0.170885 11.4972 -0.170885 10.5028 0.512655 9.88895L11.0118 0.460379C11.6954 -0.15346 12.8027 -0.15346 13.4863 0.460379C14.1698 1.07422 14.1698 2.06864 13.4863 2.68248L4.22401 11L13.4873 19.3188C14.1709 19.9326 14.1709 20.927 13.4873 21.5408C13.1456 21.8478 12.6972 22 12.2488 22Z" fill="#4472C4"/></svg></a></span>
-        <h1 class="xo-text__title">Сервис расчетов: “Lobster”</h1>
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.75506 11.311L0.229357 6.43494C0.0669965 6.27163 0 6.11854 0 5.98841C0 5.85828 0.0669663 5.68298 0.201835 5.5651L5.72754 0.689012C6.00373 0.444213 6.46209 0.436252 6.75059 0.670674C7.04106 0.903507 7.05051 1.2925 6.77228 1.53592L1.72742 5.98841L6.79743 10.4639C7.07565 10.7063 7.0662 11.0962 6.77574 11.3291C6.4884 11.5636 6.02969 11.556 5.75506 11.311Z" fill="#282828"/></svg></span><span>Вернуться к расчётам</span></a>
+      <div class="xo-calc__header">
+        <div class="xo-calc__header-title"><span class="xo-link__back-big"><a href="*">
+              <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.2488 22C11.801 22 11.3531 21.8465 11.0118 21.5396L0.512655 12.111C-0.170885 11.4972 -0.170885 10.5028 0.512655 9.88895L11.0118 0.460379C11.6954 -0.15346 12.8027 -0.15346 13.4863 0.460379C14.1698 1.07422 14.1698 2.06864 13.4863 2.68248L4.22401 11L13.4873 19.3188C14.1709 19.9326 14.1709 20.927 13.4873 21.5408C13.1456 21.8478 12.6972 22 12.2488 22Z" fill="#4472C4"/></svg></a></span>
+          <h1 class="xo-text__28-700">Расчет остойчивости</h1>
+        </div>
       </div>
-      <div class="xo-calc__tabs">
-        <div class="xo-tabs">
-          <input name="xo-tab-btn" type="radio" value="" id="xo-tab1"/>
-          <label for="xo-tab1">status</label>
-          <input name="xo-tab-btn" type="radio" value="" id="xo-tab2"/>
-          <label for="xo-tab2">Noon-report</label>
-          <input name="xo-tab-btn" type="radio" value="" checked="checked" id="xo-tab3"/>
-          <label for="xo-tab3">Расчет остойчивости</label>
-          <div class="xo-tab" id="xo-tab1-content">
-            <p>status</p>
-          </div>
-          <div class="xo-tab" id="xo-tab2-content">
-            <p>report</p>
-          </div>
-          <div class="xo-tab" id="xo-tab3-content">
-                <button class="xo-btn xo-btn__content-clean xo-calc__stability-calc-btn">Новый расчет остойчивости
-                </button>
-            <section class="xo-calc__stability-cases">
-              <h3 class="xo-calc__stability-cases-title xo-text__24-500">Типовые случаи нагрузки</h3>
-              <div class="xo-calc__stability-cases-cards">
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна с промысла</div>
-                            <div class="xo-icons__three"><span>&#128065;</span><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19.6618 6.91972L18.011 8.5705C17.8427 8.7388 17.5706 8.7388 17.4023 8.5705L13.4275 4.59573C13.2592 4.42743 13.2592 4.15528 13.4275 3.98698L15.0783 2.3362C15.7479 1.66658 16.8365 1.66658 17.5097 2.3362L19.6618 4.48831C20.335 5.15793 20.335 6.24651 19.6618 6.91972ZM12.0095 5.40501L2.60612 14.8084L1.84697 19.1591C1.74313 19.7464 2.25519 20.2549 2.84245 20.1546L7.19321 19.3919L16.5966 9.98852C16.7649 9.82022 16.7649 9.54808 16.5966 9.37978L12.6218 5.40501C12.4499 5.23671 12.1778 5.23671 12.0095 5.40501ZM6.27651 14.0027C6.07956 13.8057 6.07956 13.4906 6.27651 13.2937L11.7911 7.77913C11.988 7.58218 12.3031 7.58218 12.5001 7.77913C12.697 7.97607 12.697 8.29119 12.5001 8.48814L6.98552 14.0027C6.78857 14.1996 6.47346 14.1996 6.27651 14.0027ZM4.98381 17.0142H6.70263V18.3141L4.39297 18.7187L3.27932 17.605L3.68396 15.2954H4.98381V17.0142Z" fill="#4472C4"/></svg></span><span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg></span></div>
-                      </div>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Трюмы заполнены полностью, минимальное количество запасов</p>
-                    </div>
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна на промысел</div>
-                            <div class="xo-icons__three"><span>&#128065;</span><span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19.6618 6.91972L18.011 8.5705C17.8427 8.7388 17.5706 8.7388 17.4023 8.5705L13.4275 4.59573C13.2592 4.42743 13.2592 4.15528 13.4275 3.98698L15.0783 2.3362C15.7479 1.66658 16.8365 1.66658 17.5097 2.3362L19.6618 4.48831C20.335 5.15793 20.335 6.24651 19.6618 6.91972ZM12.0095 5.40501L2.60612 14.8084L1.84697 19.1591C1.74313 19.7464 2.25519 20.2549 2.84245 20.1546L7.19321 19.3919L16.5966 9.98852C16.7649 9.82022 16.7649 9.54808 16.5966 9.37978L12.6218 5.40501C12.4499 5.23671 12.1778 5.23671 12.0095 5.40501ZM6.27651 14.0027C6.07956 13.8057 6.07956 13.4906 6.27651 13.2937L11.7911 7.77913C11.988 7.58218 12.3031 7.58218 12.5001 7.77913C12.697 7.97607 12.697 8.29119 12.5001 8.48814L6.98552 14.0027C6.78857 14.1996 6.47346 14.1996 6.27651 14.0027ZM4.98381 17.0142H6.70263V18.3141L4.39297 18.7187L3.27932 17.605L3.68396 15.2954H4.98381V17.0142Z" fill="#4472C4"/></svg></span><span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg></span></div>
-                      </div>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Пустые трюмы, максимальное количество запасов</p>
-                    </div>
-              </div>
-            </section>
-            <section class="xo-calc__stability-cases">
-              <h3 class="xo-calc__stability-cases-title xo-text__24-500">Выполненные расчеты</h3>
-              <form class="xo-calc__stability-cases-form">
-                <div>
-                      <input class="xo-inputs__simple-input" type="text" placeholder="#000000" name="xo-text" id="xo-text" style="width: 390px"/>
-                      <input class="xo-inputs__calendar" type="date" name="xo-date" id="xo-date" style="width: 164px"/>
-                </div>
-                <div>
-                      <button class="xo-btn xo-btn__accent-fill" type="submit">Найти
-                      </button>
-                      <button class="xo-btn xo-btn__cancel-fill">Сбросить
-                      </button>
-                </div>
-              </form>
-              <div class="xo-calc__stability-cases-cards">
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна с промысла</div>
-                            <div class="xo-icons__two"><span>&#128065;</span><span>
-                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3125 11C19.3125 11.7601 18.6968 12.3754 17.9375 12.3754H11.75V18.5629C11.75 19.323 11.1343 19.9375 10.375 19.9375C9.61574 19.9375 9 19.323 9 18.5629V12.3754H2.8125C2.05324 12.3754 1.4375 11.7601 1.4375 11C1.4375 10.2399 2.05324 9.62543 2.8125 9.62543H9V3.43793C9 2.67781 9.61574 2.0625 10.375 2.0625C11.1343 2.0625 11.75 2.67781 11.75 3.43793V9.62543H17.9375C18.698 9.625 19.3125 10.2395 19.3125 11Z" fill="#198754"/></svg></span></div>
-                      </div>
-                      <p class="xo-text__18-400">Случай нагрузки от <span class="xo-text__18-500">01.03.23 12.00</span></p>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Трюмы заполнены полностью, минимальное количество запасов</p>
-                    </div>
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна с промысла</div>
-                            <div class="xo-icons__two"><span>&#128065;</span><span>
-                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3125 11C19.3125 11.7601 18.6968 12.3754 17.9375 12.3754H11.75V18.5629C11.75 19.323 11.1343 19.9375 10.375 19.9375C9.61574 19.9375 9 19.323 9 18.5629V12.3754H2.8125C2.05324 12.3754 1.4375 11.7601 1.4375 11C1.4375 10.2399 2.05324 9.62543 2.8125 9.62543H9V3.43793C9 2.67781 9.61574 2.0625 10.375 2.0625C11.1343 2.0625 11.75 2.67781 11.75 3.43793V9.62543H17.9375C18.698 9.625 19.3125 10.2395 19.3125 11Z" fill="#198754"/></svg></span></div>
-                      </div>
-                      <p class="xo-text__18-400">Случай нагрузки от <span class="xo-text__18-500">28.02.23 12.00</span></p>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Трюмы заполнены на половину, среднее количество запасов</p>
-                    </div>
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна на промысел</div>
-                            <div class="xo-icons__two"><span>&#128065;</span><span>
-                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3125 11C19.3125 11.7601 18.6968 12.3754 17.9375 12.3754H11.75V18.5629C11.75 19.323 11.1343 19.9375 10.375 19.9375C9.61574 19.9375 9 19.323 9 18.5629V12.3754H2.8125C2.05324 12.3754 1.4375 11.7601 1.4375 11C1.4375 10.2399 2.05324 9.62543 2.8125 9.62543H9V3.43793C9 2.67781 9.61574 2.0625 10.375 2.0625C11.1343 2.0625 11.75 2.67781 11.75 3.43793V9.62543H17.9375C18.698 9.625 19.3125 10.2395 19.3125 11Z" fill="#198754"/></svg></span></div>
-                      </div>
-                      <p class="xo-text__18-400">Случай нагрузки от <span class="xo-text__18-500">15.02.23 12.00</span></p>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Пустые трюмы, максимальное количество запасов</p>
-                    </div>
-                    <div class="xo-calc__stability-cases-card">
-                      <div class="xo-calc__stability-cases-card-header">
-                        <div class="xo-calc__stability-cases-card-header-title xo-text__20-600">Расчет остойчивости судна с промысла</div>
-                            <div class="xo-icons__two"><span>&#128065;</span><span>
-                                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3125 11C19.3125 11.7601 18.6968 12.3754 17.9375 12.3754H11.75V18.5629C11.75 19.323 11.1343 19.9375 10.375 19.9375C9.61574 19.9375 9 19.323 9 18.5629V12.3754H2.8125C2.05324 12.3754 1.4375 11.7601 1.4375 11C1.4375 10.2399 2.05324 9.62543 2.8125 9.62543H9V3.43793C9 2.67781 9.61574 2.0625 10.375 2.0625C11.1343 2.0625 11.75 2.67781 11.75 3.43793V9.62543H17.9375C18.698 9.625 19.3125 10.2395 19.3125 11Z" fill="#198754"/></svg></span></div>
-                      </div>
-                      <p class="xo-text__18-400">Случай нагрузки от <span class="xo-text__18-500">03.02.23 12.00</span></p>
-                      <p><span class="xo-text__18-500">Описание</span></p>
-                      <p class="xo-text__18-400">Трюмы заполнены полностью, минимальное количество запасов</p>
-                    </div>
-              </div>
-            </section>
+      <div class="xo-calc__wrapper">
+        <div class="xo-calc__estimation">
+          <div class="xo-steps xo-steps__status">
+            <ul>
+              <li><span>1</span><span>Запасы</span></li>
+              <li><span>2</span><span>Груз</span></li>
+              <li><span>3</span><span>Константы</span></li>
+              <li class="active"><span>4</span><span>Статус</span></li>
+              <li class="inactive"><span>&#10003;</span></li>
+            </ul>
           </div>
         </div>
       </div>

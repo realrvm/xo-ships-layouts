@@ -1,5 +1,7 @@
-mixin steps(steps = [])
-  .xo-steps
+mixin steps(steps = [], cls)
+  - var attrs = {};
+  - attrs.class = cls;
+  div(class= 'xo-steps')&attributes(attrs)
     ul
       each step,index in steps
         - var {caption, cls} = step;
@@ -11,11 +13,6 @@ mixin steps(steps = [])
           li
             span #{index + 1}
             span= caption
-      if steps.at(-1).cls === 'active'
-        li(class= cls)
-          span
-            | &#10003;
-      else
-        li(class= 'inactive')
-          span
-            | &#10003;
+      li(class= 'inactive')
+        span
+          | &#10003;

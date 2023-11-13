@@ -1,6 +1,5 @@
-mixin collapse(placeholder, width, cls)
-  details.xo-collapse(style= `width: ${width}px`)
-    summary.xo-collapse__summary
+mixin collapse(placeholder, cls= 'xo-text__18-700', width)
+  details.xo-collapse(open)
+    summary(class= 'xo-collapse__summary' style= width ? `width: ${width}px;` : "width: 100%;")
       span(class= cls)= placeholder
-    ul.xo-collapse__content
-      block
+    block

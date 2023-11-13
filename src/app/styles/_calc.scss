@@ -3,11 +3,6 @@
     margin-bottom: 20px;
   }
 
-  &__link-back {
-    display: inline-block;
-    margin-bottom: 40px;
-  }
-
   &__title {
     display: flex;
     align-items: center;
@@ -16,6 +11,125 @@
 
     & h1 {
       margin: 0;
+    }
+  }
+
+  &__link-back {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & h1 {
+        margin: 0;
+      }
+    }
+
+    &-btns {
+      button:not(:last-child) {
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__estimation {
+    flex: 1;
+
+    &-form {
+      margin-bottom: 40px;
+    }
+
+    &-th {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 15px 0;
+      gap: 50px;
+    }
+
+    &-table-rows {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 15px 0;
+      gap: 50px;
+    }
+
+    &-table-td {
+      display: flex;
+      align-items: center;
+
+      span:first-child {
+        margin-right: 15px;
+      }
+    }
+
+    &-inputs {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      margin-bottom: 30px;
+
+      & span {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__findings {
+    flex-basis: 400px;
+    align-self: flex-start;
+    border-radius: 6px;
+    border: 1px solid var(--color-secondary);
+    padding: 20px 25px 30px 25px;
+
+    &-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px 0;
+      border-bottom: 1px solid #ececec;
+
+      &:last-child {
+      border-bottom: 1px solid var(--color-secondary);
+      }
+    }
+
+    &-header {
+      margin-bottom: 10px;
+
+      &-row {
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        &> div {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        &:first-child {
+          margin-bottom: 4px;
+        }
+      }
+
+      &-img {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

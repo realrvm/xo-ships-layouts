@@ -1,0 +1,28 @@
+extends /shared/ui/layout
+
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/steps
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Расчет остойчивости-результат'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {caption: 'Расчет загрузки судна'}];
+  - var steps = [{caption:'Запасы'}, {caption: 'Груз'}, {caption: "Константы"}, {caption: "Статус"}];
+
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться к расчётам
+    .xo-calc__header
+      .xo-calc__header-title
+        +arrow-left('*')
+        h1.xo-text__28-700 Расчет остойчивости
+    .xo-calc__wrapper
+      .xo-calc__estimation
+        +steps(steps, 'xo-steps__complete')

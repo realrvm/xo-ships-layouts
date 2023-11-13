@@ -9,6 +9,7 @@ include /shared/mixins/ui/steps
 include /shared/mixins/ui/tabs
 include /shared/mixins/ui/inputs
 include /shared/mixins/ui/collapse
+include /shared/mixins/ui/link-more
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -31,12 +32,18 @@ block content
           a(href='services-start-screen/services-start-screen.html') Стартовый экран  сервисов
           a(href='calc-service/calc-service.html') Команда сервис расчётов
           a(href='calc-service-lobster/calc-service-lobster.html') Сервис расчётов Lobster(эк 43)
+          a(href='calc-service-reserves/calc-service-reserves.html') Расчёт остойчивости - запасы(эк 44)
+          a(href='calc-service-cargo/calc-service-cargo.html') Расчёт остойчивости - груз(эк 46)
+          a(href='calc-service-constants/calc-service-constants.html') Расчёт остойчивости - константы(эк 48)
+          a(href='calc-service-status/calc-service-status.html') Расчёт остойчивости - статус(эк 52)
+          a(href='calc-service-complete/calc-service-complete.html') Расчёт остойчивости - результат(эк 58)
 
       section.xo-layouts__typography
         h2 Типография
         .xo-layouts__typography-items
           span.xo-text__title Заголовок
           span.xo-text__subtitle Подзаголовок
+          span.xo-text__28-700 Текст 28-700
           span.xo-text__24-600 Текст 24-600
           span.xo-text__24-500 Текст 24-500
           span.xo-text__20-600 Текст 20-600
@@ -77,6 +84,7 @@ block content
             | Вернуться к выбору судна
           +breadcrumbs(breadcrumbsLinks)
           +arrow-left('*')
+          +link-more
         .xo-layouts__icons
           +three-icons
           +two-icons
@@ -84,11 +92,12 @@ block content
           +cb-double
           +cb-tripple
         .xo-layouts__steps
-          +steps(steps)
+          +steps(steps, 'xo-steps__layouts')
         .xo-layouts__tabs
           +tabs(tabs)
             |   - the test for the layouts page
         .xo-layouts__collapse
-          +collapse('Дизельное топливо', '250')
-            each item in collaps_items
-              li= item
+          +collapse('Дизельное топливо')
+            ul.xo-collapse__content
+              each item in collaps_items
+                li= item

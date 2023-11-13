@@ -1,0 +1,145 @@
+extends /shared/ui/layout
+
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/steps
+include /shared/mixins/ui/button
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/collapse
+include /shared/mixins/ui/cbs
+include /shared/mixins/ui/link-more
+
+include /shared/mixins/svg/settings-sm
+include /shared/mixins/svg/circle-check
+include /shared/mixins/svg/circle-exclamation
+
+include /snippets/table/th
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Расчет остойчивости-запасы'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {caption: 'Расчет загрузки судна'}];
+  - var steps = [{caption:'Запасы',cls: 'active'}, {caption: 'Груз', cls: 'inactive'}, {caption: "Константы", cls: 'inactive'}, {caption: "Статус", cls: 'inactive'}];
+  - var options = [{1 :'m'}, {2: 't'}, {3: 'km'}];
+  - var headers = ['Наименование', 'Заполненность', 'Плотность', 'Поправка на СП'];
+
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться к расчётам
+    .xo-calc__header
+      .xo-calc__header-title
+        +arrow-left('*')
+        h1.xo-text__28-700 Расчет остойчивости
+      .xo-calc__header-btns
+        +button('xo-btn__accent-fill')
+          | Импорт данных
+        +button('xo-btn__accent-fill')
+          | Справочник
+    .xo-calc__wrapper
+      .xo-calc__estimation
+        +steps(steps, 'xo-steps__reserves')
+        form.xo-calc__estimation-form
+          .xo-calc__estimation-inputs
+            div
+              span.xo-text__18-700 Дата
+              +calendar('187')
+            div
+              span.xo-text__18-700 Грузовая марка
+              +simple_select(options, '187')
+          .xo-calc__estimation-inputs
+            div
+              span.xo-text__18-700 Параметры
+              +simple_select(options, '128')
+          .xo-calc__estimation-table
+            +collapse('Форпик / Forepeak', 'xo-text__18-700', '210')
+              +th(headers)
+              each val in [1]
+                include /snippets/table/tr
+            +collapse('Дизельное топливо', 'xo-text__18-700','220')
+              +th(headers)
+              each val in [1, 2, 3, 4, 5, 6, 7]
+                include /snippets/table/tr
+            +collapse('Пресная вода', 'xo-text__18-700','185')
+              +th(headers)
+              each val in [1, 2]
+                include /snippets/table/tr
+            +collapse('Смазочное масло', 'xo-text__18-700','210')
+              +th(headers)
+              each val in [1, 2, 3]
+                include /snippets/table/tr
+        +button('xo-btn__accent-fill')
+          | Продолжить
+      .xo-calc__findings
+        .xo-calc__findings-header
+          .xo-calc__findings-header-row
+            div
+              span.xo-calc__findings-header-img
+                +svg-circle-check
+              span.xo-text__14-400 Остойчивость
+            div
+              span.xo-calc__findings-header-img
+                +svg-circle-exclamation
+              span.xo-text__14-400 Аварийная остойчивость
+          .xo-calc__findings-header-row
+            +link-more
+            +link-more
+        +collapse('Результирующие', 'xo-text__18-600')
+          +collapse('Водоизмещение', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Посадка судна', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Остойчивость', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Прочность', 'xo-text__16-600--gray')
+          +collapse('Видимость', 'xo-text__16-600--gray')

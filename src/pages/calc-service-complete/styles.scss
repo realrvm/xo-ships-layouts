@@ -1,0 +1,27 @@
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
+@import "../../app/styles/reset";
+@import "../../app/styles/main";
+@import "../../app/styles/common";
+@import "../../app/styles/sidebar";
+@import "../../app/styles/calc";
+
+/* СТИЛИ СТРАНИЦЫ */
+
+.xo-steps__complete {
+  & li:last-child span:first-child {
+    box-sizing: border-box;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    font-weight: 600;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 40px);
+      height: 2px;
+      background-color: var(--color-accent);
+      left: 40px;
+      z-index: -10;
+    }
+  }
+}
