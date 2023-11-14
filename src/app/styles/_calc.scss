@@ -88,6 +88,12 @@
         margin-right: 20px;
       }
     }
+
+    &-btns {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
   }
 
   &__findings {

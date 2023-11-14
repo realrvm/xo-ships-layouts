@@ -668,6 +668,11 @@ main.xo-main {
 .xo-calc__estimation-inputs span {
   margin-right: 20px;
 }
+.xo-calc__estimation-btns {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
 .xo-calc__findings {
   flex-basis: 400px;
   align-self: flex-start;
