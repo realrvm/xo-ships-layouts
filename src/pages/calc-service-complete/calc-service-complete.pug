@@ -4,6 +4,15 @@ include /shared/mixins/ui/breadcrumbs
 include /shared/mixins/ui/link-back
 include /shared/mixins/ui/arrow-left
 include /shared/mixins/ui/steps
+include /shared/mixins/ui/link-more
+include /shared/mixins/ui/button
+
+include /shared/mixins/svg/circle-check
+include /shared/mixins/svg/circle-exclamation
+include /shared/mixins/svg/search
+include /shared/mixins/svg/arrow-down
+include /shared/mixins/svg/arrow-right
+include /shared/mixins/svg/docs2
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -26,3 +35,31 @@ block content
     .xo-calc__wrapper
       .xo-calc__estimation
         +steps(steps, 'xo-steps__complete')
+        p.xo-text__24-300.xo-calc__estimation-stability-ready Готово!
+        .xo-calc__estimation-stability
+          .xo-calc__findings-header
+            .xo-calc__findings-header-row
+              div
+                span.xo-calc__findings-header-img
+                  +svg-circle-check
+                span.xo-text__14-400 Остойчивость
+              div
+                span.xo-calc__findings-header-img
+                  +svg-circle-exclamation
+                span.xo-text__14-400 Аварийная остойчивость
+            .xo-calc__findings-header-row
+              +link-more
+              +link-more
+          .xo-calc__estimation-stability-btns
+            +button('xo-btn__accent-fill')
+              +svg-search
+              span Просмотреть расчет остойчивости
+            +button('xo-btn__accent-fill')
+              +svg-arrow-down
+              span Скачать пакет документов
+            +button('xo-btn__accent-fill')
+              +svg-arrow-right
+              span Отправить пакет документов
+            +button('xo-btn__accent-fill')
+              +svg-docs2
+              span Сохранить случай нагрузки

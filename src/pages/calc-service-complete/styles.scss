@@ -25,3 +25,29 @@
     }
   }
 }
+
+.xo-calc__estimation-stability {
+  &-ready {
+    margin-bottom: 30px;
+  }
+  & > .xo-calc__findings-header {
+    max-width: 373px;
+    margin-bottom: 40px;
+  }
+
+  &-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    & button {
+      display: flex;
+      align-items: center;
+    }
+
+    & span {
+      margin-left: 10px;
+    }
+  }
+}

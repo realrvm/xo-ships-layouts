@@ -1,4 +1,3 @@
-include /shared/mixins/svg/logo
 include /shared/mixins/svg/analitics
 include /shared/mixins/svg/calculations
 include /shared/mixins/svg/settings
@@ -11,7 +10,7 @@ include /shared/mixins/svg/office
 aside.sidebar
   .sidebar__logo
     a(href='../index.html')
-      +svg-logo
+      image(src='../img/logo.png' alt='logo')
   ul.sidebar__services
     li.sidebar__service(title= 'Аналитика')
       div(data-path='analytics')
