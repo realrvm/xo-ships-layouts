@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="./styles.css">
-    <title>Расчет остойчивости-статус</title>
+    <title>Расчет остойчивости-статус-груз</title>
   </head>
   <body>
     <aside class="sidebar">
@@ -57,6 +57,36 @@
               <li class="active"><span>4</span><span>Статус</span></li>
               <li class="inactive"><span>&#10003;</span></li>
             </ul>
+          </div>
+          <div class="xo-calc__status-btns">
+            <button class="xo-btn xo-btn__status--fill">Балластные цистерны
+            </button>
+            <button class="xo-btn xo-btn__status--clean">Грузовые трюмы
+            </button>
+          </div>
+          <div class="xo-calc__status-images"><img src="../img/ship8.png" alt=""><img src="../img/ship9.png" alt=""></div>
+          <div class="xo-calc__status-bottom">
+            <div class="xo-calc__estimation-btns">
+              <button class="xo-btn xo-btn__accent-fill">Продолжить
+              </button>
+              <button class="xo-btn xo-btn__cancel-fill">Вернуться на предыдущий шаг
+              </button>
+            </div>
+            <div class="xo-calc__findings">
+              <div class="xo-calc__findings-header">
+                <div class="xo-calc__findings-header-row">
+                  <div><span class="xo-calc__findings-header-img">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="circle-check 2" clip-path="url(#clip0_404_1913)"><path id="Vector" d="M9.52344 13.2734C9.09766 13.6992 8.40234 13.6992 7.97656 13.2734L5.47656 10.7734C5.05078 10.3477 5.05078 9.65234 5.47656 9.22656C5.90234 8.80078 6.59766 8.80078 7.02344 9.22656L8.75 10.9531L12.9766 6.72656C13.4023 6.30078 14.0977 6.30078 14.5234 6.72656C14.9492 7.15234 14.9492 7.84766 14.5234 8.27344L9.52344 13.2734ZM20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10ZM10 1.875C5.51172 1.875 1.875 5.51172 1.875 10C1.875 14.4883 5.51172 18.125 10 18.125C14.4883 18.125 18.125 14.4883 18.125 10C18.125 5.51172 14.4883 1.875 10 1.875Z" fill="#198754"/></g><defs><clipPath id="clip0_404_1913"><rect width="20" height="20" fill="white"/></clipPath></defs></svg></span><span class="xo-text__14-400">Остойчивость</span></div>
+                  <div><span class="xo-calc__findings-header-img">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="circle-exclamation 1" clip-path="url(#clip0_404_1919)"><path id="Vector" d="M10 0C4.47656 0 0 4.47656 0 10C0 15.5234 4.47656 20 10 20C15.5234 20 20 15.5234 20 10C20 4.47656 15.5234 0 10 0ZM10 18.125C5.51953 18.125 1.875 14.4801 1.875 10C1.875 5.51992 5.51953 1.875 10 1.875C14.4805 1.875 18.125 5.51992 18.125 10C18.125 14.4801 14.4805 18.125 10 18.125ZM10 11.875C10.5176 11.875 10.9375 11.4551 10.9375 10.9375V5.9375C10.9375 5.42188 10.5195 5 10 5C9.48047 5 9.0625 5.42188 9.0625 5.9375V10.9375C9.0625 11.457 9.48438 11.875 10 11.875ZM10 13.168C9.32187 13.168 8.77188 13.718 8.77188 14.3961C8.77344 15.0742 9.32031 15.625 10 15.625C10.6797 15.625 11.2281 15.075 11.2281 14.3969C11.2266 13.7188 10.6797 13.168 10 13.168Z" fill="#DC3545"/></g><defs><clipPath id="clip0_404_1919"><rect width="20" height="20" fill="white"/></clipPath></defs></svg></span><span class="xo-text__14-400">Аварийная остойчивость</span></div>
+                </div>
+                <div class="xo-calc__findings-header-row"><a class="xo-link-more" href="*">Подробнее ></a><a class="xo-link-more" href="*">Подробнее ></a>
+                </div>
+              </div>
+              <details class="xo-collapse" open="open">
+                <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__18-600">Результирующие</span></summary>
+              </details>
+            </div>
           </div>
         </div>
       </div>

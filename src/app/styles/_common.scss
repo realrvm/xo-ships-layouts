@@ -162,7 +162,8 @@ main.xo-main {
     border: none;
   }
 
-  &__cross, &__add {
+  &__cross,
+  &__add {
     background-color: transparent;
     border: none;
     outline: none;
@@ -176,9 +177,22 @@ main.xo-main {
 
   &__add {
     color: var(--color-add-content);
-    font: 400 18px/1.4 'Monrope', sans-serif;
+    font:
+      400 18px/1.4 "Monrope",
+      sans-serif;
   }
 
+  &__status--clean {
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-bg);
+  }
+
+  &__status--fill {
+    color: var(--color-primary);
+    border: 1px solid #e0e0e0;
+    background-color: #e0e0e0;
+  }
 }
 
 .xo-inputs {
@@ -573,7 +587,9 @@ main.xo-main {
       outline: none;
       cursor: pointer;
       color: var(--color-accent);
-      font: 400 18px/1.4 "Mantrope", sans-serif;
+      font:
+        400 18px/1.4 "Mantrope",
+        sans-serif;
       margin-right: 20px;
     }
   }

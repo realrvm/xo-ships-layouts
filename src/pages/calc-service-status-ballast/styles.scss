@@ -36,3 +36,25 @@
     }
   }
 }
+
+.xo-calc__status {
+  &-btns,
+  &-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &-btns {
+    margin-bottom: 50px;
+  }
+
+  &-images {
+    margin-bottom: 136px;
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}

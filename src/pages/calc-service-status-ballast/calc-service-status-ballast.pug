@@ -1,0 +1,63 @@
+extends /shared/ui/layout
+
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/steps
+include /shared/mixins/ui/button
+include /shared/mixins/ui/collapse
+include /shared/mixins/ui/link-more
+
+include /shared/mixins/svg/circle-check
+include /shared/mixins/svg/circle-exclamation
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Расчет остойчивости-статус-балласт'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {caption: 'Расчет загрузки судна'}];
+  - var steps = [{caption:'Запасы'}, {caption: 'Груз'}, {caption: "Константы"}, {caption: "Статус", cls: 'active'}];
+
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться к расчётам
+    .xo-calc__header
+      .xo-calc__header-title
+        +arrow-left('*')
+        h1.xo-text__28-700 Расчет остойчивости
+    .xo-calc__wrapper
+      .xo-calc__estimation
+        +steps(steps, 'xo-steps__status')
+        .xo-calc__status-btns
+          +button('xo-btn__status--clean')
+            | Балластные цистерны
+          +button('xo-btn__status--fill')
+            | Грузовые трюмы
+        .xo-calc__status-images
+          img(src= '../img/ship6.png' alt= '')
+          img(src= '../img/ship7.png' alt= '')
+        .xo-calc__status-bottom
+          .xo-calc__estimation-btns
+            +button('xo-btn__accent-fill')
+              | Продолжить
+            +button('xo-btn__cancel-fill')
+              | Вернуться на предыдущий шаг
+          .xo-calc__findings
+            .xo-calc__findings-header
+              .xo-calc__findings-header-row
+                div
+                  span.xo-calc__findings-header-img
+                    +svg-circle-check
+                  span.xo-text__14-400 Остойчивость
+                div
+                  span.xo-calc__findings-header-img
+                    +svg-circle-exclamation
+                  span.xo-text__14-400 Аварийная остойчивость
+              .xo-calc__findings-header-row
+                +link-more
+                +link-more
+            +collapse('Результирующие', 'xo-text__18-600')

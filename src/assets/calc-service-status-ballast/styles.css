@@ -261,6 +261,16 @@ main.xo-main {
   color: var(--color-add-content);
   font: 400 18px/1.4 "Monrope", sans-serif;
 }
+.xo-btn__status--clean {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-bg);
+}
+.xo-btn__status--fill {
+  color: var(--color-primary);
+  border: 1px solid #e0e0e0;
+  background-color: #e0e0e0;
+}
 
 .xo-inputs__simple-input, .xo-inputs__calendar, .xo-inputs__simple-select {
   font: 500 16px/1.4 "Monrope", sans-serif;
@@ -775,4 +785,20 @@ main.xo-main {
   background-color: #cecece;
   right: 0;
   z-index: -10;
+}
+
+.xo-calc__status-btns, .xo-calc__status-images {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.xo-calc__status-btns {
+  margin-bottom: 50px;
+}
+.xo-calc__status-images {
+  margin-bottom: 136px;
+}
+.xo-calc__status-bottom {
+  display: flex;
+  justify-content: space-between;
 }
