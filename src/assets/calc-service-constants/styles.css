@@ -247,6 +247,20 @@ main.xo-main {
   background-color: var(--color-add-content);
   border: none;
 }
+.xo-btn__cross, .xo-btn__add {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.xo-btn__cross {
+  width: 24px;
+}
+.xo-btn__add {
+  color: var(--color-add-content);
+  font: 400 18px/1.4 "Monrope", sans-serif;
+}
 
 .xo-inputs__simple-input, .xo-inputs__calendar, .xo-inputs__simple-select {
   font: 500 16px/1.4 "Monrope", sans-serif;
@@ -314,17 +328,24 @@ main.xo-main {
   height: 16px;
   margin-left: 12px;
 }
-.xo-icons__two {
+.xo-icons__two, .xo-icons__two--2 {
   white-space: nowrap;
 }
-.xo-icons__two span:first-child {
+.xo-icons__two span:first-child, .xo-icons__two--2 span:first-child {
   display: inline-block;
-  transform: translateY(-5px);
 }
-.xo-icons__two svg {
+.xo-icons__two svg, .xo-icons__two--2 svg {
   width: 20px;
   height: 22px;
   margin-left: 12px;
+}
+.xo-icons__two span:last-child {
+  transform: translateY(-5px);
+}
+.xo-icons__two--2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .xo-cb__double {
@@ -545,6 +566,21 @@ main.xo-main {
   transform-origin: 4px 50%;
   transition: 0.2s transform ease;
 }
+.xo-collapse__wrapper {
+  position: relative;
+}
+.xo-collapse__wrapper button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-accent);
+  font: 400 18px/1.4 "Mantrope", sans-serif;
+  margin-right: 20px;
+}
 
 .xo-link-more {
   display: inline-block;
@@ -625,6 +661,7 @@ main.xo-main {
 }
 .xo-calc__header-title h1 {
   margin: 0;
+  text-transform: uppercase;
 }
 .xo-calc__header-btns button:not(:last-child) {
   margin-right: 18px;
@@ -667,6 +704,10 @@ main.xo-main {
 }
 .xo-calc__estimation-inputs span {
   margin-right: 20px;
+}
+.xo-calc__estimation-inputs div {
+  display: flex;
+  align-items: center;
 }
 .xo-calc__estimation-btns {
   display: flex;
@@ -734,4 +775,15 @@ main.xo-main {
   background-color: #cecece;
   right: 0;
   z-index: -10;
+}
+
+.xo-calc__constants-row3 {
+  display: grid;
+  grid-template-columns: 40% 25% auto;
+  margin: 10px 0;
+}
+.xo-calc__constants-row6 {
+  display: grid;
+  grid-template-columns: 35% 25% 12% 12% 12% 4%;
+  margin: 15px 0;
 }

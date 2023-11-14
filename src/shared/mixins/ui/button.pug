@@ -1,3 +1,17 @@
+include /shared/mixins/svg/cross-sm
+include /shared/mixins/svg/cross-bg
+
 mixin button(cls, attr)
   button.xo-btn(class= cls)&attributes(attr)
     block
+
+mixin button-cross(size = 'sm')
+  button.xo-btn__cross
+    if size === 'bg'
+      +svg-cross-bg
+    else
+      +svg-cross-sm
+
+mixin button-add(descr)
+  button.xo-btn__add
+    | #{descr}

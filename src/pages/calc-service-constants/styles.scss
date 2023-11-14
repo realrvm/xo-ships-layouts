@@ -36,3 +36,17 @@
     }
   }
 }
+
+.xo-calc__constants {
+  &-row3 {
+    display:grid;
+    grid-template-columns: 40% 25% auto;
+    margin: 10px 0;
+  }
+
+  &-row6 {
+    display:grid;
+    grid-template-columns: 35% 25% 12% 12% 12% 4%;
+    margin: 15px 0;
+  }
+}

@@ -161,6 +161,24 @@ main.xo-main {
     background-color: var(--color-add-content);
     border: none;
   }
+
+  &__cross, &__add {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  &__cross {
+    width: 24px;
+  }
+
+  &__add {
+    color: var(--color-add-content);
+    font: 400 18px/1.4 'Monrope', sans-serif;
+  }
+
 }
 
 .xo-inputs {
@@ -256,12 +274,12 @@ main.xo-main {
     }
   }
 
-  &__two {
+  &__two,
+  &__two--2 {
     white-space: nowrap;
 
     & span:first-child {
       display: inline-block;
-      transform: translateY(-5px);
     }
 
     & svg {
@@ -269,6 +287,18 @@ main.xo-main {
       height: 22px;
       margin-left: 12px;
     }
+  }
+
+  &__two {
+    & span:last-child {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__two--2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 
@@ -530,10 +560,29 @@ main.xo-main {
       transition: 0.2s transform ease;
     }
   }
+
+  &__wrapper {
+    position: relative;
+
+    & button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: var(--color-accent);
+      font: 400 18px/1.4 "Mantrope", sans-serif;
+      margin-right: 20px;
+    }
+  }
 }
 
 .xo-link-more {
   display: inline-block;
-  font: 400 14px/1.4 "Mantrope", sans-serif;
+  font:
+    400 14px/1.4 "Mantrope",
+    sans-serif;
   color: var(--color-accent);
 }

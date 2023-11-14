@@ -3,3 +3,12 @@ mixin collapse(placeholder, cls= 'xo-text__18-700', width)
     summary(class= 'xo-collapse__summary' style= width ? `width: ${width}px;` : "width: 100%;")
       span(class= cls)= placeholder
     block
+
+mixin collapse-add(placeholder, cls= 'xo-text__18-700', width, descr)
+  .xo-collapse__wrapper
+    button
+      | #{descr}
+  details.xo-collapse(open)
+      summary(class= 'xo-collapse__summary' style= width ? `width: ${width}px;` : "width: 100%;")
+        span(class= cls)= placeholder
+      block

@@ -66,8 +66,129 @@
               <li class="inactive"><span>&#10003;</span></li>
             </ul>
           </div>
+          <form class="xo-calc__estimation-form">
+            <div class="xo-calc__estimation-inputs">
+              <div><span class="xo-text__18-700">Обледенение</span>
+                <input type="checkbox" id="xo-cb-double" style="display:none" checked="checked"/>
+                <label class="xo-cb__double" for="xo-cb-double"><span></span></label>
+              </div>
+              <div><span class="xo-text__18-700">Намокание</span>
+                <input type="checkbox" id="xo-cb-double" style="display:none" checked="checked"/>
+                <label class="xo-cb__double" for="xo-cb-double"><span></span></label>
+              </div>
+            </div>
+            <div class="xo-calc__estimation-table">
+              <details class="xo-collapse" open="open">
+                <summary class="xo-collapse__summary" style="width: 160px;"><span class="xo-text__18-700">Константы</span></summary>
+                <div class="xo-calc__constants-row3"><span class="xo-text__16-600">Наименование</span><span class="xo-text__16-600">Масса</span></div>
+                <div class="xo-calc__constants-row3"><span class="xo-text__18-400">Экипаж с багажом / Crews&Effects</span>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="1" name="xo-text" id="xo-text" style="width: 240px"/>
+                  <div class="xo-icons__two--2"><span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19.6618 6.91972L18.011 8.5705C17.8427 8.7388 17.5706 8.7388 17.4023 8.5705L13.4275 4.59573C13.2592 4.42743 13.2592 4.15528 13.4275 3.98698L15.0783 2.3362C15.7479 1.66658 16.8365 1.66658 17.5097 2.3362L19.6618 4.48831C20.335 5.15793 20.335 6.24651 19.6618 6.91972ZM12.0095 5.40501L2.60612 14.8084L1.84697 19.1591C1.74313 19.7464 2.25519 20.2549 2.84245 20.1546L7.19321 19.3919L16.5966 9.98852C16.7649 9.82022 16.7649 9.54808 16.5966 9.37978L12.6218 5.40501C12.4499 5.23671 12.1778 5.23671 12.0095 5.40501ZM6.27651 14.0027C6.07956 13.8057 6.07956 13.4906 6.27651 13.2937L11.7911 7.77913C11.988 7.58218 12.3031 7.58218 12.5001 7.77913C12.697 7.97607 12.697 8.29119 12.5001 8.48814L6.98552 14.0027C6.78857 14.1996 6.47346 14.1996 6.27651 14.0027ZM4.98381 17.0142H6.70263V18.3141L4.39297 18.7187L3.27932 17.605L3.68396 15.2954H4.98381V17.0142Z" fill="#4472C4"/></svg></span><span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg></span></div>
+                </div>
+                <div class="xo-calc__constants-row3"><span class="xo-text__18-400">Продовольствие  / Stores</span>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="1" name="xo-text" id="xo-text" style="width: 240px"/>
+                  <div class="xo-icons__two--2"><span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19.6618 6.91972L18.011 8.5705C17.8427 8.7388 17.5706 8.7388 17.4023 8.5705L13.4275 4.59573C13.2592 4.42743 13.2592 4.15528 13.4275 3.98698L15.0783 2.3362C15.7479 1.66658 16.8365 1.66658 17.5097 2.3362L19.6618 4.48831C20.335 5.15793 20.335 6.24651 19.6618 6.91972ZM12.0095 5.40501L2.60612 14.8084L1.84697 19.1591C1.74313 19.7464 2.25519 20.2549 2.84245 20.1546L7.19321 19.3919L16.5966 9.98852C16.7649 9.82022 16.7649 9.54808 16.5966 9.37978L12.6218 5.40501C12.4499 5.23671 12.1778 5.23671 12.0095 5.40501ZM6.27651 14.0027C6.07956 13.8057 6.07956 13.4906 6.27651 13.2937L11.7911 7.77913C11.988 7.58218 12.3031 7.58218 12.5001 7.77913C12.697 7.97607 12.697 8.29119 12.5001 8.48814L6.98552 14.0027C6.78857 14.1996 6.47346 14.1996 6.27651 14.0027ZM4.98381 17.0142H6.70263V18.3141L4.39297 18.7187L3.27932 17.605L3.68396 15.2954H4.98381V17.0142Z" fill="#4472C4"/></svg></span><span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg></span></div>
+                </div>
+                <div class="xo-calc__constants-row3"><span class="xo-text__18-400">Расходные цистерны / Small tanks</span>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="1" name="xo-text" id="xo-text" style="width: 240px"/>
+                  <div class="xo-icons__two--2"><span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19.6618 6.91972L18.011 8.5705C17.8427 8.7388 17.5706 8.7388 17.4023 8.5705L13.4275 4.59573C13.2592 4.42743 13.2592 4.15528 13.4275 3.98698L15.0783 2.3362C15.7479 1.66658 16.8365 1.66658 17.5097 2.3362L19.6618 4.48831C20.335 5.15793 20.335 6.24651 19.6618 6.91972ZM12.0095 5.40501L2.60612 14.8084L1.84697 19.1591C1.74313 19.7464 2.25519 20.2549 2.84245 20.1546L7.19321 19.3919L16.5966 9.98852C16.7649 9.82022 16.7649 9.54808 16.5966 9.37978L12.6218 5.40501C12.4499 5.23671 12.1778 5.23671 12.0095 5.40501ZM6.27651 14.0027C6.07956 13.8057 6.07956 13.4906 6.27651 13.2937L11.7911 7.77913C11.988 7.58218 12.3031 7.58218 12.5001 7.77913C12.697 7.97607 12.697 8.29119 12.5001 8.48814L6.98552 14.0027C6.78857 14.1996 6.47346 14.1996 6.27651 14.0027ZM4.98381 17.0142H6.70263V18.3141L4.39297 18.7187L3.27932 17.605L3.68396 15.2954H4.98381V17.0142Z" fill="#4472C4"/></svg></span><span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg></span></div>
+                </div>
+              </details>
+              <div class="xo-collapse__wrapper">
+                <button>Раскрыть координатную сетку &gt;</button>
+              </div>
+              <details class="xo-collapse" open="open">
+                <summary class="xo-collapse__summary" style="width: 240px;"><span class="xo-text__18-700">Статические нагрузки</span></summary>
+                <div class="xo-calc__constants-row6"><span class="xo-text__16-600">Наименование</span><span class="xo-text__16-600">Масса</span><span class="xo-text__16-600">X от миделя</span><span class="xo-text__16-600">Y от ДП</span><span class="xo-text__16-600">Z от ОП</span></div>
+                <div class="xo-calc__constants-row6">
+                  <input class="xo-inputs__simple-input" type="text" placeholder="Переоборудование" name="xo-text" id="xo-text" style="width: 400px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="5.60 т" name="xo-text" id="xo-text" style="width: 260px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="3.94" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="0" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="6.53" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <button class="xo-btn__cross">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg>
+                  </button>
+                </div>
+                <div class="xo-calc__constants-row6">
+                  <input class="xo-inputs__simple-input" type="text" placeholder="Контейнер №1" name="xo-text" id="xo-text" style="width: 400px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="0" name="xo-text" id="xo-text" style="width: 260px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="4" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="3" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <input class="xo-inputs__simple-input" type="text" placeholder="2" name="xo-text" id="xo-text" style="width: 94px"/>
+                  <button class="xo-btn__cross">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.334735 0.334735C0.781049 -0.111578 1.50467 -0.111578 1.95098 0.334735L8 6.38376L14.049 0.334735C14.4953 -0.111578 15.219 -0.111578 15.6653 0.334735C16.1116 0.781049 16.1116 1.50467 15.6653 1.95098L9.61624 8L15.6653 14.049C16.1116 14.4953 16.1116 15.219 15.6653 15.6653C15.219 16.1116 14.4953 16.1116 14.049 15.6653L8 9.61624L1.95098 15.6653C1.50467 16.1116 0.781049 16.1116 0.334735 15.6653C-0.111578 15.219 -0.111578 14.4953 0.334735 14.049L6.38376 8L0.334735 1.95098C-0.111578 1.50467 -0.111578 0.781049 0.334735 0.334735Z" fill="#DC3545"/></svg>
+                  </button>
+                </div>
+              </details>
+            </div>
+            <div class="xo-calc__estimation-btn-add">
+              <button class="xo-btn__add">+ Добавить объект</button>
+            </div>
+          </form>
+          <div class="xo-calc__estimation-btns">
+            <button class="xo-btn xo-btn__accent-fill">Продолжить
+            </button>
+            <button class="xo-btn xo-btn__cancel-fill">Вернуться на предыдущий шаг
+            </button>
+          </div>
         </div>
-        <div class="xo-calc__findings"></div>
+        <div class="xo-calc__findings">
+          <div class="xo-calc__findings-header">
+            <div class="xo-calc__findings-header-row">
+              <div><span class="xo-calc__findings-header-img">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="circle-check 2" clip-path="url(#clip0_404_1913)"><path id="Vector" d="M9.52344 13.2734C9.09766 13.6992 8.40234 13.6992 7.97656 13.2734L5.47656 10.7734C5.05078 10.3477 5.05078 9.65234 5.47656 9.22656C5.90234 8.80078 6.59766 8.80078 7.02344 9.22656L8.75 10.9531L12.9766 6.72656C13.4023 6.30078 14.0977 6.30078 14.5234 6.72656C14.9492 7.15234 14.9492 7.84766 14.5234 8.27344L9.52344 13.2734ZM20 10C20 15.5234 15.5234 20 10 20C4.47656 20 0 15.5234 0 10C0 4.47656 4.47656 0 10 0C15.5234 0 20 4.47656 20 10ZM10 1.875C5.51172 1.875 1.875 5.51172 1.875 10C1.875 14.4883 5.51172 18.125 10 18.125C14.4883 18.125 18.125 14.4883 18.125 10C18.125 5.51172 14.4883 1.875 10 1.875Z" fill="#198754"/></g><defs><clipPath id="clip0_404_1913"><rect width="20" height="20" fill="white"/></clipPath></defs></svg></span><span class="xo-text__14-400">Остойчивость</span></div>
+              <div><span class="xo-calc__findings-header-img">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="circle-exclamation 1" clip-path="url(#clip0_404_1919)"><path id="Vector" d="M10 0C4.47656 0 0 4.47656 0 10C0 15.5234 4.47656 20 10 20C15.5234 20 20 15.5234 20 10C20 4.47656 15.5234 0 10 0ZM10 18.125C5.51953 18.125 1.875 14.4801 1.875 10C1.875 5.51992 5.51953 1.875 10 1.875C14.4805 1.875 18.125 5.51992 18.125 10C18.125 14.4801 14.4805 18.125 10 18.125ZM10 11.875C10.5176 11.875 10.9375 11.4551 10.9375 10.9375V5.9375C10.9375 5.42188 10.5195 5 10 5C9.48047 5 9.0625 5.42188 9.0625 5.9375V10.9375C9.0625 11.457 9.48438 11.875 10 11.875ZM10 13.168C9.32187 13.168 8.77188 13.718 8.77188 14.3961C8.77344 15.0742 9.32031 15.625 10 15.625C10.6797 15.625 11.2281 15.075 11.2281 14.3969C11.2266 13.7188 10.6797 13.168 10 13.168Z" fill="#DC3545"/></g><defs><clipPath id="clip0_404_1919"><rect width="20" height="20" fill="white"/></clipPath></defs></svg></span><span class="xo-text__14-400">Аварийная остойчивость</span></div>
+            </div>
+            <div class="xo-calc__findings-header-row"><a class="xo-link-more" href="*">Подробнее ></a><a class="xo-link-more" href="*">Подробнее ></a>
+            </div>
+          </div>
+          <details class="xo-collapse" open="open">
+            <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__18-600">Результирующие</span></summary>
+            <details class="xo-collapse" open="open">
+              <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__16-600">Водоизмещение</span></summary>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+            </details>
+            <details class="xo-collapse" open="open">
+              <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__16-600">Посадка судна</span></summary>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+            </details>
+            <details class="xo-collapse" open="open">
+              <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__16-600">Остойчивость</span></summary>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+            </details>
+            <details class="xo-collapse" open="open">
+              <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__16-600">Прочность</span></summary>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+            </details>
+            <details class="xo-collapse" open="open">
+              <summary class="xo-collapse__summary" style="width: 100%;"><span class="xo-text__16-600">Видимость</span></summary>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+              <div class="xo-calc__findings-row"><span class="xo-text__14-400">Дедвейт</span><span class="xo-text__14-500">957.37 т</span></div>
+            </details>
+          </details>
+        </div>
       </div>
     </main>
   </body>

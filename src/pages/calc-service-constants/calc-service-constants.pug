@@ -5,6 +5,14 @@ include /shared/mixins/ui/link-back
 include /shared/mixins/ui/arrow-left
 include /shared/mixins/ui/steps
 include /shared/mixins/ui/button
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/collapse
+include /shared/mixins/ui/cbs
+include /shared/mixins/ui/link-more
+include /shared/mixins/ui/icons
+
+include /shared/mixins/svg/circle-check
+include /shared/mixins/svg/circle-exclamation
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -34,4 +42,136 @@ block content
     .xo-calc__wrapper
       .xo-calc__estimation
         +steps(steps, 'xo-steps__constants')
+        form.xo-calc__estimation-form
+          .xo-calc__estimation-inputs
+            div
+              span.xo-text__18-700 Обледенение
+              +cb-double
+            div
+              span.xo-text__18-700 Намокание
+              +cb-double
+          .xo-calc__estimation-table
+            +collapse('Константы', 'xo-text__18-700', '160')
+              .xo-calc__constants-row3
+                span.xo-text__16-600 Наименование
+                span.xo-text__16-600 Масса
+              .xo-calc__constants-row3
+                span.xo-text__18-400 Экипаж с багажом / Crews&Effects
+                +simple_input('1', '240')
+                +two-icons-2
+              .xo-calc__constants-row3
+                span.xo-text__18-400 Продовольствие  / Stores
+                +simple_input('1', '240')
+                +two-icons-2
+              .xo-calc__constants-row3
+                span.xo-text__18-400 Расходные цистерны / Small tanks
+                +simple_input('1', '240')
+                +two-icons-2
+            +collapse-add('Статические нагрузки', 'xo-text__18-700', '240', 'Раскрыть координатную сетку >')
+              .xo-calc__constants-row6
+                span.xo-text__16-600 Наименование
+                span.xo-text__16-600 Масса
+                span.xo-text__16-600 X от миделя
+                span.xo-text__16-600 Y от ДП
+                span.xo-text__16-600 Z от ОП
+              .xo-calc__constants-row6
+                +simple_input("Переоборудование", '400')
+                +simple_input("5.60 т", '260')
+                +simple_input("3.94", '94')
+                +simple_input("0", '94')
+                +simple_input("6.53", '94')
+                +button-cross
+              .xo-calc__constants-row6
+                +simple_input("Контейнер №1", '400')
+                +simple_input("0", '260')
+                +simple_input("4", '94')
+                +simple_input("3", '94')
+                +simple_input("2", '94')
+                +button-cross
+          .xo-calc__estimation-btn-add
+            +button-add('+ Добавить объект')
+        .xo-calc__estimation-btns
+          +button('xo-btn__accent-fill')
+            | Продолжить
+          +button('xo-btn__cancel-fill')
+            | Вернуться на предыдущий шаг
       .xo-calc__findings
+        .xo-calc__findings-header
+          .xo-calc__findings-header-row
+            div
+              span.xo-calc__findings-header-img
+                +svg-circle-check
+              span.xo-text__14-400 Остойчивость
+            div
+              span.xo-calc__findings-header-img
+                +svg-circle-exclamation
+              span.xo-text__14-400 Аварийная остойчивость
+          .xo-calc__findings-header-row
+            +link-more
+            +link-more
+        +collapse('Результирующие', 'xo-text__18-600')
+          +collapse('Водоизмещение', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Посадка судна', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Остойчивость', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Прочность', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+          +collapse('Видимость', 'xo-text__16-600')
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
+            .xo-calc__findings-row
+              span.xo-text__14-400 Дедвейт
+              span.xo-text__14-500 957.37 т
