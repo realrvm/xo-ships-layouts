@@ -1,0 +1,32 @@
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
+@import "../../app/styles/reset";
+@import "../../app/styles/main";
+@import "../../app/styles/common";
+@import "../../app/styles/sidebar";
+@import "../../app/styles/calc";
+
+/* СТИЛИ СТРАНИЦЫ */
+.xo-calc__add-reserves {
+  margin-top: 30px;
+  display: inline-flex;
+  flex-direction: column;
+
+  & label,
+  & input {
+    display: block;
+  }
+
+  & label {
+    margin-bottom: 20px;
+  }
+
+  & input {
+    margin-top: 10px;
+    color: var(--color-primary);
+  }
+
+  & button {
+    width: 112px;
+    margin-top: 40px;
+  }
+}

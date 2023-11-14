@@ -97,11 +97,17 @@ main.xo-main {
       sans-serif;
   }
 
+  &__16-400 {
+    font:
+      500 16px/1.4 "Monrope",
+      sans-serif;
+  }
+
   &__14-600 {
     font:
       600 14px/1.4 "Monrope",
       sans-serif;
-  }
+ }
 
   &__14-400 {
     font:
@@ -529,6 +535,7 @@ main.xo-main {
     text-transform: uppercase;
     color: var(--color-secondary);
     font-weight: 300;
+    cursor: pointer;
   }
 
   & > label:not(:last-of-type) {

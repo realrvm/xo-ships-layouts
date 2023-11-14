@@ -22,3 +22,26 @@ mixin tabs(list= [])
             include /snippets/tabs/report
           else
             include /snippets/tabs/stability
+
+mixin tabs-br(list= [])
+  .xo-tabs-br
+    each tab,index in list
+      - var len = list.length;
+      - var indx = index + 1;
+      if indx === len
+        input(name='xo-tab-btn' type='radio' value='' checked id='xo-tab-br' + indx)
+      else
+        input(name='xo-tab-btn' type='radio' value='' id='xo-tab-br' + indx)
+      label(for='xo-tab-br' + indx)
+        | #{tab}
+    each tab,index in list
+      - var indx = index + 1;
+      .xo-tab-br(id='xo-tab-br' + indx + '-content')
+        if block
+          | #{tab}
+          block
+        else
+          if indx === 1
+            include /snippets/tabs/br-cargo
+          else
+            include /snippets/tabs/br-reserves

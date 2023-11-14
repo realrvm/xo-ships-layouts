@@ -1,12 +1,24 @@
 include /shared/mixins/svg/pencil
 include /shared/mixins/svg/cross-sm
 include /shared/mixins/svg/plus
+include /shared/mixins/svg/pencil-micro
+include /shared/mixins/svg/cross-micro
 
 mixin three-icons
   - var pencil = 'svg-pencil';
   - var cross = 'svg-cross-sm';
   .xo-icons__three
     span &#128065;
+    span
+      +#{pencil}
+    span
+      +#{cross}
+
+mixin three-icons-mini
+  - var pencil = 'svg-pencil-micro';
+  - var cross = 'svg-cross-micro';
+  .xo-icons__three
+    span(style={'font-size': '14px'}) &#128065;
     span
       +#{pencil}
     span

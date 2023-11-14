@@ -1,0 +1,31 @@
+extends /shared/ui/layout
+
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/button
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Справочник доп грузов'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {path: "*", caption: 'Расчет остойчивости'}, {path: '*', caption: 'Справочник'}, {caption: 'Новый объект'}];
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться к справочнику
+    .xo-calc__header
+      .xo-calc__header-title
+        +arrow-left('*')
+        h1.xo-text__28-700 Новый объект
+    form.xo-calc__add-cargo
+      label.xo-text__16-400 Наименование
+        +simple_input('Живая продукция в  воде', '400')
+      label.xo-text__16-400 Плотность
+        +simple_input('1.025 т/м3', '400')
+      +button('xo-btn__content-fill-inter', {type: 'submit'})
+        | Добавить

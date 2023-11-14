@@ -1,0 +1,35 @@
+include /shared/mixins/ui/button
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/icons
+
+.xo-calc__br
+  +button('xo-btn__content-fill-inter')
+    | Новый объект
+  form.xo-calc__br-form
+    +simple_input('Наименование', '200')
+    +simple_input('Плотность', '200')
+    +button('xo-btn__accent-clean')
+      | Найти
+    +button('xo-btn__cancel-clean')
+      | Сбросить
+  .xo-calc__br-table
+    .xo-calc__br-table-th
+      span.xo-text__14-600 #
+      span.xo-text__14-600 Наименование
+      span.xo-text__14-600 Плотность
+      span.xo-text__14-600 Действия
+    .xo-calc__br-table-tr
+      span.xo-text__14-400 1
+      span.xo-text__14-400 Замороженная продукция
+      span.xo-text__14-400 0.500
+      +three-icons-mini
+    .xo-calc__br-table-tr
+      span.xo-text__14-400 2
+      span.xo-text__14-400 Живая продукция
+      span.xo-text__14-400 0.800
+      +three-icons-mini
+    .xo-calc__br-table-tr
+      span.xo-text__14-400 3
+      span.xo-text__14-400 Живая продукция в воде
+      span.xo-text__14-400 1.500
+      +three-icons-mini

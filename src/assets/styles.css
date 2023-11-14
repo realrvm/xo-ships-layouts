@@ -196,6 +196,9 @@ main.xo-main {
 .xo-text__16-500 {
   font: 500 16px/1.4 "Monrope", sans-serif;
 }
+.xo-text__16-400 {
+  font: 500 16px/1.4 "Monrope", sans-serif;
+}
 .xo-text__14-600 {
   font: 600 14px/1.4 "Monrope", sans-serif;
 }
@@ -533,6 +536,7 @@ main.xo-main {
   text-transform: uppercase;
   color: var(--color-secondary);
   font-weight: 300;
+  cursor: pointer;
 }
 .xo-tabs > label:not(:last-of-type) {
   margin-right: 28px;
