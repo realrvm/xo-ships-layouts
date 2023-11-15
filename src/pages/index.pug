@@ -34,6 +34,7 @@ block content
           a(href='calc-service-lobster/calc-service-lobster.html') Сервис расчётов Lobster(эк 43)
           a(href='calc-service-reserves/calc-service-reserves.html') Расчёт остойчивости - запасы(эк 44)
           a(href='calc-service-cargo/calc-service-cargo.html') Расчёт остойчивости - груз(эк 46)
+          a(href='calc-service-cargo-modal/calc-service-cargo-modal.html') Расчёт остойчивости - груз - модальное окно(эк 61)
           a(href='calc-service-constants/calc-service-constants.html') Расчёт остойчивости - константы(эк 48)
           a(href='calc-service-status-ballast/calc-service-status-ballast.html') Расчёт остойчивости - статус - балласт(эк 52)
           a(href='calc-service-status-cargo/calc-service-status-cargo.html') Расчёт остойчивости - статус - груз(эк 53)
@@ -50,6 +51,7 @@ block content
           span.xo-text__28-700 Текст 28-700
           span.xo-text__24-600 Текст 24-600
           span.xo-text__24-500 Текст 24-500
+          span.xo-text__20-700 Текст 20-700
           span.xo-text__20-600 Текст 20-600
           span.xo-text__20-400 Текст 20-400
           span.xo-text__18-700 Текст 18-700
@@ -71,6 +73,8 @@ block content
           +button('xo-btn__accent-clean')
             | Найти
           +button('xo-btn__cancel-fill')
+            | Сбросить
+          +button('xo-btn__cancel-fill-del')
             | Сбросить
           +button('xo-btn__cancel-clean')
             | Сбросить
@@ -96,6 +100,8 @@ block content
         .xo-layouts__cbs
           +cb-double
           +cb-tripple
+          +cb
+            | Checkbox
         .xo-layouts__steps
           +steps(steps, 'xo-steps__layouts')
         .xo-layouts__tabs

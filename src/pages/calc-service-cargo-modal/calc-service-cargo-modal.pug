@@ -1,0 +1,45 @@
+extends /shared/ui/layout
+
+include /shared/mixins/ui/cbs
+include /shared/mixins/ui/inputs
+include /shared/mixins/ui/button
+
+include /shared/mixins/svg/cross-bg
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'модальное окно'
+
+block content
+  - var options = [{1 :'m'}, {2: 't'}, {3: 'km'}];
+  .xo-calc__layouts-bg
+    main.xo-calc__cargo-modal
+      .xo-calc__cargo-modal-title
+        h3.xo-text__24-600 Настройка поправки на СП
+        span.xo-calc__cargo-modal-close
+          +svg-cross-bg
+      .xo-calc__cargo-modal-tr
+        +cb
+          span.xo-text__18-400 Включить / отключить поправку на СП для всех помещений
+      form.xo-calc__cargo-modal-form
+        p.xo-text__20-700.xo-calc__cargo-modal-th Грузовые трюмы
+        .xo-calc__cargo-modal-row
+          +cb
+            span.xo-text_18-400 NO.2 Грузовой трюм ЛБ / NO.2 R.S.W.(P)
+          +simple_select(options, '280')
+        p.xo-text__20-700.xo-calc__cargo-modal-th Морозильное отделение  / Freezing rooms
+        .xo-calc__cargo-modal-row
+          +cb
+            span.xo-text_18-400 NO.2 Грузовой трюм ЛБ / NO.2 R.S.W.(P)
+          +simple_select(options, '280')
+        p.xo-text__20-700.xo-calc__cargo-modal-th Рефрижераторные трюма / Refrigerating Holds
+        .xo-calc__cargo-modal-row
+          +cb
+            span.xo-text_18-400 NO.2 Грузовой трюм ЛБ / NO.2 R.S.W.(P)
+          +simple_select(options, '280')
+        .xo-calc__cargo-modal-btns
+          +button('xo-btn__content-fill')
+            | Сохранить
+          +button('xo-btn__cancel-fill-del')
+            | Отменить
