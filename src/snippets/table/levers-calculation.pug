@@ -1,0 +1,59 @@
+- var header_val = [['Угол крена', ' Angle of heel θ°'], 0 , 5, 10, 12, 15, 20, 30, 40, 50, 60, 70, 80];
+- var row1_val = ['Sinθ', '0.000', '0.087', '0.174', '0.208', '0.259', '0.342', '0.500', '0.643', '0.766', '0.766', '0.940', '0.985'];
+- var row2_val = [['Zgи*sinθ', 'KG*sinθ'], '0.000', '0.699', '1.394', '1.669', '2.077', '2.748', '4.013', '5.159', '6.148', '6.148', '7.542', '7.904'];
+- var row3_val = [['Плечо формы lf, м', 'Cross curve lever lf, m'], '0.000', '0.819', '1.635', '1.961', '2.448', '3.230', '4.702', '5.962', '6.850', '7.374', '7.580', '7.509'];
+- var row4_val = [['Плечо ДСО l, м', 'Righting lever GZ, m'], '0.000', '0.120', '0.242', '0.292', '0.371', '0.485', '0.690', '0.804', '0.703', '0.424', '0.039', '-0.394'];
+- var row5_val = [['Плечо ДДО ld, м', 'Lever of DCS ld, m'], '0.000', '0.005', '0.021', '0.030', '0.048', '0.085', '0.188', '0.318', '0.449', '0.548', '0.588', '-0.557'];
+
+section.xo-calc__case-levers
+  h4.xo-text__20-600 Расчет плеч статической и динамической остойчивости / Static and dynamic stability levers calculation
+  .xo-calc__case-levers-wrapper
+    .xo-calc__case-levers-header
+      each item,index in header_val
+        .xo-calc__case-levers-td
+          if index === 0
+            div
+              span= item[0]
+              span= item[1]
+          else
+            span= item
+    .xo-calc__case-levers-row
+      each item in row1_val
+        .xo-calc__case-levers-td
+          span= item
+    .xo-calc__case-levers-row
+      each item,index in row2_val
+        .xo-calc__case-levers-td
+          if index === 0
+            div
+              span= item[0]
+              span= item[1]
+          else
+            span= item
+    .xo-calc__case-levers-row
+      each item,index in row3_val
+        .xo-calc__case-levers-td
+          if index === 0
+            div
+              span= item[0]
+              span= item[1]
+          else
+            span= item
+    .xo-calc__case-levers-row
+      each item,index in row4_val
+        .xo-calc__case-levers-td
+          if index === 0
+            div
+              span= item[0]
+              span= item[1]
+          else
+            span= item
+    .xo-calc__case-levers-row
+      each item,index in row5_val
+        .xo-calc__case-levers-td
+          if index === 0
+            div
+              span= item[0]
+              span= item[1]
+          else
+            span= item

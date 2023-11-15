@@ -100,6 +100,7 @@ input, select {
   --font-size: 18px;
   /* COLORS */
   --color-primary: #282828;
+  --color-primary-gray: #28282850;
   --color-secondary: #878787;
   --color-accent: #4472c4;
   --color-add-content: #198754;
@@ -107,6 +108,7 @@ input, select {
   --color-bg: #fff;
   --color-border: #cecece;
   --color-bg-table: #fbfbfb;
+  --color-bg-td: #f2f2f2;
 }
 
 html {
@@ -173,6 +175,9 @@ main.xo-main {
 }
 .xo-text__20-600 {
   font: 600 20px/1.4 "Manrope", sans-serif;
+}
+.xo-text__20-500 {
+  font: 500 20px/1.4 "Manrope", sans-serif;
 }
 .xo-text__20-400 {
   font: 400 20px/1.4 "Manrope", sans-serif;
@@ -291,7 +296,12 @@ main.xo-main {
   padding: 8px 12px;
   border-radius: 4px;
   border: 1px solid var(--color-secondary);
+}
+.xo-inputs__calendar, .xo-inputs__simple-select {
   color: var(--color-secondary);
+}
+.xo-inputs__simple-input {
+  color: var(--color-primary);
 }
 .xo-inputs__calendar::-webkit-calendar-picker-indicator {
   opacity: 0.5;
@@ -363,8 +373,8 @@ main.xo-main {
   height: 22px;
   margin-left: 12px;
 }
-.xo-icons__two span:last-child {
-  transform: translateY(-5px);
+.xo-icons__two span:first-child {
+  transform: translateY(-3px);
 }
 .xo-icons__two--2 {
   display: flex;
@@ -452,6 +462,7 @@ main.xo-main {
   z-index: 2;
   white-space: nowrap;
   font-size: 16px;
+  cursor: pointer;
 }
 .xo-cb__tripple-lb-off {
   left: -10px;
@@ -479,7 +490,7 @@ main.xo-main {
   content: "";
   position: absolute;
   top: 1px;
-  left: 0;
+  left: -5px;
   width: 0;
   height: 0;
   border-left: 9px solid transparent;
@@ -713,7 +724,7 @@ main.xo-main {
 .xo-calc__header-title {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .xo-calc__header-title h1 {
   margin: 0;
@@ -866,3 +877,631 @@ main.xo-main {
 }
 
 /* СТИЛИ СТРАНИЦЫ */
+.xo-calc__case {
+  display: flex;
+  flex-direction: column;
+}
+.xo-calc__case-isport {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  margin-right: 6px;
+}
+.xo-calc__case-head {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 25% auto;
+  gap: 10px;
+  grid-template-areas: "head1 head2" "head3 head4";
+}
+.xo-calc__case .case-head1 {
+  grid-area: head1;
+}
+.xo-calc__case .case-head2 {
+  grid-area: head2;
+}
+.xo-calc__case .case-head3 {
+  grid-area: head3;
+}
+.xo-calc__case .case-head4 {
+  grid-area: head4;
+}
+.xo-calc__case-summary {
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 25% auto;
+  gap: 10px;
+  grid-template-areas: "summary1 summary2" "summary3 summary4" "   .     summary5";
+}
+.xo-calc__case .case-summary1 {
+  grid-area: summary1;
+}
+.xo-calc__case .case-summary2 {
+  grid-area: summary2;
+}
+.xo-calc__case .case-summary3 {
+  grid-area: summary3;
+}
+.xo-calc__case .case-summary4 {
+  grid-area: summary4;
+}
+.xo-calc__case .case-summary4 > span:not(:first-child) {
+  display: block;
+  padding-left: 5px;
+}
+.xo-calc__case .case-summary5 {
+  grid-area: summary5;
+}
+.xo-calc__case .case-summary5 > span:not(:first-child) {
+  display: block;
+  padding-left: 5px;
+}
+.xo-calc__case-trim-calc {
+  max-width: 1510px;
+  margin-bottom: 66px;
+}
+.xo-calc__case-trim-calc > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-trim-calc-fb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.xo-calc__case-trim-calc-wrapper {
+  display: grid;
+  grid-template-rows: 86px 86px 86px 86px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "trim1 trim1 trim1 trim2 trim2 trim2 trim3 trim3 trim3 trim5" "trim1 trim1 trim1 trim2 trim2 trim2 trim4 trim4 trim4 trim6" "trim7 trim7 trim9 trim11 trim11 trim13 trim15 trim16 trim16 trim18" "trim8 trim8 trim10 trim12 trim12 trim14 trim15 trim17 trim17 trim19";
+}
+.xo-calc__case-trim-calc-wrapper span {
+  display: block;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc1,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc2,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc3,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc4,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc7,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc8,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc11,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc12,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc15,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc16,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc17 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc5,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc6,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc9,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc10,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc13,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc14,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc18,
+.xo-calc__case-trim-calc-wrapper .case-trim-calc19 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc6 {
+  background-color: #ffc7ce;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc1 {
+  grid-area: trim1;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc2 {
+  grid-area: trim2;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc3 {
+  grid-area: trim3;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc4 {
+  grid-area: trim4;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc5 {
+  grid-area: trim5;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc6 {
+  grid-area: trim6;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc7 {
+  grid-area: trim7;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc8 {
+  grid-area: trim8;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc9 {
+  grid-area: trim9;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc10 {
+  grid-area: trim10;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc11 {
+  grid-area: trim11;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc12 {
+  grid-area: trim12;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc13 {
+  grid-area: trim13;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc14 {
+  grid-area: trim14;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc15 {
+  grid-area: trim15;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc16 {
+  grid-area: trim16;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc17 {
+  grid-area: trim17;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc18 {
+  grid-area: trim18;
+}
+.xo-calc__case-trim-calc-wrapper .case-trim-calc19 {
+  grid-area: trim19;
+}
+.xo-calc__case-intact {
+  max-width: 1100px;
+  margin-bottom: 66px;
+}
+.xo-calc__case-intact > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-intact-wrapper {
+  display: grid;
+  grid-template-rows: 86px 86px 86px 86px 86px 57px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "intact1 intact1 intact1 intact6 intact6 intact10" "intact2 intact2 intact2 intact7 intact7 intact11" "intact3 intact3 intact3 intact8 intact8 intact12" "intact4 intact4 intact4 intact9 intact9 intact13" "intact5 intact5 intact5 intact5 intact5 intact14" "intact15 intact15 intact15 intact15 intact15 intact15";
+}
+.xo-calc__case-intact .case-intact1,
+.xo-calc__case-intact .case-intact2,
+.xo-calc__case-intact .case-intact3,
+.xo-calc__case-intact .case-intact4,
+.xo-calc__case-intact .case-intact5,
+.xo-calc__case-intact .case-intact6,
+.xo-calc__case-intact .case-intact7,
+.xo-calc__case-intact .case-intact8,
+.xo-calc__case-intact .case-intact9 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+.xo-calc__case-intact .case-intact10,
+.xo-calc__case-intact .case-intact11,
+.xo-calc__case-intact .case-intact12,
+.xo-calc__case-intact .case-intact13,
+.xo-calc__case-intact .case-intact14,
+.xo-calc__case-intact .case-intact15 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-intact .case-intact1 {
+  grid-area: intact1;
+}
+.xo-calc__case-intact .case-intact2 {
+  grid-area: intact2;
+}
+.xo-calc__case-intact .case-intact3 {
+  grid-area: intact3;
+}
+.xo-calc__case-intact .case-intact4 {
+  grid-area: intact4;
+}
+.xo-calc__case-intact .case-intact5 {
+  grid-area: intact5;
+}
+.xo-calc__case-intact .case-intact6 {
+  grid-area: intact6;
+}
+.xo-calc__case-intact .case-intact7 {
+  grid-area: intact7;
+}
+.xo-calc__case-intact .case-intact8 {
+  grid-area: intact8;
+}
+.xo-calc__case-intact .case-intact9 {
+  grid-area: intact9;
+}
+.xo-calc__case-intact .case-intact10 {
+  grid-area: intact10;
+}
+.xo-calc__case-intact .case-intact11 {
+  grid-area: intact11;
+}
+.xo-calc__case-intact .case-intact12 {
+  grid-area: intact12;
+}
+.xo-calc__case-intact .case-intact13 {
+  grid-area: intact13;
+}
+.xo-calc__case-intact .case-intact14 {
+  grid-area: intact14;
+}
+.xo-calc__case-intact .case-intact15 {
+  grid-area: intact15;
+}
+.xo-calc__case-intact .case-intact15 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.xo-calc__case-damage {
+  max-width: 1100px;
+  margin-bottom: 66px;
+}
+.xo-calc__case-damage > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-damage-wrapper {
+  display: grid;
+  grid-template-rows: 86px 86px 57px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "damage1 damage1 damage1 damage3 damage3 damage4" "damage2 damage2 damage2 damage2 damage2 damage5" "damage6 damage6 damage6 damage6 damage6 damage6";
+}
+.xo-calc__case-damage .case-damage1,
+.xo-calc__case-damage .case-damage2,
+.xo-calc__case-damage .case-damage3 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+.xo-calc__case-damage .case-damage4,
+.xo-calc__case-damage .case-damage5,
+.xo-calc__case-damage .case-damage6 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-damage .case-damage1 {
+  grid-area: damage1;
+}
+.xo-calc__case-damage .case-damage2 {
+  grid-area: damage2;
+}
+.xo-calc__case-damage .case-damage3 {
+  grid-area: damage3;
+}
+.xo-calc__case-damage .case-damage4 {
+  grid-area: damage4;
+}
+.xo-calc__case-damage .case-damage5 {
+  grid-area: damage5;
+}
+.xo-calc__case-damage .case-damage6 {
+  grid-area: damage6;
+}
+.xo-calc__case-damage .case-damage6 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.xo-calc__case-levers {
+  margin-bottom: 66px;
+}
+.xo-calc__case-levers > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-levers-wrapper {
+  border: 1px solid var(--color-primary-gray);
+}
+.xo-calc__case-levers-header, .xo-calc__case-levers-row {
+  display: grid;
+  grid-template-columns: 300px repeat(12, 1fr);
+  grid-template-rows: 68px;
+  font: 500 20px/1.4 "Manrope", sans-serif;
+}
+.xo-calc__case-levers-header > div:first-child, .xo-calc__case-levers-row > div:first-child {
+  background-color: var(--color-bg-td);
+}
+.xo-calc__case-levers-header > div {
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-levers-header > div:first-child span {
+  display: block;
+}
+.xo-calc__case-levers-header > div + div {
+  font: 700 20px/1.4 "Manrope", sans-serif;
+}
+.xo-calc__case-levers-row > div:first-child {
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.xo-calc__case-levers-row > div:first-child span {
+  display: block;
+}
+.xo-calc__case-levers-row > div + div {
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-levers-header {
+  background-color: var(--color-bg-td);
+}
+.xo-calc__case-levers-td {
+  border: 1px solid var(--color-primary-gray);
+}
+.xo-calc__case-criteria {
+  margin-bottom: 66px;
+}
+.xo-calc__case-criteria > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-criteria-wrapper {
+  display: grid;
+  grid-template-rows: 39px repeat(7, 1fr) repeat(4, 39px) 59px;
+  grid-template-columns: 125px 125px 150px 150px 210px 210px 110px 1fr 1fr 1fr 142px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria2 criteria2 criteria2 criteria2 criteria5" "criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria3 criteria3 criteria4 criteria4 criteria5" "criteria6 criteria6 criteria7 criteria7 criteria7 criteria7 criteria18 criteria28 criteria28 criteria38 criteria38 criteria48" "criteria6 criteria6 criteria8 criteria8 criteria8 criteria8 criteria19 criteria29 criteria29 criteria39 criteria39 criteria49" "criteria6 criteria6 criteria9 criteria9 criteria9 criteria9 criteria20 criteria30 criteria30 criteria40 criteria40 criteria50" "criteria6 criteria6 criteria10 criteria10 criteria11 criteria11 criteria21 criteria31 criteria31 criteria41 criteria41 criteria51" "criteria6 criteria6 criteria10 criteria10 criteria12 criteria12 criteria22 criteria32 criteria32 criteria42 criteria42 criteria52" "criteria6 criteria6 criteria10 criteria10 criteria13 criteria13 criteria23 criteria33 criteria33 criteria43 criteria43 criteria53" "criteria14 criteria14 criteria14 criteria14 criteria14 criteria14 criteria24 criteria34 criteria34 criteria44 criteria44 criteria54" "criteria15 criteria15 criteria15 criteria15 criteria15 criteria15 criteria25 criteria35 criteria35 criteria45 criteria45  criteria55" "criteria16 criteria16 criteria16 criteria16 criteria16 criteria16 criteria26 criteria36 criteria36 criteria46 criteria46 criteria56 " "criteria17 criteria17 criteria17 criteria17 criteria17 criteria17 criteria27 criteria37 criteria37 criteria47 criteria47 criteria57" "criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 ";
+}
+.xo-calc__case-criteria .case-criteria7,
+.xo-calc__case-criteria .case-criteria8,
+.xo-calc__case-criteria .case-criteria9,
+.xo-calc__case-criteria .case-criteria10,
+.xo-calc__case-criteria .case-criteria11,
+.xo-calc__case-criteria .case-criteria12,
+.xo-calc__case-criteria .case-criteria13,
+.xo-calc__case-criteria .case-criteria14,
+.xo-calc__case-criteria .case-criteria15,
+.xo-calc__case-criteria .case-criteria16,
+.xo-calc__case-criteria .case-criteria17 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-criteria .case-criteria1,
+.xo-calc__case-criteria .case-criteria2,
+.xo-calc__case-criteria .case-criteria3,
+.xo-calc__case-criteria .case-criteria4,
+.xo-calc__case-criteria .case-criteria5,
+.xo-calc__case-criteria .case-criteria6 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-criteria .case-criteria18,
+.xo-calc__case-criteria .case-criteria19,
+.xo-calc__case-criteria .case-criteria20,
+.xo-calc__case-criteria .case-criteria21,
+.xo-calc__case-criteria .case-criteria22,
+.xo-calc__case-criteria .case-criteria23,
+.xo-calc__case-criteria .case-criteria24,
+.xo-calc__case-criteria .case-criteria25,
+.xo-calc__case-criteria .case-criteria26,
+.xo-calc__case-criteria .case-criteria27,
+.xo-calc__case-criteria .case-criteria28,
+.xo-calc__case-criteria .case-criteria29,
+.xo-calc__case-criteria .case-criteria30,
+.xo-calc__case-criteria .case-criteria31,
+.xo-calc__case-criteria .case-criteria32,
+.xo-calc__case-criteria .case-criteria33,
+.xo-calc__case-criteria .case-criteria34,
+.xo-calc__case-criteria .case-criteria35,
+.xo-calc__case-criteria .case-criteria36,
+.xo-calc__case-criteria .case-criteria37,
+.xo-calc__case-criteria .case-criteria38,
+.xo-calc__case-criteria .case-criteria39,
+.xo-calc__case-criteria .case-criteria40,
+.xo-calc__case-criteria .case-criteria41,
+.xo-calc__case-criteria .case-criteria42,
+.xo-calc__case-criteria .case-criteria43,
+.xo-calc__case-criteria .case-criteria44,
+.xo-calc__case-criteria .case-criteria45,
+.xo-calc__case-criteria .case-criteria46,
+.xo-calc__case-criteria .case-criteria47,
+.xo-calc__case-criteria .case-criteria48,
+.xo-calc__case-criteria .case-criteria49,
+.xo-calc__case-criteria .case-criteria50,
+.xo-calc__case-criteria .case-criteria51,
+.xo-calc__case-criteria .case-criteria52,
+.xo-calc__case-criteria .case-criteria53,
+.xo-calc__case-criteria .case-criteria54,
+.xo-calc__case-criteria .case-criteria55,
+.xo-calc__case-criteria .case-criteria56,
+.xo-calc__case-criteria .case-criteria57,
+.xo-calc__case-criteria .case-criteria58 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-criteria .case-criteria1 {
+  grid-area: criteria1;
+}
+.xo-calc__case-criteria .case-criteria2 {
+  grid-area: criteria2;
+}
+.xo-calc__case-criteria .case-criteria3 {
+  grid-area: criteria3;
+}
+.xo-calc__case-criteria .case-criteria4 {
+  grid-area: criteria4;
+}
+.xo-calc__case-criteria .case-criteria5 {
+  grid-area: criteria5;
+}
+.xo-calc__case-criteria .case-criteria6 {
+  grid-area: criteria6;
+  padding: 20px;
+}
+.xo-calc__case-criteria .case-criteria7 {
+  grid-area: criteria7;
+}
+.xo-calc__case-criteria .case-criteria8 {
+  grid-area: criteria8;
+}
+.xo-calc__case-criteria .case-criteria9 {
+  grid-area: criteria9;
+}
+.xo-calc__case-criteria .case-criteria10 {
+  grid-area: criteria10;
+}
+.xo-calc__case-criteria .case-criteria11 {
+  grid-area: criteria11;
+}
+.xo-calc__case-criteria .case-criteria12 {
+  grid-area: criteria12;
+}
+.xo-calc__case-criteria .case-criteria13 {
+  grid-area: criteria13;
+}
+.xo-calc__case-criteria .case-criteria14 {
+  grid-area: criteria14;
+}
+.xo-calc__case-criteria .case-criteria15 {
+  grid-area: criteria15;
+}
+.xo-calc__case-criteria .case-criteria16 {
+  grid-area: criteria16;
+}
+.xo-calc__case-criteria .case-criteria17 {
+  grid-area: criteria17;
+}
+.xo-calc__case-criteria .case-criteria18 {
+  grid-area: criteria18;
+}
+.xo-calc__case-criteria .case-criteria19 {
+  grid-area: criteria19;
+}
+.xo-calc__case-criteria .case-criteria20 {
+  grid-area: criteria20;
+}
+.xo-calc__case-criteria .case-criteria21 {
+  grid-area: criteria21;
+}
+.xo-calc__case-criteria .case-criteria22 {
+  grid-area: criteria22;
+}
+.xo-calc__case-criteria .case-criteria23 {
+  grid-area: criteria23;
+}
+.xo-calc__case-criteria .case-criteria24 {
+  grid-area: criteria24;
+}
+.xo-calc__case-criteria .case-criteria25 {
+  grid-area: criteria25;
+}
+.xo-calc__case-criteria .case-criteria26 {
+  grid-area: criteria26;
+}
+.xo-calc__case-criteria .case-criteria27 {
+  grid-area: criteria27;
+}
+.xo-calc__case-criteria .case-criteria28 {
+  grid-area: criteria28;
+}
+.xo-calc__case-criteria .case-criteria29 {
+  grid-area: criteria29;
+}
+.xo-calc__case-criteria .case-criteria30 {
+  grid-area: criteria30;
+}
+.xo-calc__case-criteria .case-criteria31 {
+  grid-area: criteria31;
+}
+.xo-calc__case-criteria .case-criteria32 {
+  grid-area: criteria32;
+}
+.xo-calc__case-criteria .case-criteria33 {
+  grid-area: criteria33;
+}
+.xo-calc__case-criteria .case-criteria34 {
+  grid-area: criteria34;
+}
+.xo-calc__case-criteria .case-criteria35 {
+  grid-area: criteria35;
+}
+.xo-calc__case-criteria .case-criteria36 {
+  grid-area: criteria36;
+}
+.xo-calc__case-criteria .case-criteria37 {
+  grid-area: criteria37;
+}
+.xo-calc__case-criteria .case-criteria38 {
+  grid-area: criteria38;
+}
+.xo-calc__case-criteria .case-criteria39 {
+  grid-area: criteria39;
+}
+.xo-calc__case-criteria .case-criteria40 {
+  grid-area: criteria40;
+}
+.xo-calc__case-criteria .case-criteria41 {
+  grid-area: criteria41;
+}
+.xo-calc__case-criteria .case-criteria42 {
+  grid-area: criteria42;
+}
+.xo-calc__case-criteria .case-criteria43 {
+  grid-area: criteria43;
+}
+.xo-calc__case-criteria .case-criteria44 {
+  grid-area: criteria44;
+}
+.xo-calc__case-criteria .case-criteria45 {
+  grid-area: criteria45;
+}
+.xo-calc__case-criteria .case-criteria46 {
+  grid-area: criteria46;
+}
+.xo-calc__case-criteria .case-criteria47 {
+  grid-area: criteria47;
+}
+.xo-calc__case-criteria .case-criteria48 {
+  grid-area: criteria48;
+}
+.xo-calc__case-criteria .case-criteria49 {
+  grid-area: criteria49;
+}
+.xo-calc__case-criteria .case-criteria50 {
+  grid-area: criteria50;
+}
+.xo-calc__case-criteria .case-criteria51 {
+  grid-area: criteria51;
+}
+.xo-calc__case-criteria .case-criteria52 {
+  grid-area: criteria52;
+}
+.xo-calc__case-criteria .case-criteria53 {
+  grid-area: criteria53;
+}
+.xo-calc__case-criteria .case-criteria54 {
+  grid-area: criteria54;
+}
+.xo-calc__case-criteria .case-criteria55 {
+  grid-area: criteria55;
+}
+.xo-calc__case-criteria .case-criteria56 {
+  grid-area: criteria56;
+}
+.xo-calc__case-criteria .case-criteria57 {
+  grid-area: criteria57;
+}
+.xo-calc__case-criteria .case-criteria58 {
+  grid-area: criteria58;
+}
+.xo-calc__case-criteria .case-criteria58 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

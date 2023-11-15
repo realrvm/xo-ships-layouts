@@ -4,6 +4,7 @@
 
   /* COLORS */
   --color-primary: #282828;
+  --color-primary-gray: #28282850;
   --color-secondary: #878787;
   --color-accent: #4472c4;
   --color-add-content: #198754;
@@ -11,6 +12,7 @@
   --color-bg: #fff;
   --color-border: #cecece;
   --color-bg-table: #fbfbfb;
+  --color-bg-td: #f2f2f2;
 }
 
 $base-font-size: var(--font-size);
@@ -48,5 +50,3 @@ a {
 li {
   list-style: none;
 }
-
-

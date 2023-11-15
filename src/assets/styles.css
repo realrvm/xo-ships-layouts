@@ -100,6 +100,7 @@ input, select {
   --font-size: 18px;
   /* COLORS */
   --color-primary: #282828;
+  --color-primary-gray: #28282850;
   --color-secondary: #878787;
   --color-accent: #4472c4;
   --color-add-content: #198754;
@@ -107,6 +108,7 @@ input, select {
   --color-bg: #fff;
   --color-border: #cecece;
   --color-bg-table: #fbfbfb;
+  --color-bg-td: #f2f2f2;
 }
 
 html {
@@ -173,6 +175,9 @@ main.xo-main {
 }
 .xo-text__20-600 {
   font: 600 20px/1.4 "Manrope", sans-serif;
+}
+.xo-text__20-500 {
+  font: 500 20px/1.4 "Manrope", sans-serif;
 }
 .xo-text__20-400 {
   font: 400 20px/1.4 "Manrope", sans-serif;
@@ -291,7 +296,12 @@ main.xo-main {
   padding: 8px 12px;
   border-radius: 4px;
   border: 1px solid var(--color-secondary);
+}
+.xo-inputs__calendar, .xo-inputs__simple-select {
   color: var(--color-secondary);
+}
+.xo-inputs__simple-input {
+  color: var(--color-primary);
 }
 .xo-inputs__calendar::-webkit-calendar-picker-indicator {
   opacity: 0.5;
@@ -363,8 +373,8 @@ main.xo-main {
   height: 22px;
   margin-left: 12px;
 }
-.xo-icons__two span:last-child {
-  transform: translateY(-5px);
+.xo-icons__two span:first-child {
+  transform: translateY(-3px);
 }
 .xo-icons__two--2 {
   display: flex;
@@ -452,6 +462,7 @@ main.xo-main {
   z-index: 2;
   white-space: nowrap;
   font-size: 16px;
+  cursor: pointer;
 }
 .xo-cb__tripple-lb-off {
   left: -10px;
@@ -479,7 +490,7 @@ main.xo-main {
   content: "";
   position: absolute;
   top: 1px;
-  left: 0;
+  left: -5px;
   width: 0;
   height: 0;
   border-left: 9px solid transparent;

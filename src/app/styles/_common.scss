@@ -54,6 +54,12 @@ main.xo-main {
       sans-serif;
   }
 
+  &__20-500 {
+    font:
+      500 20px/1.4 "Manrope",
+      sans-serif;
+  }
+
   &__20-400 {
     font:
       400 20px/1.4 "Manrope",
@@ -229,7 +235,15 @@ main.xo-main {
     padding: 8px 12px;
     border-radius: 4px;
     border: 1px solid var(--color-secondary);
+  }
+
+  &__calendar,
+  &__simple-select {
     color: var(--color-secondary);
+  }
+
+  &__simple-input {
+    color: var(--color-primary);
   }
 
   &__calendar {
@@ -328,8 +342,8 @@ main.xo-main {
   }
 
   &__two {
-    & span:last-child {
-      transform: translateY(-5px);
+    & span:first-child {
+      transform: translateY(-3px);
     }
   }
 
@@ -428,6 +442,7 @@ main.xo-main {
       z-index: 2;
       white-space: nowrap;
       font-size: 16px;
+      cursor:pointer;
     }
 
     &-lb-off {
@@ -461,7 +476,7 @@ main.xo-main {
         content: "";
         position: absolute;
         top: 1px;
-        left: 0;
+        left: -5px;
         width: 0;
         height: 0;
         border-left: 9px solid transparent;

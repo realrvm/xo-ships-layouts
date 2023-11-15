@@ -6,3 +6,736 @@
 @import "../../app/styles/calc";
 
 /* СТИЛИ СТРАНИЦЫ */
+
+.xo-calc__case {
+  display: flex;
+  flex-direction: column;
+
+  &-isport {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    margin-right: 6px;
+  }
+
+  &-head {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 10px;
+    grid-template-areas:
+      "head1 head2"
+      "head3 head4";
+  }
+
+  .case-head1 {
+    grid-area: head1;
+  }
+
+  .case-head2 {
+    grid-area: head2;
+  }
+
+  .case-head3 {
+    grid-area: head3;
+  }
+
+  .case-head4 {
+    grid-area: head4;
+  }
+
+  &-summary {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 10px;
+    grid-template-areas:
+      "summary1 summary2"
+      "summary3 summary4"
+      "   .     summary5";
+  }
+
+  .case-summary1 {
+    grid-area: summary1;
+  }
+
+  .case-summary2 {
+    grid-area: summary2;
+  }
+
+  .case-summary3 {
+    grid-area: summary3;
+  }
+
+  .case-summary4 {
+    grid-area: summary4;
+
+    & > span:not(:first-child) {
+      display: block;
+      padding-left: 5px;
+    }
+  }
+
+  .case-summary5 {
+    grid-area: summary5;
+
+    & > span:not(:first-child) {
+      display: block;
+      padding-left: 5px;
+    }
+  }
+
+  &-trim-calc {
+    max-width: 1510px;
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-fb {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: 86px 86px 86px 86px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "trim1 trim1 trim1 trim2 trim2 trim2 trim3 trim3 trim3 trim5"
+        "trim1 trim1 trim1 trim2 trim2 trim2 trim4 trim4 trim4 trim6"
+        "trim7 trim7 trim9 trim11 trim11 trim13 trim15 trim16 trim16 trim18"
+        "trim8 trim8 trim10 trim12 trim12 trim14 trim15 trim17 trim17 trim19";
+
+      & span {
+        display: block;
+      }
+
+      .case-trim-calc1,
+      .case-trim-calc2,
+      .case-trim-calc3,
+      .case-trim-calc4,
+      .case-trim-calc7,
+      .case-trim-calc8,
+      .case-trim-calc11,
+      .case-trim-calc12,
+      .case-trim-calc15,
+      .case-trim-calc16,
+      .case-trim-calc17 {
+        background-color: var(--color-bg-td);
+        border: 1px solid var(--color-primary-gray);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 16px;
+      }
+
+      .case-trim-calc5,
+      .case-trim-calc6,
+      .case-trim-calc9,
+      .case-trim-calc10,
+      .case-trim-calc13,
+      .case-trim-calc14,
+      .case-trim-calc18,
+      .case-trim-calc19 {
+        border: 1px solid var(--color-primary-gray);
+        display: grid;
+        place-items: center;
+      }
+
+      .case-trim-calc6 {
+        background-color: #ffc7ce;
+      }
+
+      .case-trim-calc1 {
+        grid-area: trim1;
+      }
+
+      .case-trim-calc2 {
+        grid-area: trim2;
+      }
+
+      .case-trim-calc3 {
+        grid-area: trim3;
+      }
+
+      .case-trim-calc4 {
+        grid-area: trim4;
+      }
+
+      .case-trim-calc5 {
+        grid-area: trim5;
+      }
+
+      .case-trim-calc6 {
+        grid-area: trim6;
+      }
+      .case-trim-calc7 {
+        grid-area: trim7;
+      }
+      .case-trim-calc8 {
+        grid-area: trim8;
+      }
+      .case-trim-calc9 {
+        grid-area: trim9;
+      }
+      .case-trim-calc10 {
+        grid-area: trim10;
+      }
+      .case-trim-calc11 {
+        grid-area: trim11;
+      }
+      .case-trim-calc12 {
+        grid-area: trim12;
+      }
+      .case-trim-calc13 {
+        grid-area: trim13;
+      }
+      .case-trim-calc14 {
+        grid-area: trim14;
+      }
+      .case-trim-calc15 {
+        grid-area: trim15;
+      }
+      .case-trim-calc16 {
+        grid-area: trim16;
+      }
+      .case-trim-calc17 {
+        grid-area: trim17;
+      }
+      .case-trim-calc18 {
+        grid-area: trim18;
+      }
+      .case-trim-calc19 {
+        grid-area: trim19;
+      }
+    }
+  }
+
+  &-intact {
+    max-width: 1100px;
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: 86px 86px 86px 86px 86px 57px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "intact1 intact1 intact1 intact6 intact6 intact10"
+        "intact2 intact2 intact2 intact7 intact7 intact11"
+        "intact3 intact3 intact3 intact8 intact8 intact12"
+        "intact4 intact4 intact4 intact9 intact9 intact13"
+        "intact5 intact5 intact5 intact5 intact5 intact14"
+        "intact15 intact15 intact15 intact15 intact15 intact15";
+    }
+
+    .case-intact1,
+    .case-intact2,
+    .case-intact3,
+    .case-intact4,
+    .case-intact5,
+    .case-intact6,
+    .case-intact7,
+    .case-intact8,
+    .case-intact9 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16px;
+    }
+
+    .case-intact10,
+    .case-intact11,
+    .case-intact12,
+    .case-intact13,
+    .case-intact14,
+    .case-intact15 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-intact1 {
+      grid-area: intact1;
+    }
+    .case-intact2 {
+      grid-area: intact2;
+    }
+    .case-intact3 {
+      grid-area: intact3;
+    }
+    .case-intact4 {
+      grid-area: intact4;
+    }
+    .case-intact5 {
+      grid-area: intact5;
+    }
+    .case-intact6 {
+      grid-area: intact6;
+    }
+    .case-intact7 {
+      grid-area: intact7;
+    }
+    .case-intact8 {
+      grid-area: intact8;
+    }
+    .case-intact9 {
+      grid-area: intact9;
+    }
+    .case-intact10 {
+      grid-area: intact10;
+    }
+    .case-intact11 {
+      grid-area: intact11;
+    }
+    .case-intact12 {
+      grid-area: intact12;
+    }
+    .case-intact13 {
+      grid-area: intact13;
+    }
+    .case-intact14 {
+      grid-area: intact14;
+    }
+    .case-intact15 {
+      grid-area: intact15;
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  &-damage {
+    max-width: 1100px;
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: 86px 86px 57px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "damage1 damage1 damage1 damage3 damage3 damage4"
+        "damage2 damage2 damage2 damage2 damage2 damage5"
+        "damage6 damage6 damage6 damage6 damage6 damage6";
+    }
+
+    .case-damage1,
+    .case-damage2,
+    .case-damage3 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16px;
+    }
+
+    .case-damage4,
+    .case-damage5,
+    .case-damage6 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-damage1 {
+      grid-area: damage1;
+    }
+    .case-damage2 {
+      grid-area: damage2;
+    }
+    .case-damage3 {
+      grid-area: damage3;
+    }
+    .case-damage4 {
+      grid-area: damage4;
+    }
+    .case-damage5 {
+      grid-area: damage5;
+    }
+    .case-damage6 {
+      grid-area: damage6;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  &-levers {
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      border: 1px solid var(--color-primary-gray);
+    }
+
+    &-header,
+    &-row {
+      display: grid;
+      grid-template-columns: 300px repeat(12, 1fr);
+      grid-template-rows: 68px;
+      font:
+        500 20px/1.4 "Manrope",
+        sans-serif;
+
+      & > div:first-child {
+        background-color: var(--color-bg-td);
+      }
+    }
+
+    &-header {
+      & > div {
+        display: grid;
+        place-items: center;
+      }
+
+      & > div:first-child {
+        & span {
+          display: block;
+        }
+      }
+
+      & > div + div {
+        font:
+          700 20px/1.4 "Manrope",
+          sans-serif;
+      }
+    }
+
+    &-row {
+      & > div:first-child {
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+
+        & span {
+          display: block;
+        }
+      }
+
+      & > div + div {
+        display: grid;
+        place-items: center;
+      }
+    }
+
+    &-header {
+      background-color: var(--color-bg-td);
+    }
+
+    &-td {
+      border: 1px solid var(--color-primary-gray);
+    }
+  }
+
+  &-criteria {
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: 39px repeat(7, 1fr) repeat(4, 39px) 59px;
+      grid-template-columns: 125px 125px 150px 150px 210px 210px 110px 1fr 1fr 1fr 142px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria2 criteria2 criteria2 criteria2 criteria5"
+        "criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria1 criteria3 criteria3 criteria4 criteria4 criteria5"
+        "criteria6 criteria6 criteria7 criteria7 criteria7 criteria7 criteria18 criteria28 criteria28 criteria38 criteria38 criteria48"
+        "criteria6 criteria6 criteria8 criteria8 criteria8 criteria8 criteria19 criteria29 criteria29 criteria39 criteria39 criteria49"
+        "criteria6 criteria6 criteria9 criteria9 criteria9 criteria9 criteria20 criteria30 criteria30 criteria40 criteria40 criteria50"
+        "criteria6 criteria6 criteria10 criteria10 criteria11 criteria11 criteria21 criteria31 criteria31 criteria41 criteria41 criteria51"
+        "criteria6 criteria6 criteria10 criteria10 criteria12 criteria12 criteria22 criteria32 criteria32 criteria42 criteria42 criteria52"
+        "criteria6 criteria6 criteria10 criteria10 criteria13 criteria13 criteria23 criteria33 criteria33 criteria43 criteria43 criteria53"
+        "criteria14 criteria14 criteria14 criteria14 criteria14 criteria14 criteria24 criteria34 criteria34 criteria44 criteria44 criteria54"
+        "criteria15 criteria15 criteria15 criteria15 criteria15 criteria15 criteria25 criteria35 criteria35 criteria45 criteria45  criteria55"
+        "criteria16 criteria16 criteria16 criteria16 criteria16 criteria16 criteria26 criteria36 criteria36 criteria46 criteria46 criteria56 "
+        "criteria17 criteria17 criteria17 criteria17 criteria17 criteria17 criteria27 criteria37 criteria37 criteria47 criteria47 criteria57"
+        "criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 criteria58 ";
+    }
+
+    .case-criteria7,
+    .case-criteria8,
+    .case-criteria9,
+    .case-criteria10,
+    .case-criteria11,
+    .case-criteria12,
+    .case-criteria13,
+    .case-criteria14,
+    .case-criteria15,
+    .case-criteria16,
+    .case-criteria17 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2px 16px;
+    }
+
+    .case-criteria1,
+    .case-criteria2,
+    .case-criteria3,
+    .case-criteria4,
+    .case-criteria5,
+    .case-criteria6 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+      padding: 2px 16px;
+    }
+
+    .case-criteria18,
+    .case-criteria19,
+    .case-criteria20,
+    .case-criteria21,
+    .case-criteria22,
+    .case-criteria23,
+    .case-criteria24,
+    .case-criteria25,
+    .case-criteria26,
+    .case-criteria27,
+    .case-criteria28,
+    .case-criteria29,
+    .case-criteria30,
+    .case-criteria31,
+    .case-criteria32,
+    .case-criteria33,
+    .case-criteria34,
+    .case-criteria35,
+    .case-criteria36,
+    .case-criteria37,
+    .case-criteria38,
+    .case-criteria39,
+    .case-criteria40,
+    .case-criteria41,
+    .case-criteria42,
+    .case-criteria43,
+    .case-criteria44,
+    .case-criteria45,
+    .case-criteria46,
+    .case-criteria47,
+    .case-criteria48,
+    .case-criteria49,
+    .case-criteria50,
+    .case-criteria51,
+    .case-criteria52,
+    .case-criteria53,
+    .case-criteria54,
+    .case-criteria55,
+    .case-criteria56,
+    .case-criteria57,
+    .case-criteria58 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-criteria1 {
+      grid-area: criteria1;
+    }
+    .case-criteria2 {
+      grid-area: criteria2;
+    }
+    .case-criteria3 {
+      grid-area: criteria3;
+    }
+    .case-criteria4 {
+      grid-area: criteria4;
+    }
+    .case-criteria5 {
+      grid-area: criteria5;
+    }
+    .case-criteria6 {
+      grid-area: criteria6;
+      padding: 20px;
+    }
+    .case-criteria7 {
+      grid-area: criteria7;
+    }
+    .case-criteria8 {
+      grid-area: criteria8;
+    }
+    .case-criteria9 {
+      grid-area: criteria9;
+    }
+    .case-criteria10 {
+      grid-area: criteria10;
+    }
+    .case-criteria11 {
+      grid-area: criteria11;
+    }
+    .case-criteria12 {
+      grid-area: criteria12;
+    }
+    .case-criteria13 {
+      grid-area: criteria13;
+    }
+    .case-criteria14 {
+      grid-area: criteria14;
+    }
+    .case-criteria15 {
+      grid-area: criteria15;
+    }
+    .case-criteria16 {
+      grid-area: criteria16;
+    }
+    .case-criteria17 {
+      grid-area: criteria17;
+    }
+    .case-criteria18 {
+      grid-area: criteria18;
+    }
+    .case-criteria19 {
+      grid-area: criteria19;
+    }
+    .case-criteria20 {
+      grid-area: criteria20;
+    }
+    .case-criteria21 {
+      grid-area: criteria21;
+    }
+    .case-criteria22 {
+      grid-area: criteria22;
+    }
+    .case-criteria23 {
+      grid-area: criteria23;
+    }
+    .case-criteria24 {
+      grid-area: criteria24;
+    }
+    .case-criteria25 {
+      grid-area: criteria25;
+    }
+    .case-criteria26 {
+      grid-area: criteria26;
+    }
+    .case-criteria27 {
+      grid-area: criteria27;
+    }
+    .case-criteria28 {
+      grid-area: criteria28;
+    }
+    .case-criteria29 {
+      grid-area: criteria29;
+    }
+    .case-criteria30 {
+      grid-area: criteria30;
+    }
+    .case-criteria31 {
+      grid-area: criteria31;
+    }
+    .case-criteria32 {
+      grid-area: criteria32;
+    }
+    .case-criteria33 {
+      grid-area: criteria33;
+    }
+    .case-criteria34 {
+      grid-area: criteria34;
+    }
+    .case-criteria35 {
+      grid-area: criteria35;
+    }
+    .case-criteria36 {
+      grid-area: criteria36;
+    }
+    .case-criteria37 {
+      grid-area: criteria37;
+    }
+    .case-criteria38 {
+      grid-area: criteria38;
+    }
+    .case-criteria39 {
+      grid-area: criteria39;
+    }
+    .case-criteria40 {
+      grid-area: criteria40;
+    }
+    .case-criteria41 {
+      grid-area: criteria41;
+    }
+    .case-criteria42 {
+      grid-area: criteria42;
+    }
+    .case-criteria43 {
+      grid-area: criteria43;
+    }
+    .case-criteria44 {
+      grid-area: criteria44;
+    }
+    .case-criteria45 {
+      grid-area: criteria45;
+    }
+    .case-criteria46 {
+      grid-area: criteria46;
+    }
+    .case-criteria47 {
+      grid-area: criteria47;
+    }
+    .case-criteria48 {
+      grid-area: criteria48;
+    }
+    .case-criteria49 {
+      grid-area: criteria49;
+    }
+    .case-criteria50 {
+      grid-area: criteria50;
+    }
+    .case-criteria51 {
+      grid-area: criteria51;
+    }
+    .case-criteria52 {
+      grid-area: criteria52;
+    }
+    .case-criteria53 {
+      grid-area: criteria53;
+    }
+    .case-criteria54 {
+      grid-area: criteria54;
+    }
+    .case-criteria55 {
+      grid-area: criteria55;
+    }
+    .case-criteria56 {
+      grid-area: criteria56;
+    }
+    .case-criteria57 {
+      grid-area: criteria57;
+    }
+    .case-criteria58 {
+      grid-area: criteria58;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
