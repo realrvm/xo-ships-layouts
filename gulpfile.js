@@ -17,10 +17,12 @@ const sass = gulpSass(dartSass);
 function convertPugToHtml() {
   return src("src/pages/**/*.pug")
     .pipe(pug({ basedir: "src", pretty: true }))
-    .pipe(rename((file) => {
-      let parentDir = path.dirname(file.dirname)
-      file.dirname= path.join(parentDir, 'assets', file.dirname)
-    }))
+    .pipe(
+      rename((file) => {
+        let parentDir = path.dirname(file.dirname);
+        file.dirname = path.join(parentDir, "assets", file.dirname);
+      }),
+    )
     .pipe(dest("src/"))
     .pipe(browserSync.stream());
 }
@@ -30,10 +32,12 @@ function convertStyles() {
   return src("src/pages/**/styles.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-    .pipe(rename((file) => {
-      let parentDir = path.dirname(file.dirname)
-      file.dirname= path.join(parentDir, 'assets', file.dirname)
-    }))
+    .pipe(
+      rename((file) => {
+        let parentDir = path.dirname(file.dirname);
+        file.dirname = path.join(parentDir, "assets", file.dirname);
+      }),
+    )
     .pipe(dest("src/"))
     .pipe(sourcemaps.write("."))
     .pipe(browserSync.stream());
@@ -73,6 +77,7 @@ function browserSyncInit() {
       baseDir: "src",
       directory: true,
     },
+    online: true,
   });
 }
 
@@ -92,18 +97,14 @@ function cleanDist() {
 // создание dist
 function buildDist() {
   return src(
-    [
-      "src/assets/**/*.html",
-      "src/assets/**/styles.css",
-      "src/assets/img/**/*",
-    ],
+    ["src/assets/**/*.html", "src/assets/**/styles.css", "src/assets/img/**/*"],
     {
       base: "src/assets",
     },
   ).pipe(dest("dist"));
 }
 
-export const build = series( cleanDist, buildDist);
+export const build = series(cleanDist, buildDist);
 export default parallel(
   convertPugToHtml,
   convertStyles,

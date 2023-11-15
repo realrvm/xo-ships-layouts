@@ -1,0 +1,33 @@
+extends /shared/ui/layout
+include /shared/mixins/ui/breadcrumbs
+include /shared/mixins/ui/link-back
+include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/button
+
+include /shared/mixins/svg/download
+
+append styles
+  link(rel= "stylesheet" href= "./styles.css")
+append head
+  title= 'Документ'
+
+block content
+  - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {path: "*", caption: 'Расчет загрузки судна'}, {caption: 'Просмотр документа'}];
+  include /widgets/sidebar
+  main.xo-main
+    +breadcrumbs(breadcrumbs, 'xo-calc__breadcrumbs')
+    +link-back('*', 'xo-calc__link-back')
+      | Вернуться
+    .xo-calc__header
+      .xo-calc__header-title
+        +arrow-left('*')
+        h1.xo-text__title Просмотр документа
+      .xo-calc__docs-dl
+        +button('xo-btn__accent-fill')
+          +svg-download
+          span Скачать
+    .xo-calc__docs
+      img(src= '../img/doc.jpg' alt='doc')
+      .xo-calc__docs-footer
+        +button('xo-btn__accent-fill')
+          | Назад

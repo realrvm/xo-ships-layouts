@@ -1,0 +1,27 @@
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ */
+@import "../../app/styles/reset";
+@import "../../app/styles/main";
+@import "../../app/styles/common";
+@import "../../app/styles/sidebar";
+@import "../../app/styles/calc";
+
+/* СТИЛИ СТРАНИЦЫ */
+
+.xo-calc__docs {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  &-footer {
+    width: 85px;
+  }
+
+  &-dl {
+    & button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
