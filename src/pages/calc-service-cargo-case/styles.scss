@@ -570,6 +570,8 @@
     }
     .case-criteria5 {
       grid-area: criteria5;
+      padding: 10px;
+      text-align: center;
     }
     .case-criteria6 {
       grid-area: criteria6;
@@ -700,36 +702,1001 @@
     }
     .case-criteria48 {
       grid-area: criteria48;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria49 {
       grid-area: criteria49;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria50 {
       grid-area: criteria50;
     }
     .case-criteria51 {
       grid-area: criteria51;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria52 {
       grid-area: criteria52;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria53 {
       grid-area: criteria53;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria54 {
       grid-area: criteria54;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria55 {
       grid-area: criteria55;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria56 {
       grid-area: criteria56;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria57 {
       grid-area: criteria57;
+
+      & span {
+        cursor: pointer;
+      }
     }
     .case-criteria58 {
       grid-area: criteria58;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-weather {
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: 45px repeat(5, 1fr) 59px;
+      grid-template-columns: repeat(8, 1fr) 140px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "weather1 weather1 weather1 weather1 weather2 weather2 weather2 weather2 weather5"
+        "weather1 weather1 weather1 weather1 weather3 weather3 weather4 weather4 weather5"
+        "weather6 weather6 weather6 weather9 weather13 weather13 weather17 weather17 weather20"
+        "weather7 weather7 weather7 weather10 weather14 weather14 weather18 weather18 weather21"
+        "weather8 weather8 weather8 weather11 weather15 weather15 weather19 weather19 weather22"
+        "weather8 weather8 weather8 weather12 weather16 weather16 weather19 weather19 weather22"
+        "weather23 weather23 weather23 weather23 weather23 weather23 weather23 weather23 weather23";
+    }
+
+    .case-weather6,
+    .case-weather7,
+    .case-weather8 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2px 16px;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-weather1,
+    .case-weather2,
+    .case-weather3,
+    .case-weather4,
+    .case-weather5 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      padding: 2px 16px;
+      display: grid;
+      place-items: center;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-weather9,
+    .case-weather10,
+    .case-weather11,
+    .case-weather12,
+    .case-weather13,
+    .case-weather14,
+    .case-weather15,
+    .case-weather16,
+    .case-weather17,
+    .case-weather18,
+    .case-weather19,
+    .case-weather20,
+    .case-weather21,
+    .case-weather22,
+    .case-weather23 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-weather1 {
+      grid-area: weather1;
+    }
+    .case-weather2 {
+      grid-area: weather2;
+    }
+    .case-weather3 {
+      grid-area: weather3;
+    }
+    .case-weather4 {
+      grid-area: weather4;
+    }
+    .case-weather5 {
+      grid-area: weather5;
+      padding: 10px;
+      text-align: center;
+    }
+    .case-weather6 {
+      grid-area: weather6;
+    }
+    .case-weather7 {
+      grid-area: weather7;
+    }
+    .case-weather8 {
+      grid-area: weather8;
+    }
+    .case-weather9 {
+      grid-area: weather9;
+    }
+    .case-weather10 {
+      grid-area: weather10;
+    }
+    .case-weather11 {
+      grid-area: weather11;
+    }
+    .case-weather12 {
+      grid-area: weather12;
+    }
+    .case-weather13 {
+      grid-area: weather13;
+    }
+    .case-weather14 {
+      grid-area: weather14;
+    }
+    .case-weather15 {
+      grid-area: weather15;
+    }
+    .case-weather16 {
+      grid-area: weather16;
+    }
+    .case-weather17 {
+      grid-area: weather17;
+    }
+    .case-weather18 {
+      grid-area: weather18;
+    }
+    .case-weather19 {
+      grid-area: weather19;
+    }
+    .case-weather20 {
+      grid-area: weather20;
+    }
+    .case-weather21 {
+      grid-area: weather21;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-weather22 {
+      grid-area: weather22;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-weather23 {
+      grid-area: weather23;
+
+      & span {
+        cursor: pointer;
+      }
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  &-loads {
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: repeat(9, 1fr) 43px;
+      grid-template-columns: 80px 100px repeat(8, 1fr) 70px 1fr;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "loads1 loads1 loads1 loads1 loads1 loads2 loads3 loads3 loads4 loads4 loads5  loads6"
+        "loads7 loads7 loads8 loads8 loads8 loads18 loads26 loads26 loads34 loads34 loads42 loads50"
+        "loads7 loads7 loads9 loads9 loads9 loads19 loads27 loads27 loads35 loads35 loads43 loads51"
+        "loads7 loads7 loads10 loads10 loads10 loads20 loads28 loads28 loads36 loads36 loads44 loads52"
+        "loads11 loads11 loads12 loads12 loads12 loads21 loads29 loads29 loads37 loads37 loads45 loads53"
+        "loads13 loads13 loads13 loads13 loads13 loads22  loads30 loads30 loads38 loads38 loads46 loads54"
+        "loads14 loads14 loads14 loads14 loads14 loads23  loads31 loads31 loads39 loads39 loads47 loads55"
+        "loads15 loads15 loads15 loads15 loads16  loads24 loads32 loads32 loads40 loads40 loads48 loads56"
+        "loads15 loads15 loads15 loads15 loads16 loads24 loads32 loads32 loads40 loads40 loads48 loads56"
+        "loads15 loads15 loads15 loads15 loads17 loads25 loads33 loads33 loads41 loads41 loads49 loads57";
+    }
+
+    .case-loads1,
+    .case-loads2,
+    .case-loads3,
+    .case-loads4,
+    .case-loads5,
+    .case-loads6,
+    .case-loads7 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+      padding: 2px 16px;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-loads8,
+    .case-loads9,
+    .case-loads10,
+    .case-loads11,
+    .case-loads12,
+    .case-loads13,
+    .case-loads14,
+    .case-loads15,
+    .case-loads16,
+    .case-loads17 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2px 16px;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-loads18,
+    .case-loads19,
+    .case-loads20,
+    .case-loads21,
+    .case-loads22,
+    .case-loads23,
+    .case-loads24,
+    .case-loads25,
+    .case-loads26,
+    .case-loads27,
+    .case-loads28,
+    .case-loads29,
+    .case-loads30,
+    .case-loads31,
+    .case-loads32,
+    .case-loads33,
+    .case-loads34,
+    .case-loads35,
+    .case-loads36,
+    .case-loads37,
+    .case-loads38,
+    .case-loads39,
+    .case-loads40,
+    .case-loads41,
+    .case-loads42,
+    .case-loads43,
+    .case-loads44,
+    .case-loads45,
+    .case-loads46,
+    .case-loads47,
+    .case-loads48,
+    .case-loads49,
+    .case-loads50,
+    .case-loads51,
+    .case-loads52,
+    .case-loads53,
+    .case-loads54,
+    .case-loads55,
+    .case-loads56,
+    .case-loads57 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-loads1 {
+      grid-area: loads1;
+    }
+    .case-loads2 {
+      grid-area: loads2;
+    }
+    .case-loads3 {
+      grid-area: loads3;
+    }
+    .case-loads4 {
+      grid-area: loads4;
+    }
+    .case-loads5 {
+      grid-area: loads5;
+    }
+    .case-loads6 {
+      grid-area: loads6;
+      text-align: center;
+    }
+    .case-loads7 {
+      grid-area: loads7;
+    }
+    .case-loads8 {
+      grid-area: loads8;
+    }
+    .case-loads9 {
+      grid-area: loads9;
+    }
+    .case-loads10 {
+      grid-area: loads10;
+    }
+    .case-loads11 {
+      grid-area: loads11;
+    }
+    .case-loads12 {
+      grid-area: loads12;
+    }
+    .case-loads13 {
+      grid-area: loads13;
+    }
+    .case-loads14 {
+      grid-area: loads14;
+    }
+    .case-loads15 {
+      grid-area: loads15;
+    }
+    .case-loads16 {
+      grid-area: loads16;
+    }
+    .case-loads17 {
+      grid-area: loads17;
+    }
+    .case-loads18 {
+      grid-area: loads18;
+    }
+    .case-loads19 {
+      grid-area: loads19;
+    }
+    .case-loads20 {
+      grid-area: loads20;
+    }
+    .case-loads21 {
+      grid-area: loads21;
+    }
+    .case-loads22 {
+      grid-area: loads22;
+    }
+    .case-loads23 {
+      grid-area: loads23;
+    }
+    .case-loads24 {
+      grid-area: loads24;
+    }
+    .case-loads25 {
+      grid-area: loads25;
+    }
+    .case-loads26 {
+      grid-area: loads26;
+    }
+    .case-loads27 {
+      grid-area: loads27;
+    }
+    .case-loads28 {
+      grid-area: loads28;
+    }
+    .case-loads29 {
+      grid-area: loads29;
+    }
+    .case-loads30 {
+      grid-area: loads30;
+    }
+    .case-loads31 {
+      grid-area: loads31;
+    }
+    .case-loads32 {
+      grid-area: loads32;
+    }
+    .case-loads33 {
+      grid-area: loads33;
+    }
+    .case-loads34 {
+      grid-area: loads34;
+    }
+    .case-loads35 {
+      grid-area: loads35;
+    }
+    .case-loads36 {
+      grid-area: loads36;
+    }
+    .case-loads37 {
+      grid-area: loads37;
+    }
+    .case-loads38 {
+      grid-area: loads38;
+    }
+    .case-loads39 {
+      grid-area: loads39;
+    }
+    .case-loads40 {
+      grid-area: loads40;
+    }
+    .case-loads41 {
+      grid-area: loads41;
+    }
+    .case-loads42 {
+      grid-area: loads42;
+    }
+    .case-loads43 {
+      grid-area: loads43;
+    }
+    .case-loads44 {
+      grid-area: loads44;
+    }
+    .case-loads45 {
+      grid-area: loads45;
+    }
+    .case-loads46 {
+      grid-area: loads46;
+    }
+    .case-loads47 {
+      grid-area: loads47;
+    }
+    .case-loads48 {
+      grid-area: loads48;
+    }
+    .case-loads49 {
+      grid-area: loads49;
+    }
+    .case-loads50 {
+      grid-area: loads50;
+    }
+    .case-loads51 {
+      grid-area: loads51;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads52 {
+      grid-area: loads52;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads53 {
+      grid-area: loads53;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads54 {
+      grid-area: loads54;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads55 {
+      grid-area: loads55;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads56 {
+      grid-area: loads56;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-loads57 {
+      grid-area: loads57;
+    }
+  }
+
+  &-strength {
+    margin-bottom: 66px;
+    max-width: 1100px;
+
+    &-switch {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(7, 1fr) 43px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1"
+        "strength2 strength3 strength3 strength4 strength4 strength5 strength5 strength5 strength5 strength6"
+        "strength7 strength8 strength8 strength9 strength9 strength10 strength10 strength11 strength11 strength12"
+        "strength13 strength14 strength14 strength15 strength15 strength16 strength16 strength17 strength17 strength18"
+        "strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19"
+        "strength20 strength21 strength21 strength22 strength22 strength23 strength23 strength23 strength23 strength24"
+        "strength25 strength26 strength26 strength27 strength27 strength28 strength28 strength29 strength29 strength30"
+        "strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31";
+    }
+
+    .case-strength1,
+    .case-strength2,
+    .case-strength3,
+    .case-strength4,
+    .case-strength5,
+    .case-strength19,
+    .case-strength20,
+    .case-strength21,
+    .case-strength22,
+    .case-strength23 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+      padding: 2px 16px;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-strength6,
+    .case-strength24 {
+      background-color: #d1e7dd;
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-strength7,
+    .case-strength8,
+    .case-strength9,
+    .case-strength10,
+    .case-strength11,
+    .case-strength12,
+    .case-strength13,
+    .case-strength14,
+    .case-strength15,
+    .case-strength16,
+    .case-strength17,
+    .case-strength18,
+    .case-strength25,
+    .case-strength26,
+    .case-strength27,
+    .case-strength28,
+    .case-strength29,
+    .case-strength30,
+    .case-strength31 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-strength1 {
+      grid-area: strength1;
+      text-align: center;
+    }
+    .case-strength2 {
+      grid-area: strength2;
+    }
+    .case-strength3 {
+      grid-area: strength3;
+    }
+    .case-strength4 {
+      grid-area: strength4;
+    }
+    .case-strength5 {
+      grid-area: strength5;
+      text-align: center;
+    }
+    .case-strength6 {
+      grid-area: strength6;
+      text-align: center;
+    }
+    .case-strength7 {
+      grid-area: strength7;
+    }
+    .case-strength8 {
+      grid-area: strength8;
+    }
+    .case-strength9 {
+      grid-area: strength9;
+    }
+    .case-strength10 {
+      grid-area: strength10;
+    }
+    .case-strength11 {
+      grid-area: strength11;
+    }
+    .case-strength12 {
+      grid-area: strength12;
+    }
+    .case-strength13 {
+      grid-area: strength13;
+    }
+    .case-strength14 {
+      grid-area: strength14;
+    }
+    .case-strength15 {
+      grid-area: strength15;
+    }
+    .case-strength16 {
+      grid-area: strength16;
+    }
+    .case-strength17 {
+      grid-area: strength17;
+    }
+    .case-strength18 {
+      grid-area: strength18;
+    }
+    .case-strength19 {
+      grid-area: strength19;
+      text-align: center;
+    }
+    .case-strength20 {
+      grid-area: strength20;
+    }
+    .case-strength21 {
+      grid-area: strength21;
+    }
+    .case-strength22 {
+      grid-area: strength22;
+    }
+    .case-strength23 {
+      grid-area: strength23;
+      text-align: center;
+    }
+    .case-strength24 {
+      grid-area: strength24;
+    }
+    .case-strength25 {
+      grid-area: strength25;
+    }
+    .case-strength26 {
+      grid-area: strength26;
+    }
+    .case-strength27 {
+      grid-area: strength27;
+    }
+    .case-strength28 {
+      grid-area: strength28;
+    }
+    .case-strength29 {
+      grid-area: strength29;
+    }
+    .case-strength30 {
+      grid-area: strength30;
+    }
+    .case-strength31 {
+      grid-area: strength31;
+
+      & span {
+        cursor: pointer;
+      }
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  &-grain {
+    margin-bottom: 66px;
+
+    & > h4 {
+      margin-bottom: 15px;
+    }
+
+    &-wrapper {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 35px repeat(6, 1fr) 40px 40px 60px;
+      border: 1px solid var(--color-primary-gray);
+      grid-template-areas:
+        "grain1 grain1 grain1 grain1 grain1 grain1 grain1 grain2 grain2 grain5"
+        "grain1 grain1 grain1 grain1 grain1 grain1 grain1 grain3 grain4 grain5"
+        "grain6 grain6 grain6 grain6 grain6 grain6 grain14 grain21 grain28 grain35"
+        "grain7 grain7 grain7 grain7 grain7 grain7 grain15 grain22 grain29 grain36"
+        "grain8 grain8 grain8 grain8 grain8 grain8 grain16 grain23 grain30 grain37"
+        "grain9 grain9 grain9 grain9 grain9 grain9 grain17 grain24 grain31 grain38"
+        "grain10 grain10 grain10 grain12 grain12 grain12 grain18 grain25 grain32 grain39"
+        "grain11 grain11 grain11 grain13 grain13 grain13 grain19 grain26 grain33 grain40"
+        "grain11 grain11 grain11 grain13 grain13 grain13 grain20 grain27 grain34 grain41"
+        "grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 ";
+    }
+
+    .case-grain3,
+    .case-grain4,
+    .case-grain5,
+    .case-grain10,
+    .case-grain12 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+      padding: 2px 16px;
+
+      & > div {
+        & span {
+          display: block;
+        }
+      }
+    }
+
+    .case-grain1,
+    .case-grain2,
+    .case-grain6,
+    .case-grain7,
+    .case-grain8,
+    .case-grain9,
+    .case-grain11,
+    .case-grain13 {
+      background-color: var(--color-bg-td);
+      border: 1px solid var(--color-primary-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2px 16px;
+    }
+
+    .case-grain14,
+    .case-grain15,
+    .case-grain16,
+    .case-grain17,
+    .case-grain18,
+    .case-grain19,
+    .case-grain20,
+    .case-grain21,
+    .case-grain22,
+    .case-grain23,
+    .case-grain24,
+    .case-grain25,
+    .case-grain26,
+    .case-grain27,
+    .case-grain28,
+    .case-grain29,
+    .case-grain30,
+    .case-grain31,
+    .case-grain32,
+    .case-grain33,
+    .case-grain34,
+    .case-grain35,
+    .case-grain36,
+    .case-grain37,
+    .case-grain38,
+    .case-grain39,
+    .case-grain40,
+    .case-grain41,
+    .case-grain42 {
+      border: 1px solid var(--color-primary-gray);
+      display: grid;
+      place-items: center;
+    }
+
+    .case-grain1 {
+      grid-area: grain1;
+      text-align: center;
+    }
+    .case-grain2 {
+      grid-area: grain2;
+      text-align: center;
+    }
+    .case-grain3 {
+      grid-area: grain3;
+      text-align: center;
+    }
+    .case-grain4 {
+      grid-area: grain4;
+      text-align: center;
+    }
+    .case-grain5 {
+      grid-area: grain5;
+      text-align: center;
+    }
+    .case-grain6 {
+      grid-area: grain6;
+    }
+    .case-grain7 {
+      grid-area: grain7;
+    }
+    .case-grain8 {
+      grid-area: grain8;
+    }
+    .case-grain9 {
+      grid-area: grain9;
+    }
+    .case-grain10 {
+      grid-area: grain10;
+    }
+    .case-grain11 {
+      grid-area: grain11;
+    }
+    .case-grain12 {
+      grid-area: grain12;
+    }
+    .case-grain13 {
+      grid-area: grain13;
+    }
+    .case-grain14 {
+      grid-area: grain14;
+    }
+    .case-grain15 {
+      grid-area: grain15;
+    }
+    .case-grain16 {
+      grid-area: grain16;
+    }
+    .case-grain17 {
+      grid-area: grain17;
+    }
+    .case-grain18 {
+      grid-area: grain18;
+    }
+    .case-grain19 {
+      grid-area: grain19;
+    }
+    .case-grain20 {
+      grid-area: grain20;
+    }
+    .case-grain21 {
+      grid-area: grain21;
+    }
+    .case-grain22 {
+      grid-area: grain22;
+    }
+    .case-grain23 {
+      grid-area: grain23;
+    }
+    .case-grain24 {
+      grid-area: grain24;
+    }
+    .case-grain25 {
+      grid-area: grain25;
+    }
+    .case-grain26 {
+      grid-area: grain26;
+    }
+    .case-grain27 {
+      grid-area: grain27;
+    }
+    .case-grain28 {
+      grid-area: grain28;
+    }
+    .case-grain29 {
+      grid-area: grain29;
+    }
+    .case-grain30 {
+      grid-area: grain30;
+    }
+    .case-grain31 {
+      grid-area: grain31;
+    }
+    .case-grain32 {
+      grid-area: grain32;
+    }
+    .case-grain33 {
+      grid-area: grain33;
+    }
+    .case-grain34 {
+      grid-area: grain34;
+    }
+    .case-grain35 {
+      grid-area: grain35;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-grain36 {
+      grid-area: grain36;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-grain37 {
+      grid-area: grain37;
+    }
+    .case-grain38 {
+      grid-area: grain38;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-grain39 {
+      grid-area: grain39;
+
+      & span {
+        cursor: pointer;
+      }
+    }
+    .case-grain40 {
+      grid-area: grain40;
+    }
+    .case-grain41 {
+      grid-area: grain41;
+    }
+    .case-grain42 {
+      grid-area: grain42;
+
+      & span {
+        cursor: pointer;
+      }
 
       & > div {
         display: flex;

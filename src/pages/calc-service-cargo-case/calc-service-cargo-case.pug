@@ -3,6 +3,7 @@ extends /shared/ui/layout
 include /shared/mixins/ui/breadcrumbs
 include /shared/mixins/ui/link-back
 include /shared/mixins/ui/arrow-left
+include /shared/mixins/ui/button
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -52,3 +53,10 @@ block content
       include /snippets/table/damage-stability
       include /snippets/table/levers-calculation
       include /snippets/table/criteria
+      include /snippets/table/weather
+      include /snippets/table/loads
+      include /snippets/table/strength
+      include /snippets/table/grain
+      .xo-calc__case-footer
+        +button('xo-btn__accent-fill')
+          | Назад

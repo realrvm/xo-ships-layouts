@@ -1339,6 +1339,8 @@ main.xo-main {
 }
 .xo-calc__case-criteria .case-criteria5 {
   grid-area: criteria5;
+  padding: 10px;
+  text-align: center;
 }
 .xo-calc__case-criteria .case-criteria6 {
   grid-area: criteria6;
@@ -1470,8 +1472,14 @@ main.xo-main {
 .xo-calc__case-criteria .case-criteria48 {
   grid-area: criteria48;
 }
+.xo-calc__case-criteria .case-criteria48 span {
+  cursor: pointer;
+}
 .xo-calc__case-criteria .case-criteria49 {
   grid-area: criteria49;
+}
+.xo-calc__case-criteria .case-criteria49 span {
+  cursor: pointer;
 }
 .xo-calc__case-criteria .case-criteria50 {
   grid-area: criteria50;
@@ -1479,28 +1487,912 @@ main.xo-main {
 .xo-calc__case-criteria .case-criteria51 {
   grid-area: criteria51;
 }
+.xo-calc__case-criteria .case-criteria51 span {
+  cursor: pointer;
+}
 .xo-calc__case-criteria .case-criteria52 {
   grid-area: criteria52;
+}
+.xo-calc__case-criteria .case-criteria52 span {
+  cursor: pointer;
 }
 .xo-calc__case-criteria .case-criteria53 {
   grid-area: criteria53;
 }
+.xo-calc__case-criteria .case-criteria53 span {
+  cursor: pointer;
+}
 .xo-calc__case-criteria .case-criteria54 {
   grid-area: criteria54;
+}
+.xo-calc__case-criteria .case-criteria54 span {
+  cursor: pointer;
 }
 .xo-calc__case-criteria .case-criteria55 {
   grid-area: criteria55;
 }
+.xo-calc__case-criteria .case-criteria55 span {
+  cursor: pointer;
+}
 .xo-calc__case-criteria .case-criteria56 {
   grid-area: criteria56;
 }
+.xo-calc__case-criteria .case-criteria56 span {
+  cursor: pointer;
+}
 .xo-calc__case-criteria .case-criteria57 {
   grid-area: criteria57;
+}
+.xo-calc__case-criteria .case-criteria57 span {
+  cursor: pointer;
 }
 .xo-calc__case-criteria .case-criteria58 {
   grid-area: criteria58;
 }
 .xo-calc__case-criteria .case-criteria58 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.xo-calc__case-weather {
+  margin-bottom: 66px;
+}
+.xo-calc__case-weather > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-weather-wrapper {
+  display: grid;
+  grid-template-rows: 45px repeat(5, 1fr) 59px;
+  grid-template-columns: repeat(8, 1fr) 140px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "weather1 weather1 weather1 weather1 weather2 weather2 weather2 weather2 weather5" "weather1 weather1 weather1 weather1 weather3 weather3 weather4 weather4 weather5" "weather6 weather6 weather6 weather9 weather13 weather13 weather17 weather17 weather20" "weather7 weather7 weather7 weather10 weather14 weather14 weather18 weather18 weather21" "weather8 weather8 weather8 weather11 weather15 weather15 weather19 weather19 weather22" "weather8 weather8 weather8 weather12 weather16 weather16 weather19 weather19 weather22" "weather23 weather23 weather23 weather23 weather23 weather23 weather23 weather23 weather23";
+}
+.xo-calc__case-weather .case-weather6,
+.xo-calc__case-weather .case-weather7,
+.xo-calc__case-weather .case-weather8 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-weather .case-weather6 > div span,
+.xo-calc__case-weather .case-weather7 > div span,
+.xo-calc__case-weather .case-weather8 > div span {
+  display: block;
+}
+.xo-calc__case-weather .case-weather1,
+.xo-calc__case-weather .case-weather2,
+.xo-calc__case-weather .case-weather3,
+.xo-calc__case-weather .case-weather4,
+.xo-calc__case-weather .case-weather5 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  padding: 2px 16px;
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-weather .case-weather1 > div span,
+.xo-calc__case-weather .case-weather2 > div span,
+.xo-calc__case-weather .case-weather3 > div span,
+.xo-calc__case-weather .case-weather4 > div span,
+.xo-calc__case-weather .case-weather5 > div span {
+  display: block;
+}
+.xo-calc__case-weather .case-weather9,
+.xo-calc__case-weather .case-weather10,
+.xo-calc__case-weather .case-weather11,
+.xo-calc__case-weather .case-weather12,
+.xo-calc__case-weather .case-weather13,
+.xo-calc__case-weather .case-weather14,
+.xo-calc__case-weather .case-weather15,
+.xo-calc__case-weather .case-weather16,
+.xo-calc__case-weather .case-weather17,
+.xo-calc__case-weather .case-weather18,
+.xo-calc__case-weather .case-weather19,
+.xo-calc__case-weather .case-weather20,
+.xo-calc__case-weather .case-weather21,
+.xo-calc__case-weather .case-weather22,
+.xo-calc__case-weather .case-weather23 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-weather .case-weather1 {
+  grid-area: weather1;
+}
+.xo-calc__case-weather .case-weather2 {
+  grid-area: weather2;
+}
+.xo-calc__case-weather .case-weather3 {
+  grid-area: weather3;
+}
+.xo-calc__case-weather .case-weather4 {
+  grid-area: weather4;
+}
+.xo-calc__case-weather .case-weather5 {
+  grid-area: weather5;
+  padding: 10px;
+  text-align: center;
+}
+.xo-calc__case-weather .case-weather6 {
+  grid-area: weather6;
+}
+.xo-calc__case-weather .case-weather7 {
+  grid-area: weather7;
+}
+.xo-calc__case-weather .case-weather8 {
+  grid-area: weather8;
+}
+.xo-calc__case-weather .case-weather9 {
+  grid-area: weather9;
+}
+.xo-calc__case-weather .case-weather10 {
+  grid-area: weather10;
+}
+.xo-calc__case-weather .case-weather11 {
+  grid-area: weather11;
+}
+.xo-calc__case-weather .case-weather12 {
+  grid-area: weather12;
+}
+.xo-calc__case-weather .case-weather13 {
+  grid-area: weather13;
+}
+.xo-calc__case-weather .case-weather14 {
+  grid-area: weather14;
+}
+.xo-calc__case-weather .case-weather15 {
+  grid-area: weather15;
+}
+.xo-calc__case-weather .case-weather16 {
+  grid-area: weather16;
+}
+.xo-calc__case-weather .case-weather17 {
+  grid-area: weather17;
+}
+.xo-calc__case-weather .case-weather18 {
+  grid-area: weather18;
+}
+.xo-calc__case-weather .case-weather19 {
+  grid-area: weather19;
+}
+.xo-calc__case-weather .case-weather20 {
+  grid-area: weather20;
+}
+.xo-calc__case-weather .case-weather21 {
+  grid-area: weather21;
+}
+.xo-calc__case-weather .case-weather21 span {
+  cursor: pointer;
+}
+.xo-calc__case-weather .case-weather22 {
+  grid-area: weather22;
+}
+.xo-calc__case-weather .case-weather22 span {
+  cursor: pointer;
+}
+.xo-calc__case-weather .case-weather23 {
+  grid-area: weather23;
+}
+.xo-calc__case-weather .case-weather23 span {
+  cursor: pointer;
+}
+.xo-calc__case-weather .case-weather23 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.xo-calc__case-loads {
+  margin-bottom: 66px;
+}
+.xo-calc__case-loads > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-loads-wrapper {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr) 43px;
+  grid-template-columns: 80px 100px repeat(8, 1fr) 70px 1fr;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "loads1 loads1 loads1 loads1 loads1 loads2 loads3 loads3 loads4 loads4 loads5  loads6" "loads7 loads7 loads8 loads8 loads8 loads18 loads26 loads26 loads34 loads34 loads42 loads50" "loads7 loads7 loads9 loads9 loads9 loads19 loads27 loads27 loads35 loads35 loads43 loads51" "loads7 loads7 loads10 loads10 loads10 loads20 loads28 loads28 loads36 loads36 loads44 loads52" "loads11 loads11 loads12 loads12 loads12 loads21 loads29 loads29 loads37 loads37 loads45 loads53" "loads13 loads13 loads13 loads13 loads13 loads22  loads30 loads30 loads38 loads38 loads46 loads54" "loads14 loads14 loads14 loads14 loads14 loads23  loads31 loads31 loads39 loads39 loads47 loads55" "loads15 loads15 loads15 loads15 loads16  loads24 loads32 loads32 loads40 loads40 loads48 loads56" "loads15 loads15 loads15 loads15 loads16 loads24 loads32 loads32 loads40 loads40 loads48 loads56" "loads15 loads15 loads15 loads15 loads17 loads25 loads33 loads33 loads41 loads41 loads49 loads57";
+}
+.xo-calc__case-loads .case-loads1,
+.xo-calc__case-loads .case-loads2,
+.xo-calc__case-loads .case-loads3,
+.xo-calc__case-loads .case-loads4,
+.xo-calc__case-loads .case-loads5,
+.xo-calc__case-loads .case-loads6,
+.xo-calc__case-loads .case-loads7 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-loads .case-loads1 > div span,
+.xo-calc__case-loads .case-loads2 > div span,
+.xo-calc__case-loads .case-loads3 > div span,
+.xo-calc__case-loads .case-loads4 > div span,
+.xo-calc__case-loads .case-loads5 > div span,
+.xo-calc__case-loads .case-loads6 > div span,
+.xo-calc__case-loads .case-loads7 > div span {
+  display: block;
+}
+.xo-calc__case-loads .case-loads8,
+.xo-calc__case-loads .case-loads9,
+.xo-calc__case-loads .case-loads10,
+.xo-calc__case-loads .case-loads11,
+.xo-calc__case-loads .case-loads12,
+.xo-calc__case-loads .case-loads13,
+.xo-calc__case-loads .case-loads14,
+.xo-calc__case-loads .case-loads15,
+.xo-calc__case-loads .case-loads16,
+.xo-calc__case-loads .case-loads17 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-loads .case-loads8 > div span,
+.xo-calc__case-loads .case-loads9 > div span,
+.xo-calc__case-loads .case-loads10 > div span,
+.xo-calc__case-loads .case-loads11 > div span,
+.xo-calc__case-loads .case-loads12 > div span,
+.xo-calc__case-loads .case-loads13 > div span,
+.xo-calc__case-loads .case-loads14 > div span,
+.xo-calc__case-loads .case-loads15 > div span,
+.xo-calc__case-loads .case-loads16 > div span,
+.xo-calc__case-loads .case-loads17 > div span {
+  display: block;
+}
+.xo-calc__case-loads .case-loads18,
+.xo-calc__case-loads .case-loads19,
+.xo-calc__case-loads .case-loads20,
+.xo-calc__case-loads .case-loads21,
+.xo-calc__case-loads .case-loads22,
+.xo-calc__case-loads .case-loads23,
+.xo-calc__case-loads .case-loads24,
+.xo-calc__case-loads .case-loads25,
+.xo-calc__case-loads .case-loads26,
+.xo-calc__case-loads .case-loads27,
+.xo-calc__case-loads .case-loads28,
+.xo-calc__case-loads .case-loads29,
+.xo-calc__case-loads .case-loads30,
+.xo-calc__case-loads .case-loads31,
+.xo-calc__case-loads .case-loads32,
+.xo-calc__case-loads .case-loads33,
+.xo-calc__case-loads .case-loads34,
+.xo-calc__case-loads .case-loads35,
+.xo-calc__case-loads .case-loads36,
+.xo-calc__case-loads .case-loads37,
+.xo-calc__case-loads .case-loads38,
+.xo-calc__case-loads .case-loads39,
+.xo-calc__case-loads .case-loads40,
+.xo-calc__case-loads .case-loads41,
+.xo-calc__case-loads .case-loads42,
+.xo-calc__case-loads .case-loads43,
+.xo-calc__case-loads .case-loads44,
+.xo-calc__case-loads .case-loads45,
+.xo-calc__case-loads .case-loads46,
+.xo-calc__case-loads .case-loads47,
+.xo-calc__case-loads .case-loads48,
+.xo-calc__case-loads .case-loads49,
+.xo-calc__case-loads .case-loads50,
+.xo-calc__case-loads .case-loads51,
+.xo-calc__case-loads .case-loads52,
+.xo-calc__case-loads .case-loads53,
+.xo-calc__case-loads .case-loads54,
+.xo-calc__case-loads .case-loads55,
+.xo-calc__case-loads .case-loads56,
+.xo-calc__case-loads .case-loads57 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-loads .case-loads1 {
+  grid-area: loads1;
+}
+.xo-calc__case-loads .case-loads2 {
+  grid-area: loads2;
+}
+.xo-calc__case-loads .case-loads3 {
+  grid-area: loads3;
+}
+.xo-calc__case-loads .case-loads4 {
+  grid-area: loads4;
+}
+.xo-calc__case-loads .case-loads5 {
+  grid-area: loads5;
+}
+.xo-calc__case-loads .case-loads6 {
+  grid-area: loads6;
+  text-align: center;
+}
+.xo-calc__case-loads .case-loads7 {
+  grid-area: loads7;
+}
+.xo-calc__case-loads .case-loads8 {
+  grid-area: loads8;
+}
+.xo-calc__case-loads .case-loads9 {
+  grid-area: loads9;
+}
+.xo-calc__case-loads .case-loads10 {
+  grid-area: loads10;
+}
+.xo-calc__case-loads .case-loads11 {
+  grid-area: loads11;
+}
+.xo-calc__case-loads .case-loads12 {
+  grid-area: loads12;
+}
+.xo-calc__case-loads .case-loads13 {
+  grid-area: loads13;
+}
+.xo-calc__case-loads .case-loads14 {
+  grid-area: loads14;
+}
+.xo-calc__case-loads .case-loads15 {
+  grid-area: loads15;
+}
+.xo-calc__case-loads .case-loads16 {
+  grid-area: loads16;
+}
+.xo-calc__case-loads .case-loads17 {
+  grid-area: loads17;
+}
+.xo-calc__case-loads .case-loads18 {
+  grid-area: loads18;
+}
+.xo-calc__case-loads .case-loads19 {
+  grid-area: loads19;
+}
+.xo-calc__case-loads .case-loads20 {
+  grid-area: loads20;
+}
+.xo-calc__case-loads .case-loads21 {
+  grid-area: loads21;
+}
+.xo-calc__case-loads .case-loads22 {
+  grid-area: loads22;
+}
+.xo-calc__case-loads .case-loads23 {
+  grid-area: loads23;
+}
+.xo-calc__case-loads .case-loads24 {
+  grid-area: loads24;
+}
+.xo-calc__case-loads .case-loads25 {
+  grid-area: loads25;
+}
+.xo-calc__case-loads .case-loads26 {
+  grid-area: loads26;
+}
+.xo-calc__case-loads .case-loads27 {
+  grid-area: loads27;
+}
+.xo-calc__case-loads .case-loads28 {
+  grid-area: loads28;
+}
+.xo-calc__case-loads .case-loads29 {
+  grid-area: loads29;
+}
+.xo-calc__case-loads .case-loads30 {
+  grid-area: loads30;
+}
+.xo-calc__case-loads .case-loads31 {
+  grid-area: loads31;
+}
+.xo-calc__case-loads .case-loads32 {
+  grid-area: loads32;
+}
+.xo-calc__case-loads .case-loads33 {
+  grid-area: loads33;
+}
+.xo-calc__case-loads .case-loads34 {
+  grid-area: loads34;
+}
+.xo-calc__case-loads .case-loads35 {
+  grid-area: loads35;
+}
+.xo-calc__case-loads .case-loads36 {
+  grid-area: loads36;
+}
+.xo-calc__case-loads .case-loads37 {
+  grid-area: loads37;
+}
+.xo-calc__case-loads .case-loads38 {
+  grid-area: loads38;
+}
+.xo-calc__case-loads .case-loads39 {
+  grid-area: loads39;
+}
+.xo-calc__case-loads .case-loads40 {
+  grid-area: loads40;
+}
+.xo-calc__case-loads .case-loads41 {
+  grid-area: loads41;
+}
+.xo-calc__case-loads .case-loads42 {
+  grid-area: loads42;
+}
+.xo-calc__case-loads .case-loads43 {
+  grid-area: loads43;
+}
+.xo-calc__case-loads .case-loads44 {
+  grid-area: loads44;
+}
+.xo-calc__case-loads .case-loads45 {
+  grid-area: loads45;
+}
+.xo-calc__case-loads .case-loads46 {
+  grid-area: loads46;
+}
+.xo-calc__case-loads .case-loads47 {
+  grid-area: loads47;
+}
+.xo-calc__case-loads .case-loads48 {
+  grid-area: loads48;
+}
+.xo-calc__case-loads .case-loads49 {
+  grid-area: loads49;
+}
+.xo-calc__case-loads .case-loads50 {
+  grid-area: loads50;
+}
+.xo-calc__case-loads .case-loads51 {
+  grid-area: loads51;
+}
+.xo-calc__case-loads .case-loads51 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads52 {
+  grid-area: loads52;
+}
+.xo-calc__case-loads .case-loads52 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads53 {
+  grid-area: loads53;
+}
+.xo-calc__case-loads .case-loads53 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads54 {
+  grid-area: loads54;
+}
+.xo-calc__case-loads .case-loads54 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads55 {
+  grid-area: loads55;
+}
+.xo-calc__case-loads .case-loads55 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads56 {
+  grid-area: loads56;
+}
+.xo-calc__case-loads .case-loads56 span {
+  cursor: pointer;
+}
+.xo-calc__case-loads .case-loads57 {
+  grid-area: loads57;
+}
+.xo-calc__case-strength {
+  margin-bottom: 66px;
+  max-width: 1100px;
+}
+.xo-calc__case-strength-switch {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.xo-calc__case-strength > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-strength-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr) 43px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1 strength1" "strength2 strength3 strength3 strength4 strength4 strength5 strength5 strength5 strength5 strength6" "strength7 strength8 strength8 strength9 strength9 strength10 strength10 strength11 strength11 strength12" "strength13 strength14 strength14 strength15 strength15 strength16 strength16 strength17 strength17 strength18" "strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19 strength19" "strength20 strength21 strength21 strength22 strength22 strength23 strength23 strength23 strength23 strength24" "strength25 strength26 strength26 strength27 strength27 strength28 strength28 strength29 strength29 strength30" "strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31 strength31";
+}
+.xo-calc__case-strength .case-strength1,
+.xo-calc__case-strength .case-strength2,
+.xo-calc__case-strength .case-strength3,
+.xo-calc__case-strength .case-strength4,
+.xo-calc__case-strength .case-strength5,
+.xo-calc__case-strength .case-strength19,
+.xo-calc__case-strength .case-strength20,
+.xo-calc__case-strength .case-strength21,
+.xo-calc__case-strength .case-strength22,
+.xo-calc__case-strength .case-strength23 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-strength .case-strength1 > div span,
+.xo-calc__case-strength .case-strength2 > div span,
+.xo-calc__case-strength .case-strength3 > div span,
+.xo-calc__case-strength .case-strength4 > div span,
+.xo-calc__case-strength .case-strength5 > div span,
+.xo-calc__case-strength .case-strength19 > div span,
+.xo-calc__case-strength .case-strength20 > div span,
+.xo-calc__case-strength .case-strength21 > div span,
+.xo-calc__case-strength .case-strength22 > div span,
+.xo-calc__case-strength .case-strength23 > div span {
+  display: block;
+}
+.xo-calc__case-strength .case-strength6,
+.xo-calc__case-strength .case-strength24 {
+  background-color: #d1e7dd;
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-strength .case-strength7,
+.xo-calc__case-strength .case-strength8,
+.xo-calc__case-strength .case-strength9,
+.xo-calc__case-strength .case-strength10,
+.xo-calc__case-strength .case-strength11,
+.xo-calc__case-strength .case-strength12,
+.xo-calc__case-strength .case-strength13,
+.xo-calc__case-strength .case-strength14,
+.xo-calc__case-strength .case-strength15,
+.xo-calc__case-strength .case-strength16,
+.xo-calc__case-strength .case-strength17,
+.xo-calc__case-strength .case-strength18,
+.xo-calc__case-strength .case-strength25,
+.xo-calc__case-strength .case-strength26,
+.xo-calc__case-strength .case-strength27,
+.xo-calc__case-strength .case-strength28,
+.xo-calc__case-strength .case-strength29,
+.xo-calc__case-strength .case-strength30,
+.xo-calc__case-strength .case-strength31 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-strength .case-strength1 {
+  grid-area: strength1;
+  text-align: center;
+}
+.xo-calc__case-strength .case-strength2 {
+  grid-area: strength2;
+}
+.xo-calc__case-strength .case-strength3 {
+  grid-area: strength3;
+}
+.xo-calc__case-strength .case-strength4 {
+  grid-area: strength4;
+}
+.xo-calc__case-strength .case-strength5 {
+  grid-area: strength5;
+  text-align: center;
+}
+.xo-calc__case-strength .case-strength6 {
+  grid-area: strength6;
+  text-align: center;
+}
+.xo-calc__case-strength .case-strength7 {
+  grid-area: strength7;
+}
+.xo-calc__case-strength .case-strength8 {
+  grid-area: strength8;
+}
+.xo-calc__case-strength .case-strength9 {
+  grid-area: strength9;
+}
+.xo-calc__case-strength .case-strength10 {
+  grid-area: strength10;
+}
+.xo-calc__case-strength .case-strength11 {
+  grid-area: strength11;
+}
+.xo-calc__case-strength .case-strength12 {
+  grid-area: strength12;
+}
+.xo-calc__case-strength .case-strength13 {
+  grid-area: strength13;
+}
+.xo-calc__case-strength .case-strength14 {
+  grid-area: strength14;
+}
+.xo-calc__case-strength .case-strength15 {
+  grid-area: strength15;
+}
+.xo-calc__case-strength .case-strength16 {
+  grid-area: strength16;
+}
+.xo-calc__case-strength .case-strength17 {
+  grid-area: strength17;
+}
+.xo-calc__case-strength .case-strength18 {
+  grid-area: strength18;
+}
+.xo-calc__case-strength .case-strength19 {
+  grid-area: strength19;
+  text-align: center;
+}
+.xo-calc__case-strength .case-strength20 {
+  grid-area: strength20;
+}
+.xo-calc__case-strength .case-strength21 {
+  grid-area: strength21;
+}
+.xo-calc__case-strength .case-strength22 {
+  grid-area: strength22;
+}
+.xo-calc__case-strength .case-strength23 {
+  grid-area: strength23;
+  text-align: center;
+}
+.xo-calc__case-strength .case-strength24 {
+  grid-area: strength24;
+}
+.xo-calc__case-strength .case-strength25 {
+  grid-area: strength25;
+}
+.xo-calc__case-strength .case-strength26 {
+  grid-area: strength26;
+}
+.xo-calc__case-strength .case-strength27 {
+  grid-area: strength27;
+}
+.xo-calc__case-strength .case-strength28 {
+  grid-area: strength28;
+}
+.xo-calc__case-strength .case-strength29 {
+  grid-area: strength29;
+}
+.xo-calc__case-strength .case-strength30 {
+  grid-area: strength30;
+}
+.xo-calc__case-strength .case-strength31 {
+  grid-area: strength31;
+}
+.xo-calc__case-strength .case-strength31 span {
+  cursor: pointer;
+}
+.xo-calc__case-strength .case-strength31 > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.xo-calc__case-grain {
+  margin-bottom: 66px;
+}
+.xo-calc__case-grain > h4 {
+  margin-bottom: 15px;
+}
+.xo-calc__case-grain-wrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 35px repeat(6, 1fr) 40px 40px 60px;
+  border: 1px solid var(--color-primary-gray);
+  grid-template-areas: "grain1 grain1 grain1 grain1 grain1 grain1 grain1 grain2 grain2 grain5" "grain1 grain1 grain1 grain1 grain1 grain1 grain1 grain3 grain4 grain5" "grain6 grain6 grain6 grain6 grain6 grain6 grain14 grain21 grain28 grain35" "grain7 grain7 grain7 grain7 grain7 grain7 grain15 grain22 grain29 grain36" "grain8 grain8 grain8 grain8 grain8 grain8 grain16 grain23 grain30 grain37" "grain9 grain9 grain9 grain9 grain9 grain9 grain17 grain24 grain31 grain38" "grain10 grain10 grain10 grain12 grain12 grain12 grain18 grain25 grain32 grain39" "grain11 grain11 grain11 grain13 grain13 grain13 grain19 grain26 grain33 grain40" "grain11 grain11 grain11 grain13 grain13 grain13 grain20 grain27 grain34 grain41" "grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 grain42 ";
+}
+.xo-calc__case-grain .case-grain3,
+.xo-calc__case-grain .case-grain4,
+.xo-calc__case-grain .case-grain5,
+.xo-calc__case-grain .case-grain10,
+.xo-calc__case-grain .case-grain12 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-grain .case-grain3 > div span,
+.xo-calc__case-grain .case-grain4 > div span,
+.xo-calc__case-grain .case-grain5 > div span,
+.xo-calc__case-grain .case-grain10 > div span,
+.xo-calc__case-grain .case-grain12 > div span {
+  display: block;
+}
+.xo-calc__case-grain .case-grain1,
+.xo-calc__case-grain .case-grain2,
+.xo-calc__case-grain .case-grain6,
+.xo-calc__case-grain .case-grain7,
+.xo-calc__case-grain .case-grain8,
+.xo-calc__case-grain .case-grain9,
+.xo-calc__case-grain .case-grain11,
+.xo-calc__case-grain .case-grain13 {
+  background-color: var(--color-bg-td);
+  border: 1px solid var(--color-primary-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px 16px;
+}
+.xo-calc__case-grain .case-grain14,
+.xo-calc__case-grain .case-grain15,
+.xo-calc__case-grain .case-grain16,
+.xo-calc__case-grain .case-grain17,
+.xo-calc__case-grain .case-grain18,
+.xo-calc__case-grain .case-grain19,
+.xo-calc__case-grain .case-grain20,
+.xo-calc__case-grain .case-grain21,
+.xo-calc__case-grain .case-grain22,
+.xo-calc__case-grain .case-grain23,
+.xo-calc__case-grain .case-grain24,
+.xo-calc__case-grain .case-grain25,
+.xo-calc__case-grain .case-grain26,
+.xo-calc__case-grain .case-grain27,
+.xo-calc__case-grain .case-grain28,
+.xo-calc__case-grain .case-grain29,
+.xo-calc__case-grain .case-grain30,
+.xo-calc__case-grain .case-grain31,
+.xo-calc__case-grain .case-grain32,
+.xo-calc__case-grain .case-grain33,
+.xo-calc__case-grain .case-grain34,
+.xo-calc__case-grain .case-grain35,
+.xo-calc__case-grain .case-grain36,
+.xo-calc__case-grain .case-grain37,
+.xo-calc__case-grain .case-grain38,
+.xo-calc__case-grain .case-grain39,
+.xo-calc__case-grain .case-grain40,
+.xo-calc__case-grain .case-grain41,
+.xo-calc__case-grain .case-grain42 {
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  place-items: center;
+}
+.xo-calc__case-grain .case-grain1 {
+  grid-area: grain1;
+  text-align: center;
+}
+.xo-calc__case-grain .case-grain2 {
+  grid-area: grain2;
+  text-align: center;
+}
+.xo-calc__case-grain .case-grain3 {
+  grid-area: grain3;
+  text-align: center;
+}
+.xo-calc__case-grain .case-grain4 {
+  grid-area: grain4;
+  text-align: center;
+}
+.xo-calc__case-grain .case-grain5 {
+  grid-area: grain5;
+  text-align: center;
+}
+.xo-calc__case-grain .case-grain6 {
+  grid-area: grain6;
+}
+.xo-calc__case-grain .case-grain7 {
+  grid-area: grain7;
+}
+.xo-calc__case-grain .case-grain8 {
+  grid-area: grain8;
+}
+.xo-calc__case-grain .case-grain9 {
+  grid-area: grain9;
+}
+.xo-calc__case-grain .case-grain10 {
+  grid-area: grain10;
+}
+.xo-calc__case-grain .case-grain11 {
+  grid-area: grain11;
+}
+.xo-calc__case-grain .case-grain12 {
+  grid-area: grain12;
+}
+.xo-calc__case-grain .case-grain13 {
+  grid-area: grain13;
+}
+.xo-calc__case-grain .case-grain14 {
+  grid-area: grain14;
+}
+.xo-calc__case-grain .case-grain15 {
+  grid-area: grain15;
+}
+.xo-calc__case-grain .case-grain16 {
+  grid-area: grain16;
+}
+.xo-calc__case-grain .case-grain17 {
+  grid-area: grain17;
+}
+.xo-calc__case-grain .case-grain18 {
+  grid-area: grain18;
+}
+.xo-calc__case-grain .case-grain19 {
+  grid-area: grain19;
+}
+.xo-calc__case-grain .case-grain20 {
+  grid-area: grain20;
+}
+.xo-calc__case-grain .case-grain21 {
+  grid-area: grain21;
+}
+.xo-calc__case-grain .case-grain22 {
+  grid-area: grain22;
+}
+.xo-calc__case-grain .case-grain23 {
+  grid-area: grain23;
+}
+.xo-calc__case-grain .case-grain24 {
+  grid-area: grain24;
+}
+.xo-calc__case-grain .case-grain25 {
+  grid-area: grain25;
+}
+.xo-calc__case-grain .case-grain26 {
+  grid-area: grain26;
+}
+.xo-calc__case-grain .case-grain27 {
+  grid-area: grain27;
+}
+.xo-calc__case-grain .case-grain28 {
+  grid-area: grain28;
+}
+.xo-calc__case-grain .case-grain29 {
+  grid-area: grain29;
+}
+.xo-calc__case-grain .case-grain30 {
+  grid-area: grain30;
+}
+.xo-calc__case-grain .case-grain31 {
+  grid-area: grain31;
+}
+.xo-calc__case-grain .case-grain32 {
+  grid-area: grain32;
+}
+.xo-calc__case-grain .case-grain33 {
+  grid-area: grain33;
+}
+.xo-calc__case-grain .case-grain34 {
+  grid-area: grain34;
+}
+.xo-calc__case-grain .case-grain35 {
+  grid-area: grain35;
+}
+.xo-calc__case-grain .case-grain35 span {
+  cursor: pointer;
+}
+.xo-calc__case-grain .case-grain36 {
+  grid-area: grain36;
+}
+.xo-calc__case-grain .case-grain36 span {
+  cursor: pointer;
+}
+.xo-calc__case-grain .case-grain37 {
+  grid-area: grain37;
+}
+.xo-calc__case-grain .case-grain38 {
+  grid-area: grain38;
+}
+.xo-calc__case-grain .case-grain38 span {
+  cursor: pointer;
+}
+.xo-calc__case-grain .case-grain39 {
+  grid-area: grain39;
+}
+.xo-calc__case-grain .case-grain39 span {
+  cursor: pointer;
+}
+.xo-calc__case-grain .case-grain40 {
+  grid-area: grain40;
+}
+.xo-calc__case-grain .case-grain41 {
+  grid-area: grain41;
+}
+.xo-calc__case-grain .case-grain42 {
+  grid-area: grain42;
+}
+.xo-calc__case-grain .case-grain42 span {
+  cursor: pointer;
+}
+.xo-calc__case-grain .case-grain42 > div {
   display: flex;
   align-items: center;
   gap: 10px;
