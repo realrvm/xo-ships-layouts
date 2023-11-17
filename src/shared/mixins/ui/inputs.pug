@@ -2,7 +2,7 @@ mixin calendar(width)
   input.xo-inputs__calendar(type='date' name='xo-date' id='xo-date' style=`width: ${width}px`)
 
 mixin simple_input(placeholder, width)
-  input.xo-inputs__simple-input(type='text' placeholder=placeholder name='xo-text' id='xo-text' style=`width: ${width}px`)
+  input.xo-inputs__simple-input(type='text' value=placeholder name='xo-text' style=`width: ${width}px`)
 
 mixin simple_select(options = [], width)
   .xo-inputs__simple-select-wrapper
@@ -11,3 +11,10 @@ mixin simple_select(options = [], width)
         - var [key, val] = Object.entries(option)[0];
         option(value= key)
           | #{val}
+
+mixin complex_input(item= [], width)
+  - var [percent, current,  common] = item;
+  .xo-inputs__complex-input(style={width: `${width}px`})
+    span= percent
+    input(type='number' value= current name='your_custom_name')
+    span= `из ${common} m³`

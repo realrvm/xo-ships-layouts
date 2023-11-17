@@ -129,7 +129,7 @@ main.xo-main {
 
   &__12-400 {
     font:
-      400 14px/1.4 "Manrope",
+      400 12px/1.4 "Manrope",
       sans-serif;
   }
 }
@@ -235,14 +235,6 @@ main.xo-main {
     padding: 8px 12px;
     border-radius: 4px;
     border: 1px solid var(--color-secondary);
-  }
-
-  &__calendar,
-  &__simple-select {
-    color: var(--color-secondary);
-  }
-
-  &__simple-input {
     color: var(--color-primary);
   }
 
@@ -272,6 +264,53 @@ main.xo-main {
         top: 8px;
         z-index: 10;
         pointer-events: none;
+      }
+    }
+  }
+
+  &__complex-input {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid var(--color-secondary);
+    overflow: hidden;
+
+    & > input[type="number"] {
+      width: 100%;
+      font:
+        500 16px/1.4 "Monrope",
+        sans-serif;
+      padding: 10px 86px 8px 115px;
+      color: var(--color-primary);
+      border: none;
+      outline: none;
+      -moz-appearance: textfield;
+      appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    & > span {
+      position: absolute;
+      pointer-events: none;
+
+      &:first-of-type {
+        font:
+          500 16px/1.4 "Monrope",
+          sans-serif;
+        left: 8px;
+        top: 10px;
+      }
+
+      &:last-of-type {
+        font:
+          400 12px/1.4 "Monrope",
+          sans-serif;
+        color: var(--color-secondary);
+        right: 19px;
+        top: 14px;
       }
     }
   }

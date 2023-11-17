@@ -1,8 +1,23 @@
+include /shared/mixins/ui/inputs
+
 .xo-calc__estimation-table-rows
   .xo-calc__estimation-table-td
     span(style= 'width: 17px; height: 19px;')
       +svg-settings-sm
     span.xo-text__18-400 Цистерна ДТ №1 ЛБ / NO.1 F.O.T.(P)
+  .xo-calc__estimation-table-td
+    +complex_input(['0%', '0.00', '456.1'], '240')
+  .xo-calc__estimation-table-td
+    +simple_select(options, '290')
+  .xo-calc__estimation-table-td
+    +cb-tripple
+
+mixin row-1(row)
+  - var {title, fullness, density} = row;
+  .xo-calc__estimation-table-td
+    span(style= 'width: 17px; height: 19px;')
+      +svg-settings-sm
+    span.xo-text__18-400= title
   .xo-calc__estimation-table-td
     +simple_input('11', '240')
   .xo-calc__estimation-table-td

@@ -24,8 +24,10 @@ append head
 block content
   - var breadcrumbs = [{path: "*", caption: 'Сервис расчётов'}, {path: "*", caption: 'Рыболовное “Lobster”'}, {caption: 'Расчет загрузки судна'}];
   - var steps = [{caption:'Запасы',cls: 'active'}, {caption: 'Груз', cls: 'inactive'}, {caption: "Константы", cls: 'inactive'}, {caption: "Статус", cls: 'inactive'}];
-  - var options = [{1 :'m'}, {2: 't'}, {3: 'km'}];
+  - var options = [{1 :'m³'}, {2: 't'}, {3: 'm'}];
+  - var cargo_options = [{1 : 'Летняя'}, {2 : 'Зимняя'}]
   - var headers = ['Наименование', 'Заполненность', 'Плотность', 'Поправка на СП'];
+  - var forepeak = [{title: 'Форпик  / Forepeak ', fullness: ['0%', '0.00', '456.1'], density: []}];
 
   include /widgets/sidebar
   main.xo-main
@@ -51,7 +53,7 @@ block content
               +calendar('187')
             div
               span.xo-text__18-700 Грузовая марка
-              +simple_select(options, '187')
+              +simple_select(cargo_options, '187')
           .xo-calc__estimation-inputs
             div
               span.xo-text__18-700 Параметры
