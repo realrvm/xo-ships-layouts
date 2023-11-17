@@ -1,0 +1,100 @@
+include /shared/mixins/ui/cbs
+
+.xo-calc__case-summary
+  .case-summary1.xo-text__20-600 РАСЧЕТ ОСТОЙЧИВОСТИ  №44
+  .case-summary2.xo-text__18-500 Описание
+  .case-summary3
+    span.xo-text__18-400 Случай нагрузки от
+    |
+    |
+    span.xo-text__18-500 01.03.23 12.00
+  .case-summary4
+    span.xo-text__18-500 Грузы: 80%
+    span.xo-text__16-400 Живая продукция в воде = 1.250 т/м3 в грузовых трюмах No.1 ... 4 Пр.Б+ЛБ.
+    span.xo-text__16-400 Живая продукция = 0.80 т/м3 в морозильном отделении ДП / Freez R.(C)
+    span.xo-text__16-400 Замороженная продукция = 0.50 т/м3 в рефрижераторных трюмах No.5 Пр.Б+ЛБ.
+  .case-summary5
+    span.xo-text__18-500 Грузы: 60%
+    span.xo-text__16-400 Морская вода = 1.250 т/м3 в форпике
+    span.xo-text__16-400 Дизельное топливо = 0.86 т/м3 в цистернах ДТ No.1 ... 3 Пр.Б+ЛБ.
+    span.xo-text__16-400 Пресная вода = 1.00 т/м3 в цистернах ПВ Пр.Б+ЛБ.
+    span.xo-text__16-400 Смазочное масло  = 0.90 т/м3 в цистернах СМ Пр.Б+ЛБ., HYD ЛБ.
+.xo-calc__case-summary-table
+  .xo-calc__case-summary-table-head
+    span.xo-text__20-600 Наименование
+    span.xo-text__20-600 Name
+  .xo-calc__case-summary-table-head
+    span.xo-text__20-600 Масса, т
+    span.xo-text__20-600 Mass, t
+  .xo-calc__case-summary-table-row Судно порожнем / The light ship
+  .xo-calc__case-summary-table-row--c 5681.00
+  .xo-calc__case-summary-table-row Экипаж с багажом / Crew with baggage
+  .xo-calc__case-summary-table-row--c 2.04
+  .xo-calc__case-summary-table-row Провизия / Provision
+  .xo-calc__case-summary-table-row--c 1.36
+  .xo-calc__case-summary-table-row Постоянные грузы / Ship’s Constants
+  .xo-calc__case-summary-table-row--c 176.56
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span Статические нагрузки / Static loads
+      span 10 панелей на палубе юта / 10 panels on poop deck
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 323.00
+      span 323.00
+  .xo-calc__case-summary-table-row Судовые запасы / The ship stores
+  .xo-calc__case-summary-table-row--c 0.00
+  .xo-calc__case-summary-table-row Жидкий балласт / Water ballast
+  .xo-calc__case-summary-table-row--c ---
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span NO.1 Грузовой трюм  / NO.1 R.S.W.
+      span Живая продукция в воде
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 27.96
+      span 27.96
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span NO.2 Грузовой трюм ЛБ / NO.2 R.S.W.(P)
+      span Живая продукция в воде
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 12.74
+      span 12.74
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span NO.2 Грузовой трюм ДП / NO.2 R.S.W.(C)
+      span Живая продукция в воде
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 16.75
+      span 16.75
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span Морозильное отделение ДП / Freez R.(C)
+      span Живая продукция
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 10.00
+      span 10.00
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-inner
+      span NO.5 Реф. трюм ЛБ / NO.5 REF H.(P)
+      span Замороженная продукция
+  .xo-calc__case-summary-table-row--c
+    .xo-calc__case-summary-table-inner
+      span 15.00
+      span 15.00
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-indent
+      +cb-double
+      span Обледенение / Icing
+  .xo-calc__case-summary-table-row--c 0.00
+  .xo-calc__case-summary-table-row
+    .xo-calc__case-summary-table-indent
+      +cb-double
+      span Намокание
+  .xo-calc__case-summary-table-row--c ---
+  .xo-calc__case-summary-table-row Судно в случае нагрузки / The ship in loading condition
+  .xo-calc__case-summary-table-row--c 18 682.92

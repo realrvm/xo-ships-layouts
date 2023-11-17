@@ -952,6 +952,52 @@ main.xo-main {
   display: block;
   padding-left: 5px;
 }
+.xo-calc__case-summary-table {
+  margin-bottom: 66px;
+  max-width: 1100px;
+  border: 1px solid var(--color-primary-gray);
+  display: grid;
+  grid-template-columns: auto 160px;
+  grid-template-rows: 86px;
+  grid-auto-rows: minmax(59px, auto);
+}
+.xo-calc__case-summary-table-head {
+  background-color: var(--color-bg-td);
+  display: grid;
+  text-align: center;
+  align-content: center;
+  border: 1px solid var(--color-primary-gray);
+}
+.xo-calc__case-summary-table-head span {
+  display: block;
+}
+.xo-calc__case-summary-table-inner {
+  flex: 1;
+}
+.xo-calc__case-summary-table-inner > span {
+  display: block;
+  padding: 12px 0;
+}
+.xo-calc__case-summary-table-inner > span + span {
+  color: var(--color-secondary);
+  border-top: 1px solid #cecece;
+}
+.xo-calc__case-summary-table-indent {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.xo-calc__case-summary-table-row, .xo-calc__case-summary-table-row--c {
+  border: 1px solid var(--color-primary-gray);
+  padding: 0 16px;
+  font: 500 20px/1.4 "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.xo-calc__case-summary-table-row--c {
+  justify-content: center;
+  text-align: center;
+}
 .xo-calc__case-trim-calc {
   max-width: 1510px;
   margin-bottom: 66px;
