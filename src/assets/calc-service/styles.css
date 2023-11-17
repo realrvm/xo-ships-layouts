@@ -450,9 +450,12 @@ main.xo-main {
   height: 10px;
   transform: scale(0);
   transition: 100ms transform ease-in-out;
-  box-shadow: inset 16px 16px var(--color-accent);
+  box-shadow: inset 16px 16px var(--color-bg);
   transform-origin: bottom left;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.xo-cb__simple input[type=checkbox]:checked {
+  background-color: var(--color-accent);
 }
 .xo-cb__simple input[type=checkbox]:checked:before {
   transform: scale(1);

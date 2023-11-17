@@ -450,9 +450,12 @@ main.xo-main {
   height: 10px;
   transform: scale(0);
   transition: 100ms transform ease-in-out;
-  box-shadow: inset 16px 16px var(--color-accent);
+  box-shadow: inset 16px 16px var(--color-bg);
   transform-origin: bottom left;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.xo-cb__simple input[type=checkbox]:checked {
+  background-color: var(--color-accent);
 }
 .xo-cb__simple input[type=checkbox]:checked:before {
   transform: scale(1);
@@ -819,6 +822,7 @@ main.xo-main {
 .xo-calc__estimation-inputs div {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .xo-calc__estimation-btns {
   display: flex;
@@ -945,4 +949,47 @@ main.xo-main {
   background-color: #cecece;
   right: 0;
   z-index: -10;
+}
+
+.xo-calc__estimation-mark {
+  position: relative;
+}
+.xo-calc__estimation-mark-icon {
+  cursor: pointer;
+  position: absolute;
+  top: -5px;
+  right: 6px;
+}
+
+[data-title]:hover:after,
+[data-title]:hover:before {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:before {
+  content: url("../img/beak.svg");
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background: var(--color-bg);
+  color: #171717;
+  font: 500 14px/1.4 "Manrope", sans-serif;
+  position: absolute;
+  bottom: -67px;
+  left: 16px;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  z-index: 99999;
+  width: 350px;
+  padding: 14px 18px;
 }
