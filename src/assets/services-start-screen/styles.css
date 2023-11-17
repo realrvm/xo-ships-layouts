@@ -307,11 +307,25 @@ main.xo-main {
   opacity: 0.5;
 }
 .xo-inputs__simple-select {
-  background: url(../img/arrow-down-sm.svg) no-repeat;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-position: 93%;
+  background-color: var(--color-bg);
+}
+.xo-inputs__simple-select-wrapper {
+  display: inline-block;
+  position: relative;
+}
+.xo-inputs__simple-select-wrapper:after {
+  content: url("../img/arrow-down-sm.svg");
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 9px;
+  right: 13px;
+  top: 8px;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .xo-link__back {
@@ -645,13 +659,13 @@ main.xo-main {
   outline: none;
   cursor: pointer;
   color: var(--color-accent);
-  font: 400 18px/1.4 "Mantrope", sans-serif;
+  font: 400 18px/1.4 "Manrope", sans-serif;
   margin-right: 20px;
 }
 
 .xo-link-more {
   display: inline-block;
-  font: 400 14px/1.4 "Mantrope", sans-serif;
+  font: 400 14px/1.4 "Manrope", sans-serif;
   color: var(--color-accent);
 }
 
