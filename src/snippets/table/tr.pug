@@ -11,16 +11,3 @@ include /shared/mixins/ui/inputs
     +simple_select(options, '290')
   .xo-calc__estimation-table-td
     +cb-tripple
-
-mixin row-1(row)
-  - var {title, fullness, density} = row;
-  .xo-calc__estimation-table-td
-    span(style= 'width: 17px; height: 19px;')
-      +svg-settings-sm
-    span.xo-text__18-400= title
-  .xo-calc__estimation-table-td
-    +simple_input('11', '240')
-  .xo-calc__estimation-table-td
-    +simple_select(options, '290')
-  .xo-calc__estimation-table-td
-    +cb-tripple

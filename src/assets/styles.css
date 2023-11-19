@@ -145,8 +145,14 @@ li {
   list-style: none;
 }
 
+.xo-container {
+  display: flex;
+  gap: 20px;
+}
+
 main.xo-main {
-  padding: 30px 20px 30px 152px;
+  padding: 30px 20px;
+  flex: 1;
 }
 
 .xo-text__title {
@@ -542,7 +548,7 @@ main.xo-main {
   height: 0;
   border-left: 9px solid transparent;
   border-right: 9px solid transparent;
-  border-top: 25px solid blue;
+  border-top: 25px solid var(--color-accent);
 }
 .xo-cb__tripple-off:checked ~ .xo-cb__tripple-slider:after {
   left: -4px;
@@ -570,10 +576,10 @@ main.xo-main {
   right: 0;
 }
 
-#xo-cb-double:checked + .xo-cb__double:before {
+input[type=checkbox]:checked + .xo-cb__double:before {
   background: var(--color-accent);
 }
-#xo-cb-double:checked + .xo-cb__double span {
+input[type=checkbox]:checked + .xo-cb__double span {
   transform: translateX(15px);
   border: none;
 }
@@ -703,6 +709,9 @@ main.xo-main {
 }
 
 /* СТИЛИ СТРАНИЦЫ */
+.xo-layouts {
+  padding-left: 100px;
+}
 .xo-layouts h1 {
   font: 700 42px/1.4 "Monrope", sans-serif;
   margin-bottom: 24px;

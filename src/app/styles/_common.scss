@@ -1,5 +1,11 @@
+.xo-container {
+  display: flex;
+  gap: 20px;
+}
+
 main.xo-main {
-  padding: 30px 20px 30px 152px;
+  padding: 30px 20px;
+  flex: 1;
 }
 
 .xo-text {
@@ -540,7 +546,7 @@ main.xo-main {
         height: 0;
         border-left: 9px solid transparent;
         border-right: 9px solid transparent;
-        border-top: 25px solid blue;
+        border-top: 25px solid var(--color-accent);
       }
     }
 
@@ -580,10 +586,11 @@ main.xo-main {
   }
 }
 
-#xo-cb-double:checked + .xo-cb__double {
+input[type="checkbox"]:checked + .xo-cb__double {
   &:before {
     background: var(--color-accent);
   }
+
   & span {
     transform: translateX(15px);
     border: none;

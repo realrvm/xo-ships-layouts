@@ -1,18 +1,18 @@
-mixin cb-double
-  input(type='checkbox' id='xo-cb-double' style='display:none' checked)
-  label.xo-cb__double(for="xo-cb-double")
+mixin cb-double(id= 'your-custom-id')
+  input(type='checkbox' id=`xo-${id}` style='display:none' name="xo")
+  label.xo-cb__double(for=`xo-${id}`)
     span
 
-mixin cb-tripple
+mixin cb-tripple(id='-your-custom-value')
   .xo-cb__tripple
-    input.xo-cb__tripple-off(id="xo-cb-triple-off" type="radio" checked name='xo')
-    label.xo-cb__tripple-lb.xo-cb__tripple-lb-off(for='xo-cb-triple-off') нет
+    input.xo-cb__tripple-off(id=`xo-cb-triple-off${id}` type="radio" checked name=`xo${id}`)
+    label.xo-cb__tripple-lb.xo-cb__tripple-lb-off(for=`xo-cb-triple-off${id}`) нет
 
-    input.xo-cb__tripple-level(id="xo-cb-triple-level" type="radio" name='xo')
-    label.xo-cb__tripple-lb.xo-cb__tripple-lb-level(for='xo-cb-triple-level') по уровню
+    input.xo-cb__tripple-level(id=`xo-cb-triple-level${id}` type="radio" name=`xo${id}`)
+    label.xo-cb__tripple-lb.xo-cb__tripple-lb-level(for=`xo-cb-triple-level${id}`) по уровню
 
-    input.xo-cb__tripple-max(id="xo-cb-triple-max" type="radio" name='xo')
-    label.xo-cb__tripple-lb.xo-cb__tripple-lb-max(for='xo-cb-triple-max') max
+    input.xo-cb__tripple-max(id=`xo-cb-triple-max${id}` type="radio" name=`xo${id}`)
+    label.xo-cb__tripple-lb.xo-cb__tripple-lb-max(for=`xo-cb-triple-max${id}`) max
 
     .xo-cb__tripple-slider
 

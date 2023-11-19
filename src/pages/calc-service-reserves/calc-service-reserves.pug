@@ -15,6 +15,7 @@ include /shared/mixins/svg/circle-check
 include /shared/mixins/svg/circle-exclamation
 
 include /snippets/table/th
+include /snippets/table/row
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -27,7 +28,7 @@ block content
   - var options = [{1 :'m³'}, {2: 't'}, {3: 'm'}];
   - var cargo_options = [{1 : 'Летняя'}, {2 : 'Зимняя'}]
   - var headers = ['Наименование', 'Заполненность', 'Плотность', 'Поправка на СП'];
-  - var forepeak = [{title: 'Форпик  / Forepeak ', fullness: ['0%', '0.00', '456.1'], density: []}];
+  - var forepeak = [{title: 'Форпик  / Forepeak ', fullness: [], density: [], id: '2'}];
 
   include /widgets/sidebar
   main.xo-main
@@ -64,8 +65,7 @@ block content
           .xo-calc__estimation-table
             +collapse('Форпик / Forepeak', 'xo-text__18-700', '210')
               +th(headers)
-              each val in [1]
-                include /snippets/table/tr
+              +row(forepeak[0])
             +collapse('Дизельное топливо', 'xo-text__18-700','220')
               +th(headers)
               each val in [1, 2, 3, 4, 5, 6, 7]

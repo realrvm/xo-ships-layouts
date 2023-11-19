@@ -18,6 +18,10 @@
   border: 1px solid var(--color-primary);
   overflow: hidden;
 
+  &:hover img {
+    filter: grayscale(0);
+  }
+
   &__img {
     width: 100%;
     max-height: 173px;
@@ -27,8 +31,10 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(100%);
+      transition: filter 0.2s;
     }
   }
+
 
   &__body {
     padding: 15px;
