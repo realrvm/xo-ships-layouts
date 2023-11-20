@@ -10,7 +10,7 @@
 .xo-steps__constants {
   & li.active span:first-child {
     box-sizing: border-box;
-    border: 2px solid blue;
+    border: 2px solid var(--color-accent);
     color: var(--color-accent);
     background-color: var(--color-bg);
     font-weight: 600;

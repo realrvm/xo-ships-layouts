@@ -10,7 +10,7 @@
 .xo-steps__status {
   & li.active span:first-child {
     box-sizing: border-box;
-    border: 2px solid blue;
+    border: 2px solid var(--color-accent);
     color: var(--color-accent);
     background-color: var(--color-bg);
     font-weight: 600;
@@ -42,19 +42,32 @@
   &-images {
     display: flex;
     align-items: center;
-    gap: 20px;
   }
 
   &-btns {
     margin-bottom: 50px;
+    gap: 20px;
   }
 
   &-images {
-    margin-bottom: 136px;
+    margin-bottom: 50px;
+
+    .xo-calc__status-img:first-child {
+      padding-right: 38px;
+      border-right: 1px dashed #cecece;
+    }
+
+    .xo-calc__status-img:last-child {
+      padding-left: 38px;
+    }
   }
 
   &-bottom {
     display: flex;
     justify-content: space-between;
+
+    & .xo-calc__estimation-btns {
+      align-items: flex-end;
+    }
   }
 }

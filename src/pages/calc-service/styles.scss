@@ -35,7 +35,6 @@
     }
   }
 
-
   &__body {
     padding: 15px;
   }
@@ -84,10 +83,12 @@
 
     & > .agreed {
       color: var(--color-add-content);
+      font-weight: 700;
     }
 
     & > .unagreed {
       color: var(--color-del);
+      font-weight: 700;
     }
   }
 }

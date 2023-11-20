@@ -255,6 +255,8 @@ main.xo-main {
   color: var(--color-accent);
   background-color: transparent;
   border: none;
+  text-decoration: underline;
+  padding: 0;
 }
 .xo-btn__content-clean {
   border: 1px solid var(--color-add-content);
@@ -492,7 +494,7 @@ main.xo-main {
   top: 4px;
   left: 6px;
   width: 14px;
-  height: 13px;
+  height: 14px;
   background: var(--color-bg);
   border-radius: 50%;
   border: 1px solid var(--color-primary);
@@ -802,13 +804,13 @@ input[type=checkbox]:checked + .xo-cb__double span {
 }
 .xo-calc__estimation-th {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 344px 240px 290px 215px;
   margin: 15px 0;
   gap: 50px;
 }
 .xo-calc__estimation-table-rows {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 344px 240px 290px 215px;
   margin: 15px 0;
   gap: 50px;
 }
@@ -836,7 +838,7 @@ input[type=checkbox]:checked + .xo-cb__double span {
 .xo-calc__estimation-btns {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 20px;
 }
 .xo-calc__findings {
   flex-basis: 400px;
@@ -924,7 +926,7 @@ input[type=checkbox]:checked + .xo-cb__double span {
 .xo-calc__br-table-th, .xo-calc__br-table-tr {
   display: grid;
   grid-template-columns: 10% 40% 30% 20%;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 .xo-calc__br-table-th {
   border-bottom: 1px solid #dee2e6;
@@ -936,7 +938,7 @@ input[type=checkbox]:checked + .xo-cb__double span {
 /* СТИЛИ СТРАНИЦЫ */
 .xo-steps__constants li.active span:first-child {
   box-sizing: border-box;
-  border: 2px solid blue;
+  border: 2px solid var(--color-accent);
   color: var(--color-accent);
   background-color: var(--color-bg);
   font-weight: 600;

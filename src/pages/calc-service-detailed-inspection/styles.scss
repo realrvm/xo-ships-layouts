@@ -19,7 +19,7 @@
     height: 900px;
     background-color: var(--color-bg);
     border-radius: 20px;
-    padding: 50px 40px;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
   }
@@ -37,8 +37,30 @@
 
   &-slider {
     flex: 1;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    &-img {
+      max-width: 1400px;
+    }
+
+    &-btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background-color: var(--color-secondary);
+      cursor: pointer;
+
+      &.arrow-active {
+        background-color: var(--color-accent);
+      }
+    }
   }
 
   &-footer {

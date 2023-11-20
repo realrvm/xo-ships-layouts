@@ -36,16 +36,21 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: nowrap;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
 
       &-title {
         transform: translateY(-7px);
       }
     }
 
-    & p:not(:last-of-type) {
-      margin-bottom: 10px;
+    &-case {
+      margin-bottom: 20px;
     }
+
+    &-subtitle {
+      margin-bottom: 4px;
+    }
+
   }
 
   &__stability-cases-form {

@@ -1,6 +1,8 @@
 extends /shared/ui/layout
 
 include /shared/mixins/svg/cross-bg
+include /shared/mixins/svg/left
+include /shared/mixins/svg/right
 
 append styles
   link(rel= "stylesheet" href= "./styles.css")
@@ -14,7 +16,14 @@ block content
         h3.xo-text__24-600 Подробный просмотр
         .xo-calc__inspection-cancel
           +svg-cross-bg
-      p.xo-text__20-400 Вид сверху
+      p.xo-text__20-400 Вид сбоку
       .xo-calc__inspection-slider
-        image(src='../img/ship12.png' alt='ship')
+        .xo-calc__inspection-slider-arrow-left
+          button.xo-calc__inspection-slider-btn
+            +svg-left
+        .xo-calc__inspection-slider-img
+          image(src='../img/ship12.png' alt='ship')
+        .xo-calc__inspection-slider-arrow-right
+          button.xo-calc__inspection-slider-btn.arrow-active
+            +svg-right
       p.xo-calc__inspection-footer.xo-text__20-400 Изображение 1 из 2

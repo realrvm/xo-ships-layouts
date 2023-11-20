@@ -58,14 +58,14 @@
 
     &-th {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 344px 240px 290px 215px;
       margin: 15px 0;
       gap: 50px;
     }
 
     &-table-rows {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 344px 240px 290px 215px;
       margin: 15px 0;
       gap: 50px;
     }
@@ -99,7 +99,7 @@
     &-btns {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 20px;
     }
   }
 
@@ -204,7 +204,7 @@
     &-tr {
       display: grid;
       grid-template-columns: 10% 40% 30% 20%;
-      padding: 5px 0;
+      padding: 10px 0;
     }
 
     &-th {
