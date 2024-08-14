@@ -1,7 +1,7 @@
 # ships
 
 ```bash
-g clone git@github.com:realrvm/xo-ships-layouts.git
+git clone git@github.com:realrvm/xo-ships-layouts.git
 cd xo*
 npm install
 npm run build
