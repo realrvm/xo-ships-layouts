@@ -1,3 +1,9 @@
 # ships
 
-[Текущее состояние приложения](https://hilarious-melomakarona-bfd2e2.netlify.app/)
+```bash
+g clone git@github.com:realrvm/xo-ships-layouts.git
+cd xo*
+npm install
+npm run build
+```
+Открыть файл index.html в папке dist в браузере
